@@ -19,7 +19,7 @@
     
     
       
-        <title>MIT 线性代数 - My Blogs</title>
+        <title>Python Learning - My Blogs</title>
       
     
     
@@ -41,6 +41,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -71,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mit" class="md-skip">
+        <a href="#python-learning" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MIT 线性代数
+              Python Learning
             
           </span>
         </div>
@@ -243,12 +245,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          MIT 线性代数
+          Python Learning
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        MIT 线性代数
+        Python Learning
       </a>
       
         
@@ -267,105 +269,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lecture-07-ax0" class="md-nav__link">
-    LECTURE 07  求解Ax=0: 主变量，特解
+  <a href="#python" class="md-nav__link">
+    第一阶段 Python语言基础入门
   </a>
   
-    <nav class="md-nav" aria-label="LECTURE 07 求解Ax=0: 主变量，特解">
+    <nav class="md-nav" aria-label="第一阶段 Python语言基础入门">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lecture-main-idea" class="md-nav__link">
-    Lecture main idea
+  <a href="#11-python" class="md-nav__link">
+    1.1 第一个python程序
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#12-ide-pycharm" class="md-nav__link">
+    1.2 IDE 集成开发环境  PyCharm
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    summary
+  <a href="#13" class="md-nav__link">
+    1.3 字面量
   </a>
   
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lecture-08-axb" class="md-nav__link">
-    LECTURE 08 求解Ax=b：可解性与结构
-  </a>
-  
-    <nav class="md-nav" aria-label="LECTURE 08 求解Ax=b：可解性与结构">
+    <nav class="md-nav" aria-label="1.3 字面量">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lecture-main-idea_1" class="md-nav__link">
-    Lecture main idea
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#background" class="md-nav__link">
-    Background
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#solving-step" class="md-nav__link">
-    Solving step
-  </a>
-  
-    <nav class="md-nav" aria-label="Solving step">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principle" class="md-nav__link">
-    Principle
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
-    Step 1 求特解
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2" class="md-nav__link">
-    Step 2 与零空间进行线性组合
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    由秩引发的讨论
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#summary_1" class="md-nav__link">
-    Summary
+    字面量的分类
   </a>
   
 </li>
@@ -374,32 +309,44 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lecture-09" class="md-nav__link">
-    LECTURE 09 线性无关，基和维数
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4 注释
   </a>
   
-    <nav class="md-nav" aria-label="LECTURE 09 线性无关，基和维数">
+    <nav class="md-nav" aria-label="1.4 注释">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#independence" class="md-nav__link">
-    Independence
+  <a href="#_2" class="md-nav__link">
+    单行注释
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#spanning-space" class="md-nav__link">
-    Spanning space
+  <a href="#_3" class="md-nav__link">
+    多行注释
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    1.6 变量
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#basis" class="md-nav__link">
-    Basis
+  <a href="#17" class="md-nav__link">
+    1.7 数据类型
   </a>
   
 </li>
@@ -459,105 +406,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lecture-07-ax0" class="md-nav__link">
-    LECTURE 07  求解Ax=0: 主变量，特解
+  <a href="#python" class="md-nav__link">
+    第一阶段 Python语言基础入门
   </a>
   
-    <nav class="md-nav" aria-label="LECTURE 07 求解Ax=0: 主变量，特解">
+    <nav class="md-nav" aria-label="第一阶段 Python语言基础入门">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lecture-main-idea" class="md-nav__link">
-    Lecture main idea
+  <a href="#11-python" class="md-nav__link">
+    1.1 第一个python程序
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#12-ide-pycharm" class="md-nav__link">
+    1.2 IDE 集成开发环境  PyCharm
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    summary
+  <a href="#13" class="md-nav__link">
+    1.3 字面量
   </a>
   
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lecture-08-axb" class="md-nav__link">
-    LECTURE 08 求解Ax=b：可解性与结构
-  </a>
-  
-    <nav class="md-nav" aria-label="LECTURE 08 求解Ax=b：可解性与结构">
+    <nav class="md-nav" aria-label="1.3 字面量">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lecture-main-idea_1" class="md-nav__link">
-    Lecture main idea
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#background" class="md-nav__link">
-    Background
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#solving-step" class="md-nav__link">
-    Solving step
-  </a>
-  
-    <nav class="md-nav" aria-label="Solving step">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principle" class="md-nav__link">
-    Principle
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
-    Step 1 求特解
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2" class="md-nav__link">
-    Step 2 与零空间进行线性组合
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    由秩引发的讨论
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#summary_1" class="md-nav__link">
-    Summary
+    字面量的分类
   </a>
   
 </li>
@@ -566,32 +446,44 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lecture-09" class="md-nav__link">
-    LECTURE 09 线性无关，基和维数
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4 注释
   </a>
   
-    <nav class="md-nav" aria-label="LECTURE 09 线性无关，基和维数">
+    <nav class="md-nav" aria-label="1.4 注释">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#independence" class="md-nav__link">
-    Independence
+  <a href="#_2" class="md-nav__link">
+    单行注释
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#spanning-space" class="md-nav__link">
-    Spanning space
+  <a href="#_3" class="md-nav__link">
+    多行注释
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    1.6 变量
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#basis" class="md-nav__link">
-    Basis
+  <a href="#17" class="md-nav__link">
+    1.7 数据类型
   </a>
   
 </li>
@@ -616,209 +508,90 @@
                   
 
 
-<h1 id="mit">MIT 线性代数</h1>
+<h1 id="python-learning">Python Learning</h1>
 <blockquote>
-<p>There were many occasions early in my career when I read, heard about, or stumbled upon some neat mathematical trick or argument, and thought I understood it well enough that I didn’t need to write it down; and then, say six months later, when I actually needed to recall that trick, I couldn’t reconstruct it at all. Eventually I resolved to write down (preferably on a computer) a sketch of any interesting argument I came across – not necessarily at a publication level of quality, but detailed enough that I could then safely forget about the details, and readily recover the argument from the sketch whenever the need arises.</p>
-<p>在我职业生涯的早期，有很多时候，当我读到、听说或偶然发现一些巧妙的数学技巧或论点时，我认为我已经理解得很好了，不需要把它写下来；然后，比如说六个月后，当我真的需要回忆那个技巧时，我根本无法重建它。最终，我决定把我遇到的任何有趣的论点写下来（最好是在电脑上）——不一定是出版质量的水平，但足够详细，这样我就可以放心地忘记细节，并在需要时随时从草图中恢复论点。</p>
-<p><p align="right">——陶哲轩</p></p>
+<p><strong>Python</strong>是一种代表简单主义思想的语言。阅读一个良好的Python程序就感觉像是在读英语一样。它使你能够<strong>专注于解决问题</strong>而不是去搞明白语言本身.</p>
 </blockquote>
-<p>近日受了些启发，觉得将自己的所学所想用文字记录下来是件好事，就从线性代数的学习记录开始吧.</p>
-<p><strong>选用教材</strong>：<em>Linear Algebra and Its Applications</em></p>
-<p><strong>视频课程</strong>：<a href="https://www.bilibili.com/video/BV16Z4y1U7oU?vd_source=a40aa7834a9aabea7a1d4b4859cc6bf9" title="Linear Algebra-Gilbert Strang">MIT open course</a></p>
+<p>这是一个菜鸡的Python学习记录 :stuck_out_tongue_winking_eye:</p>
+<p><a href="https://www.runoob.com/python/python-tutorial.html">Python基础教程</a></p>
+<p><a href="【黑马程序员python教程，8天python从入门到精通，学python看这套就够了】https://www.bilibili.com/video/BV1qW4y1a7fU?vd_source=a40aa7834a9aabea7a1d4b4859cc6bf9">Python在线课程</a></p>
+<h2 id="python">第一阶段 Python语言基础入门</h2>
+<h3 id="11-python">1.1 第一个python程序</h3>
+<pre><code class="language-python">print(&quot;hello world!&quot;)
+</code></pre>
 <hr />
-<h2 id="lecture-07-ax0">LECTURE 07  求解Ax=0: 主变量，特解</h2>
-<h3 id="lecture-main-idea">Lecture main idea</h3>
-<blockquote>
-<p>How can I describe all the vectors that are in those spaces ? How to compute these vectors , this lecture is the , turning the idea , the definition into an <strong>algorithm</strong> . ( solving Ax = 0 )</p>
-</blockquote>
-<h3 id="example">Example</h3>
-<p><strong>计算零空间</strong> 
-$$
-A =
-\left[
-\begin{matrix}
- 1 &amp; 2 &amp; 2 &amp; 2 \
- 2 &amp; 4 &amp; 6 &amp; 8 \
- 3 &amp; 6 &amp; 8 &amp; 10
- \end{matrix}
- \right] \tag{1}
-$$
-<strong>消元（Do elimination）</strong></p>
-<p>$$
-A =
-\left[\begin{matrix} 
- 1 &amp; 2 &amp; 2 &amp; 2 \
- 0 &amp; 0 &amp; 2 &amp; 4 \
- 0 &amp; 0 &amp; 0 &amp; 0 
-\end{matrix} \right] \tag{2}
-$$
-<strong>选取主元列与自由列（decide which are the pivot columns and which are free columns）</strong></p>
-<p>显然，$x_1$,$x_3$所代表的列为主元列，剩余为自由列.</p>
-<blockquote>
-<p>主元列和自由列的一个重要区别就是，自由列可以表示为其左侧所有主元列的线性组合，而主元列则不可以.</p>
-</blockquote>
-<p>这里引出了<strong>秩(Rank)</strong>的概念:</p>
-<blockquote>
-<p>A的<strong>秩</strong>等于A的主元个数，即A的列空间的维数.</p>
-</blockquote>
-<p>提前引入<strong>秩定理</strong>吧：</p>
-<blockquote>
-<p>$m \times n$矩阵A的列空间和行空间的维数相等，这个公共的维数还等于A的主元位置个数且满足方程：
-$$
-rank A +dim NulA =n
-$$</p>
-</blockquote>
-<p>(来源于<strong>Linear Algebra and Its Application</strong> P 231).</p>
-<p><strong>赋予自由变量特值以求得特殊解（assign them your special solutions）</strong></p>
-<p>即赋0,1特值解出两个主元特解.
-$$
-x_1 =
-\left[\begin{matrix} 
- -2 \
- 1 \
- 0 \
- 0
-\end{matrix} \right]
-,x_2=
-\left[\begin{matrix} 
- 2 \
- 0 \
- -2 \
- 1
-\end{matrix} \right]
-$$
-最后，以老先生的原话收尾：</p>
-<blockquote>
-<p>The null space contains exactly all the combinations of the special solutions.</p>
-</blockquote>
-<p><strong>行最简阶梯矩阵 （Reduced row echelon form ）</strong></p>
-<p>通过继续消元我们可以将矩阵<strong>U</strong>转变为行最简阶梯矩阵形式<strong>R</strong>，其中主元为1，而主元列除主元外皆为0。在<code>Matlab</code>中用命令<code>rref(A)</code>实现这一过程.</p>
-<p>即将(2)式继续化简：
-$$
-R =
-\left[\begin{matrix}<br />
-1 &amp; 2 &amp; 0 &amp; -2 \ 
-0 &amp; 0 &amp; 1 &amp; 2 \ 
-0 &amp; 0 &amp; 0 &amp; 0 
-\end{matrix} \right] \tag{3}
-$$
-我们记<strong>F为自由列消元后组成的部分</strong>，<strong>I是一个r$\times$r的单位方阵</strong>，通过列交换，<strong>R</strong>可写作：
-$$
-R =
-\left[
-\begin{matrix}<br />
-I &amp; F \ 
-0 &amp; 0 \ 
-\end{matrix} \right] \tag{4}
-$$
-此时Rx=0的解为：
-$$
-x =
-\left[
-\begin{matrix}<br />
--F  \ 
-I
-\end{matrix} \right] \tag{5}
-$$
-即为前面说的<strong>“all the combinations of the special solutions”.</strong></p>
-<h3 id="summary">summary</h3>
-<blockquote>
-<p>对于矩阵<strong>R</strong> 而言，只需要将消元的到的<strong>F</strong> 部分拼接上单位阵就可以得到所有的通解。注意如果在变换出<strong>R</strong> 左上角的单位阵的过程中采用了列交换，则最后的解要完成逆变换。</p>
-</blockquote>
+<h3 id="12-ide-pycharm">1.2 IDE 集成开发环境  PyCharm</h3>
+<p><a href="https://www.jetbrains.com/pycharm/download/">PyCharm下载</a></p>
 <hr />
-<h2 id="lecture-08-axb">LECTURE 08 求解Ax=b：可解性与结构</h2>
-<h3 id="lecture-main-idea_1">Lecture main idea</h3>
+<h3 id="13">1.3 字面量</h3>
 <blockquote>
-<p>To find complete solution to Ax=b.</p>
+<p>在代码中被写下来的固定的值.</p>
 </blockquote>
-<h3 id="background">Background</h3>
-<p><strong>同07节中的矩阵A，求解Ax=b.</strong></p>
-<p>当且仅当b属于A的列空间时有解.</p>
-<h3 id="solving-step">Solving step</h3>
-<h4 id="principle">Principle</h4>
-<p>$$
-\begin{cases}
-Ax_p=b\
-Ax_n=0
-\end{cases}
-\Rightarrow
-A(x_p+x_n)=b
-\Rightarrow
-x=x_p+x_n
-$$</p>
-<h4 id="step-1">Step 1 求特解</h4>
-<blockquote>
-<p>Set all free variables to 0 . Solve Ax=b for pivot variables.</p>
-</blockquote>
-<p>$$
-\begin{cases}
-x_1+2x_3=1\
-2x_3=3
-\end{cases}
-\Rightarrow
-x_{particular}=
-\left[
-\begin{matrix}<br />
--2 \ 
-0 \
-1.5 \
-0
-\end{matrix} \right]
-$$</p>
-<h4 id="step-2">Step 2 与零空间进行线性组合</h4>
-<p>此处略去.</p>
-<h3 id="_1">由秩引发的讨论</h3>
-<p>对于m$\times$n的矩阵，若其秩为r，则必有<strong>r&lt;=m,r&lt;=n.</strong></p>
-<p><strong>r=m=n时</strong></p>
-<p>R=I，仅有唯一解.</p>
-<p><strong>r=n&lt;m时</strong></p>
-<p>$R=
-\left[
-\begin{matrix}
-I\
-0
-\end{matrix}
-\right]$，无解或唯一解.</p>
-<p><strong>r=m&lt;n时</strong></p>
-<p>$R=
-\left[
-\begin{matrix}
-I &amp; F\
-\end{matrix}
-\right]$，无穷多解.</p>
-<p><strong>r&lt;m,r&lt;n时</strong></p>
-<p>$R=
-\left[
-\begin{matrix}
-I &amp; F\
-0 &amp; 0
-\end{matrix}
-\right]$，无解或无穷多解.</p>
-<h3 id="summary_1">Summary</h3>
-<blockquote>
-<p>The rank tells you everything about the number of solutions.</p>
-</blockquote>
-<hr />
-<h2 id="lecture-09">LECTURE 09 线性无关，基和维数</h2>
-<blockquote>
-<p>Independence, basis, and dimension.</p>
-</blockquote>
-<h3 id="independence">Independence</h3>
-<p>Vector  $x_1,x_2,...x_n$  are independent if no combination gives zero vector（except all $c_i=0$）.
-$$
-c_1x_1+c_2x_2+...+c_nx_n \neq 0
-$$</p>
-<h3 id="spanning-space">Spanning space</h3>
-<p>Vectors $v_1,v_2,...v_l$ span a space means : The space consists of all combination of <strong>those vectors</strong>.</p>
-<p><strong>This leads to the definition of basis.</strong></p>
-<h3 id="basis">Basis</h3>
-<blockquote>
-<p>Basis is a bunch of vectors in the space with two feature :</p>
+<h4 id="_1">字面量的分类</h4>
 <ul>
-<li>Independent</li>
-<li>Span the space</li>
+<li><strong>数字</strong>（<strong>整数</strong>，<strong>浮点数</strong>，复数，布尔）</li>
+<li><strong>字符串</strong>（由任意数量的字符组成，<strong>字符串需要用双引号包括起来</strong>）</li>
+<li>列表、元组、集合、字典（此处后续会讲到）</li>
 </ul>
+<pre><code class="language-py">print(123)
+print(13.14)
+print(&quot;Wayne's blogs&quot;)
+</code></pre>
+<hr />
+<h3 id="14">1.4 注释</h3>
+<h4 id="_2">单行注释</h4>
+<pre><code class="language-py"># 一个#号表示单行注释，与后面的文本注释以一个空格隔开
+print(&quot;hello world&quot;)
+</code></pre>
+<h4 id="_3">多行注释</h4>
+<pre><code class="language-py">&quot;&quot;&quot;
+    用三个双引号
+    表示
+    多行注释
+&quot;&quot;&quot;
+print(&quot;hello&quot;)
+</code></pre>
+<hr />
+<h3 id="16">1.6 变量</h3>
+<blockquote>
+<p>储存计算结果或能表示值的抽象概念.</p>
+<blockquote>
+<p><strong>变量名称 = 变量的值</strong></p>
 </blockquote>
+</blockquote>
+<pre><code class="language-py"># python 变量相关操作
+
+# 定义一个变量，记录钱包余额
+money = 50
+# 通过print语句，输出变量记录的内容
+print(&quot;钱包还有：&quot;, money)
+
+# 花费10元
+money = money - 10
+print(&quot;花费10元，还剩余：&quot;, money, &quot;元&quot;)
+
+</code></pre>
+<p>复制代码可以使用快捷键<code>CTRL</code> +<code>D</code>.</p>
+<h3 id="17">1.7 数据类型</h3>
+<p>第一阶段只接触字符串，整型，浮点型.</p>
+<pre><code class="language-py"># 判断数据类型以及type()语句的使用
+
+print(type(&quot;wayne&quot;))
+print(type(123))
+print(type(13.14))
+
+# type查看变量中储存的数据类型
+
+name = &quot;hello&quot;
+name_type = type(name) # 查看数据的类型
+print(name_type)
+</code></pre>
+<p>输出如下结果：</p>
+<pre><code>&lt;class 'str'&gt;
+&lt;class 'int'&gt;
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;
+</code></pre>
 
 
 
@@ -860,6 +633,18 @@ $$</p>
     
     
       <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../javascripts/katex.js"></script>
+        
+      
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        
+      
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        
       
     
   </body>
