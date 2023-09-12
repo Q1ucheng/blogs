@@ -521,126 +521,128 @@
                   
 
 
-<h1 id="latex">数学建模中的LaTeX代码<a class="headerlink" href="#latex" title="Permanent link">&para;</a></h1>
+<h1 id="latex">数学建模中的LaTeX代码</h1>
+<blockquote>
 <p>一些已经编译好的LaTeX代码，可随时取用.</p>
-<h2 id="1">1. 宏包的引用<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">\documentclass</span><span class="na">[12pt,a4paper,utf8]</span><span class="nb">{</span>article<span class="nb">}</span> <span class="c">% 文档类设置为article，字体大小为12pt，纸张尺寸为A4，编码为utf8</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">\usepackage</span><span class="nb">{</span>ctex<span class="nb">}</span> <span class="c">% 使用ctex宏包以支持中文</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">\usepackage</span><span class="nb">{</span>url<span class="nb">}</span> <span class="c">% 支持在文档中插入URL</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">\usepackage</span><span class="nb">{</span>booktabs<span class="nb">}</span> <span class="c">% 提供漂亮的表格线</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">\usepackage</span><span class="nb">{</span>makecell<span class="nb">}</span><span class="c">% 允许在表格中使用更多的命令和选项</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">\usepackage</span><span class="nb">{</span>tabularx<span class="nb">}</span> <span class="c">% 提供可自动调整宽度的表格</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">\usepackage</span><span class="nb">{</span>amssymb<span class="nb">}</span><span class="c">% 提供额外的数学符号</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">\usepackage</span><span class="nb">{</span>amsmath<span class="nb">}</span> <span class="c">% 提供数学公式和环境</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">\usepackage</span><span class="nb">{</span>setspace<span class="nb">}</span> <span class="c">% 控制行距</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span> <span class="c">% 支持插入图像</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">\usepackage</span><span class="nb">{</span>array,caption<span class="nb">}</span> <span class="c">% 提供更多的表格控制选项</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">\usepackage</span><span class="na">[labelfont=bf]</span><span class="nb">{</span>caption<span class="nb">}</span> <span class="c">% 设置标题的字体为粗体</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">\usepackage</span><span class="nb">{</span>tabu<span class="nb">}</span>                     <span class="c">% 表格插入</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="k">\usepackage</span><span class="nb">{</span>multirow<span class="nb">}</span>                 <span class="c">% 一般用以设计表格，将所行合并</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="k">\usepackage</span><span class="nb">{</span>multicol<span class="nb">}</span>                 <span class="c">% 合并多列</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">\usepackage</span><span class="nb">{</span>multirow<span class="nb">}</span>                <span class="c">% 合并多行</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="k">\usepackage</span><span class="nb">{</span>float<span class="nb">}</span>                    <span class="c">% 图片浮动</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="k">\usepackage</span><span class="nb">{</span>makecell<span class="nb">}</span> 
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="k">\usepackage</span>[colorlinks,
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>linkcolor=blue,      
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>anchorcolor=blue,  
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>citecolor=blue,        
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>]<span class="nb">{</span>hyperref<span class="nb">}</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="c">% \documentclass{article}</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="k">\usepackage</span><span class="nb">{</span>listings<span class="nb">}</span>  <span class="c">% 导入代码列表宏包</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="k">\usepackage</span><span class="nb">{</span>xcolor<span class="nb">}</span> <span class="c">% 导入颜色宏包</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="c">%New colors defined below</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="k">\definecolor</span><span class="nb">{</span>codegreen<span class="nb">}{</span>rgb<span class="nb">}{</span>0,0.6,0<span class="nb">}</span> <span class="c">% 代码中的注释颜色</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="k">\definecolor</span><span class="nb">{</span>codegray<span class="nb">}{</span>rgb<span class="nb">}{</span>0.5,0.5,0.5<span class="nb">}</span> <span class="c">% 代码中的行号和注释颜色</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="k">\definecolor</span><span class="nb">{</span>codepurple<span class="nb">}{</span>rgb<span class="nb">}{</span>0.58,0,0.82<span class="nb">}</span> <span class="c">% 代码中的关键字颜色</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="k">\definecolor</span><span class="nb">{</span>backcolour<span class="nb">}{</span>rgb<span class="nb">}{</span>0.95,0.95,0.92<span class="nb">}</span> <span class="c">% 代码的背景颜色</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="c">%Code listing style named &quot;mystyle&quot;</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="k">\lstdefinestyle</span><span class="nb">{</span>mystyle<span class="nb">}{</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    backgroundcolor=<span class="k">\color</span><span class="nb">{</span>backcolour<span class="nb">}</span>,  <span class="c">% 设置代码的背景颜色</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    commentstyle=<span class="k">\color</span><span class="nb">{</span>codegreen<span class="nb">}</span>,  <span class="c">% 设置代码中注释的颜色</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    keywordstyle=<span class="k">\color</span><span class="nb">{</span>magenta<span class="nb">}</span>,  <span class="c">% 设置代码中关键字的颜色</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    numberstyle=<span class="k">\tiny\color</span><span class="nb">{</span>codegray<span class="nb">}</span>,  <span class="c">% 设置代码中行号的颜色</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    stringstyle=<span class="k">\color</span><span class="nb">{</span>codepurple<span class="nb">}</span>,  <span class="c">% 设置代码中字符串的颜色</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    basicstyle=<span class="k">\ttfamily\footnotesize</span>,  <span class="c">% 设置代码的基本样式为等宽字体、小号字体</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>    breakatwhitespace=false,  <span class="c">% 控制代码在空白处是否换行</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    breaklines=true,  <span class="c">% 控制长代码是否自动换行</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    captionpos=b,  <span class="c">% 设置代码标题的位置为底部</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    keepspaces=true,  <span class="c">% 保留代码中的空格</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    numbers=left,  <span class="c">% 设置行号显示在代码的左侧</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    numbersep=5pt,  <span class="c">% 设置行号与代码之间的间距</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    showspaces=false,  <span class="c">% 控制是否显示代码中的空格</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    showstringspaces=false,  <span class="c">% 控制是否显示代码中字符串之间的空格</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    showtabs=false,  <span class="c">% 控制是否显示代码中的制表符</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    tabsize=2  <span class="c">% 设置制表符的大小为2个空格</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="nb">}</span>
-<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>
-<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="c">% 设置代码列表的样式为 &quot;mystyle&quot;</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="k">\lstset</span><span class="nb">{</span>style=mystyle<span class="nb">}</span>
+</blockquote>
+<h2 id="1">1. 宏包的引用</h2>
+<div class="highlight"><pre><span></span><code><span class="k">\documentclass</span><span class="na">[12pt,a4paper,utf8]</span><span class="nb">{</span>article<span class="nb">}</span> <span class="c">% 文档类设置为article，字体大小为12pt，纸张尺寸为A4，编码为utf8</span>
+<span class="k">\usepackage</span><span class="nb">{</span>ctex<span class="nb">}</span> <span class="c">% 使用ctex宏包以支持中文</span>
+<span class="k">\usepackage</span><span class="nb">{</span>url<span class="nb">}</span> <span class="c">% 支持在文档中插入URL</span>
+<span class="k">\usepackage</span><span class="nb">{</span>booktabs<span class="nb">}</span> <span class="c">% 提供漂亮的表格线</span>
+<span class="k">\usepackage</span><span class="nb">{</span>makecell<span class="nb">}</span><span class="c">% 允许在表格中使用更多的命令和选项</span>
+<span class="k">\usepackage</span><span class="nb">{</span>tabularx<span class="nb">}</span> <span class="c">% 提供可自动调整宽度的表格</span>
+<span class="k">\usepackage</span><span class="nb">{</span>amssymb<span class="nb">}</span><span class="c">% 提供额外的数学符号</span>
+<span class="k">\usepackage</span><span class="nb">{</span>amsmath<span class="nb">}</span> <span class="c">% 提供数学公式和环境</span>
+
+<span class="k">\usepackage</span><span class="nb">{</span>setspace<span class="nb">}</span> <span class="c">% 控制行距</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span> <span class="c">% 支持插入图像</span>
+<span class="k">\usepackage</span><span class="nb">{</span>array,caption<span class="nb">}</span> <span class="c">% 提供更多的表格控制选项</span>
+<span class="k">\usepackage</span><span class="na">[labelfont=bf]</span><span class="nb">{</span>caption<span class="nb">}</span> <span class="c">% 设置标题的字体为粗体</span>
+
+<span class="k">\usepackage</span><span class="nb">{</span>tabu<span class="nb">}</span>                     <span class="c">% 表格插入</span>
+<span class="k">\usepackage</span><span class="nb">{</span>multirow<span class="nb">}</span>                 <span class="c">% 一般用以设计表格，将所行合并</span>
+<span class="k">\usepackage</span><span class="nb">{</span>multicol<span class="nb">}</span>                 <span class="c">% 合并多列</span>
+<span class="k">\usepackage</span><span class="nb">{</span>multirow<span class="nb">}</span>                <span class="c">% 合并多行</span>
+<span class="k">\usepackage</span><span class="nb">{</span>float<span class="nb">}</span>                    <span class="c">% 图片浮动</span>
+<span class="k">\usepackage</span><span class="nb">{</span>makecell<span class="nb">}</span> 
+
+<span class="k">\usepackage</span>[colorlinks,
+linkcolor=blue,      
+anchorcolor=blue,  
+citecolor=blue,        
+]<span class="nb">{</span>hyperref<span class="nb">}</span>
+
+<span class="c">% \documentclass{article}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>listings<span class="nb">}</span>  <span class="c">% 导入代码列表宏包</span>
+
+<span class="k">\usepackage</span><span class="nb">{</span>xcolor<span class="nb">}</span> <span class="c">% 导入颜色宏包</span>
+
+<span class="c">%New colors defined below</span>
+<span class="k">\definecolor</span><span class="nb">{</span>codegreen<span class="nb">}{</span>rgb<span class="nb">}{</span>0,0.6,0<span class="nb">}</span> <span class="c">% 代码中的注释颜色</span>
+<span class="k">\definecolor</span><span class="nb">{</span>codegray<span class="nb">}{</span>rgb<span class="nb">}{</span>0.5,0.5,0.5<span class="nb">}</span> <span class="c">% 代码中的行号和注释颜色</span>
+<span class="k">\definecolor</span><span class="nb">{</span>codepurple<span class="nb">}{</span>rgb<span class="nb">}{</span>0.58,0,0.82<span class="nb">}</span> <span class="c">% 代码中的关键字颜色</span>
+<span class="k">\definecolor</span><span class="nb">{</span>backcolour<span class="nb">}{</span>rgb<span class="nb">}{</span>0.95,0.95,0.92<span class="nb">}</span> <span class="c">% 代码的背景颜色</span>
+
+<span class="c">%Code listing style named &quot;mystyle&quot;</span>
+<span class="k">\lstdefinestyle</span><span class="nb">{</span>mystyle<span class="nb">}{</span>
+    backgroundcolor=<span class="k">\color</span><span class="nb">{</span>backcolour<span class="nb">}</span>,  <span class="c">% 设置代码的背景颜色</span>
+    commentstyle=<span class="k">\color</span><span class="nb">{</span>codegreen<span class="nb">}</span>,  <span class="c">% 设置代码中注释的颜色</span>
+    keywordstyle=<span class="k">\color</span><span class="nb">{</span>magenta<span class="nb">}</span>,  <span class="c">% 设置代码中关键字的颜色</span>
+    numberstyle=<span class="k">\tiny\color</span><span class="nb">{</span>codegray<span class="nb">}</span>,  <span class="c">% 设置代码中行号的颜色</span>
+    stringstyle=<span class="k">\color</span><span class="nb">{</span>codepurple<span class="nb">}</span>,  <span class="c">% 设置代码中字符串的颜色</span>
+    basicstyle=<span class="k">\ttfamily\footnotesize</span>,  <span class="c">% 设置代码的基本样式为等宽字体、小号字体</span>
+    breakatwhitespace=false,  <span class="c">% 控制代码在空白处是否换行</span>
+    breaklines=true,  <span class="c">% 控制长代码是否自动换行</span>
+    captionpos=b,  <span class="c">% 设置代码标题的位置为底部</span>
+    keepspaces=true,  <span class="c">% 保留代码中的空格</span>
+    numbers=left,  <span class="c">% 设置行号显示在代码的左侧</span>
+    numbersep=5pt,  <span class="c">% 设置行号与代码之间的间距</span>
+    showspaces=false,  <span class="c">% 控制是否显示代码中的空格</span>
+    showstringspaces=false,  <span class="c">% 控制是否显示代码中字符串之间的空格</span>
+    showtabs=false,  <span class="c">% 控制是否显示代码中的制表符</span>
+    tabsize=2  <span class="c">% 设置制表符的大小为2个空格</span>
+<span class="nb">}</span>
+
+<span class="c">% 设置代码列表的样式为 &quot;mystyle&quot;</span>
+<span class="k">\lstset</span><span class="nb">{</span>style=mystyle<span class="nb">}</span>
 </code></pre></div>
-<h2 id="2">2. 三线表<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    <span class="c">% Written especially for 朱宇欣</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[!htp]
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        <span class="k">\centering</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="k">\setlength</span><span class="nb">{</span><span class="k">\tabcolsep</span><span class="nb">}{</span>16mm<span class="nb">}</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="k">\caption</span><span class="nb">{</span>本文所用符号的相关说明与解释<span class="nb">}</span><span class="k">\label</span><span class="nb">{</span>Tab:1<span class="nb">}</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>cc<span class="nb">}</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            <span class="k">\toprule</span><span class="na">[1.5pt]</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>            <span class="c">%\makebox[0.3\textwidth][c]{符号} &amp;  \makebox[0.4\textwidth][c]{意义} \\</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            符号 <span class="nb">&amp;</span> 意义 <span class="k">\\</span> 
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>            <span class="k">\midrule</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            <span class="s">$</span><span class="nb">x_{i</span><span class="m">1</span><span class="nb">}</span><span class="s">$</span> <span class="nb">&amp;</span> 一个品类在第i天的平均成本 <span class="k">\\</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>            <span class="s">$</span><span class="nb">x_{i</span><span class="m">2</span><span class="nb">}</span><span class="s">$</span> <span class="nb">&amp;</span> 一个品类在第i天的平均利润率 <span class="k">\\</span>  
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            <span class="s">$</span><span class="nb">y_i</span><span class="s">$</span>    <span class="nb">&amp;</span> 一个品类的销量 <span class="k">\\</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>            <span class="s">$</span><span class="nv">\alpha</span><span class="s">$</span> <span class="nb">&amp;</span> 平均成本相关系数 <span class="k">\\</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>            <span class="s">$</span><span class="nv">\beta</span><span class="s">$</span>  <span class="nb">&amp;</span> 平均利润率相关系数 <span class="k">\\</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>            <span class="s">$</span><span class="nv">\gamma</span><span class="s">$</span> <span class="nb">&amp;</span> 线性拟合常量 <span class="k">\\</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>            <span class="k">\bottomrule</span><span class="na">[1.5pt]</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        <span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+<h2 id="2">2. 三线表</h2>
+<div class="highlight"><pre><span></span><code>    <span class="c">% Written especially for 朱宇欣</span>
+    <span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[!htp]
+        <span class="k">\centering</span>
+        <span class="k">\setlength</span><span class="nb">{</span><span class="k">\tabcolsep</span><span class="nb">}{</span>16mm<span class="nb">}</span>
+        <span class="k">\caption</span><span class="nb">{</span>本文所用符号的相关说明与解释<span class="nb">}</span><span class="k">\label</span><span class="nb">{</span>Tab:1<span class="nb">}</span>
+        <span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>cc<span class="nb">}</span>
+            <span class="k">\toprule</span><span class="na">[1.5pt]</span>
+            <span class="c">%\makebox[0.3\textwidth][c]{符号} &amp;  \makebox[0.4\textwidth][c]{意义} \\</span>
+            符号 <span class="nb">&amp;</span> 意义 <span class="k">\\</span> 
+            <span class="k">\midrule</span>
+            <span class="s">$</span><span class="nb">x_{i</span><span class="m">1</span><span class="nb">}</span><span class="s">$</span> <span class="nb">&amp;</span> 一个品类在第i天的平均成本 <span class="k">\\</span>
+            <span class="s">$</span><span class="nb">x_{i</span><span class="m">2</span><span class="nb">}</span><span class="s">$</span> <span class="nb">&amp;</span> 一个品类在第i天的平均利润率 <span class="k">\\</span>  
+            <span class="s">$</span><span class="nb">y_i</span><span class="s">$</span>    <span class="nb">&amp;</span> 一个品类的销量 <span class="k">\\</span>
+            <span class="s">$</span><span class="nv">\alpha</span><span class="s">$</span> <span class="nb">&amp;</span> 平均成本相关系数 <span class="k">\\</span>
+            <span class="s">$</span><span class="nv">\beta</span><span class="s">$</span>  <span class="nb">&amp;</span> 平均利润率相关系数 <span class="k">\\</span>
+            <span class="s">$</span><span class="nv">\gamma</span><span class="s">$</span> <span class="nb">&amp;</span> 线性拟合常量 <span class="k">\\</span>
+            <span class="k">\bottomrule</span><span class="na">[1.5pt]</span>
+        <span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+    <span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
 </code></pre></div>
-<h2 id="3">3. 图片的插入<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c">% 单个图的插入</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[!htbp]
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="k">\centering</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="k">\includegraphics</span><span class="na">[width=.6\textwidth]</span><span class="nb">{</span>图片名称<span class="nb">}</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c">% 图片并列</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[htbp]
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="k">\centering</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="k">\begin</span><span class="nb">{</span>minipage<span class="nb">}</span>[t]<span class="nb">{</span>0.48<span class="k">\textwidth</span><span class="nb">}</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>            <span class="k">\centering</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>            <span class="k">\includegraphics</span><span class="na">[width=6cm]</span><span class="nb">{</span>图片名称<span class="nb">}</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>            <span class="k">\caption</span><span class="nb">{</span>图片标题<span class="nb">}</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        <span class="k">\end</span><span class="nb">{</span>minipage<span class="nb">}</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        <span class="k">\begin</span><span class="nb">{</span>minipage<span class="nb">}</span>[t]<span class="nb">{</span>0.48<span class="k">\textwidth</span><span class="nb">}</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>            <span class="k">\centering</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>            <span class="k">\includegraphics</span><span class="na">[width=6cm]</span><span class="nb">{</span>图片名称<span class="nb">}</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>            <span class="k">\caption</span><span class="nb">{</span>图片标题<span class="nb">}</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        <span class="k">\end</span><span class="nb">{</span>minipage<span class="nb">}</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+<h2 id="3">3. 图片的插入</h2>
+<div class="highlight"><pre><span></span><code><span class="c">% 单个图的插入</span>
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[!htbp]
+        <span class="k">\centering</span>
+        <span class="k">\includegraphics</span><span class="na">[width=.6\textwidth]</span><span class="nb">{</span>图片名称<span class="nb">}</span>
+    <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+
+
+<span class="c">% 图片并列</span>
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[htbp]
+        <span class="k">\centering</span>
+        <span class="k">\begin</span><span class="nb">{</span>minipage<span class="nb">}</span>[t]<span class="nb">{</span>0.48<span class="k">\textwidth</span><span class="nb">}</span>
+            <span class="k">\centering</span>
+            <span class="k">\includegraphics</span><span class="na">[width=6cm]</span><span class="nb">{</span>图片名称<span class="nb">}</span>
+            <span class="k">\caption</span><span class="nb">{</span>图片标题<span class="nb">}</span>
+        <span class="k">\end</span><span class="nb">{</span>minipage<span class="nb">}</span>
+        <span class="k">\begin</span><span class="nb">{</span>minipage<span class="nb">}</span>[t]<span class="nb">{</span>0.48<span class="k">\textwidth</span><span class="nb">}</span>
+            <span class="k">\centering</span>
+            <span class="k">\includegraphics</span><span class="na">[width=6cm]</span><span class="nb">{</span>图片名称<span class="nb">}</span>
+            <span class="k">\caption</span><span class="nb">{</span>图片标题<span class="nb">}</span>
+        <span class="k">\end</span><span class="nb">{</span>minipage<span class="nb">}</span>
+    <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 </code></pre></div>
-<h2 id="4">4. 一些零碎的语句<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">\textbf</span><span class="nb">{}</span> <span class="c">% 文字加粗</span>
+<h2 id="4">4. 一些零碎的语句</h2>
+<div class="highlight"><pre><span></span><code><span class="k">\textbf</span><span class="nb">{}</span> <span class="c">% 文字加粗</span>
 </code></pre></div>
-<h2 id="4_1">4. 附录相关<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    <span class="c">%附录</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="k">\appendix</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="k">\section</span><span class="nb">{</span>主程序--python 源程序<span class="nb">}</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">\begin</span><span class="nb">{</span>lstlisting<span class="nb">}</span>[language=Python, caption=附录名称]
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>...
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">\end</span><span class="nb">{</span>lstlisting<span class="nb">}</span>
+<h2 id="4_1">4. 附录相关</h2>
+<div class="highlight"><pre><span></span><code>    <span class="c">%附录</span>
+    <span class="k">\appendix</span>
+    <span class="k">\section</span><span class="nb">{</span>主程序--python 源程序<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>lstlisting<span class="nb">}</span>[language=Python, caption=附录名称]
+
+...
+
+<span class="k">\end</span><span class="nb">{</span>lstlisting<span class="nb">}</span>
 </code></pre></div>
 
 
@@ -654,13 +656,60 @@
           
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
       </main>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome ！" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Welcome ！
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../Markdown%E7%9B%B8%E5%85%B3/practice/" class="md-footer__link md-footer__link--next" aria-label="Next: Markdown 学习笔记 &lt;/h1&gt;" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Markdown 学习笔记 </h1>
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Wayne
+    </div>
   
   
 </div>
@@ -711,7 +760,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "admonition", "navigation.footer"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
