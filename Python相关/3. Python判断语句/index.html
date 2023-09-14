@@ -435,6 +435,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#if-else" class="md-nav__link">
+    if else 语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-elif" class="md-nav__link">
+    if elif 语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    嵌套判断
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -486,6 +507,27 @@
         <li class="md-nav__item">
   <a href="#if" class="md-nav__link">
     if语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-else" class="md-nav__link">
+    if else 语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-elif" class="md-nav__link">
+    if elif 语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    嵌套判断
   </a>
   
 </li>
@@ -549,6 +591,97 @@ How time flies!
 输入你的年龄:16
 You are still a child
 </code></pre></div></p>
+<hr />
+<h2 id="if-else">if else 语句</h2>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># if else语句的应用</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;输入年龄:&quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;你已成年&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;你还未成年&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>输入年龄:22
+你已成年
+</code></pre></div></p>
+<hr />
+<h2 id="if-elif">if elif 语句</h2>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># if elif else 多条件判断语句</span>
+<span class="n">math_grade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;输入你的高数成绩：&quot;</span><span class="p">))</span>
+<span class="n">point</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;输入你的绩点：&quot;</span><span class="p">))</span>
+<span class="n">competition</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;是否获得过数模国奖：&quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">math_grade</span> <span class="o">&gt;=</span> <span class="mi">95</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;佬&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">point</span> <span class="o">&gt;=</span> <span class="mf">3.9</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;神&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">competition</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;佬中佬&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;还行&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>输入你的高数成绩：94
+输入你的绩点：3.8
+是否获得过数模国奖：是
+佬中佬
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># 程序改进</span>
+<span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;输入你的高数成绩：&quot;</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="mi">95</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;佬&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;输入你的绩点：&quot;</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="mf">3.9</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;神&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="nb">bool</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;是否获得过数模国奖：&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;佬中佬&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;还行&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>输入你的高数成绩：94
+输入你的绩点：3.8
+是否获得过数模国奖：是
+佬中佬
+</code></pre></div></p>
+<hr />
+<h2 id="_2">嵌套判断</h2>
+<p>if elif else 可以自由组合，满足缩进的要求即可.</p>
+<p>例如：下面要判断：</p>
+<p><strong>1.必须大于18岁小于30岁.</strong></p>
+<p><strong>2.入职时间大于两年，或级别大于三才可领取.</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 练习题</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;你的年龄：&quot;</span><span class="p">))</span>
+<span class="n">year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;入职时间：&quot;</span><span class="p">))</span>
+<span class="n">level</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;级别：&quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;=</span> <span class="mi">30</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">year</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;可领取&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">level</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;可领取&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sorry&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;too old&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;too young&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>你的年龄：19
+入职时间：1
+级别：2
+sorry
+</code></pre></div></p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 
