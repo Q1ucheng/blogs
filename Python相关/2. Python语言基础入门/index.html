@@ -409,6 +409,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Mkdocs-material/mkdocs%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        Customize your mkdocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Mkdocs-material/mkdocs%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE%E4%B8%ADerror%E7%9A%84%E8%A7%A3%E5%86%B3/" class="md-nav__link">
         mkdocs部署配置中error的解决
       </a>
@@ -844,8 +858,8 @@
 <p>这页内容中包含最基础的Python语法.</p>
 </blockquote>
 <h2 id="11-python">1.1 第一个python程序</h2>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world!&quot;</span><span class="p">)</span>
-</code></pre></div>
+<pre><code class="language-python">print(&quot;hello world!&quot;)
+</code></pre>
 <hr />
 <h2 id="12-ide-pycharm">1.2 IDE 集成开发环境  PyCharm</h2>
 <p><a href="https://www.jetbrains.com/pycharm/download/">PyCharm下载</a></p>
@@ -860,24 +874,24 @@
 <li><strong>字符串</strong>（由任意数量的字符组成，<strong>字符串需要用双引号包括起来</strong>）</li>
 <li>列表、元组、集合、字典（此处后续会讲到）</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mf">13.14</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wayne&#39;s blogs&quot;</span><span class="p">)</span>
-</code></pre></div>
+<pre><code class="language-py">print(123)
+print(13.14)
+print(&quot;Wayne's blogs&quot;)
+</code></pre>
 <hr />
 <h2 id="14">1.4 注释</h2>
 <h3 id="_2">单行注释</h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># 一个#号表示单行注释，与后面的文本注释以一个空格隔开</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
-</code></pre></div>
+<pre><code class="language-py"># 一个#号表示单行注释，与后面的文本注释以一个空格隔开
+print(&quot;hello world&quot;)
+</code></pre>
 <h3 id="_3">多行注释</h3>
-<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    用三个双引号</span>
-<span class="sd">    表示</span>
-<span class="sd">    多行注释</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
-</code></pre></div>
+<pre><code class="language-py">&quot;&quot;&quot;
+    用三个双引号
+    表示
+    多行注释
+&quot;&quot;&quot;
+print(&quot;hello&quot;)
+</code></pre>
 <hr />
 <h2 id="16">1.6 变量</h2>
 <blockquote>
@@ -886,70 +900,71 @@
 <p><strong>变量名称 = 变量的值</strong></p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="c1"># python 变量相关操作</span>
+<pre><code class="language-py"># python 变量相关操作
 
-<span class="c1"># 定义一个变量，记录钱包余额</span>
-<span class="n">money</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="c1"># 通过print语句，输出变量记录的内容</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;钱包还有：&quot;</span><span class="p">,</span> <span class="n">money</span><span class="p">)</span>
+# 定义一个变量，记录钱包余额
+money = 50
+# 通过print语句，输出变量记录的内容
+print(&quot;钱包还有：&quot;, money)
 
-<span class="c1"># 花费10元</span>
-<span class="n">money</span> <span class="o">=</span> <span class="n">money</span> <span class="o">-</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;花费10元，还剩余：&quot;</span><span class="p">,</span> <span class="n">money</span><span class="p">,</span> <span class="s2">&quot;元&quot;</span><span class="p">)</span>
-</code></pre></div>
+# 花费10元
+money = money - 10
+print(&quot;花费10元，还剩余：&quot;, money, &quot;元&quot;)
+
+</code></pre>
 <p>复制代码可以使用快捷键<code>CTRL</code> +<code>D</code>.</p>
 <h2 id="17">1.7 数据类型</h2>
 <p>第一阶段只接触字符串，整型，浮点型.</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># 判断数据类型以及type()语句的使用</span>
+<pre><code class="language-py"># 判断数据类型以及type()语句的使用
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="s2">&quot;wayne&quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">123</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">13.14</span><span class="p">))</span>
+print(type(&quot;wayne&quot;))
+print(type(123))
+print(type(13.14))
 
-<span class="c1"># type查看变量中储存的数据类型</span>
+# type查看变量中储存的数据类型
 
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
-<span class="n">name_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c1"># 查看数据的类型</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">name_type</span><span class="p">)</span>
-</code></pre></div>
-输出如下结果：
-<div class="highlight"><pre><span></span><code>&lt;class &#39;str&#39;&gt;
-&lt;class &#39;int&#39;&gt;
-&lt;class &#39;float&#39;&gt;
-&lt;class &#39;str&#39;&gt;
-</code></pre></div></p>
+name = &quot;hello&quot;
+name_type = type(name) # 查看数据的类型
+print(name_type)
+</code></pre>
+<p>输出如下结果：</p>
+<pre><code>&lt;class 'str'&gt;
+&lt;class 'int'&gt;
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;
+</code></pre>
 <h2 id="18">1.8 数据类型转换</h2>
-<p>常见的转换语句：
-<div class="highlight"><pre><span></span><code><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">#将x转换为一个整数</span>
-<span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">#将x转换为一个浮点数</span>
-<span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">#将对象x转换为字符串</span>
-</code></pre></div></p>
+<p>常见的转换语句：</p>
+<pre><code class="language-py">int(x) #将x转换为一个整数
+float(x) #将x转换为一个浮点数
+str(x) #将对象x转换为字符串
+</code></pre>
 <p>（与之前的type()语句相同，可以用print直接输出）</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># 数据类型转换</span>
-<span class="n">a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">a</span><span class="p">)</span>
+<pre><code class="language-py"># 数据类型转换
+a = str(11)
+print(type(a), a)
 
-<span class="n">b</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">13.14</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="n">b</span><span class="p">)</span>
+b = str(13.14)
+print(type(b), b)
 
-<span class="c1"># 将字符串转换成数字</span>
-<span class="n">c</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;666&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">),</span> <span class="n">c</span><span class="p">)</span>
+# 将字符串转换成数字
+c = int(&quot;666&quot;)
+print(type(c), c)
 
-<span class="n">d</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;66.6&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">),</span> <span class="n">d</span><span class="p">)</span>
+d = float(&quot;66.6&quot;)
+print(type(d), d)
 
-<span class="c1"># 浮点数转整数</span>
-<span class="n">p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">11.545</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="n">p</span><span class="p">)</span>
-</code></pre></div>
-<p><div class="highlight"><pre><span></span><code>&lt;class &#39;str&#39;&gt; 11
-&lt;class &#39;str&#39;&gt; 13.14
-&lt;class &#39;int&#39;&gt; 666
-&lt;class &#39;float&#39;&gt; 66.6
-&lt;class &#39;int&#39;&gt; 11
-</code></pre></div>
-浮点数转整数会丢失精度.</p>
+# 浮点数转整数
+p = int(11.545)
+print(type(p), p)
+</code></pre>
+<pre><code>&lt;class 'str'&gt; 11
+&lt;class 'str'&gt; 13.14
+&lt;class 'int'&gt; 666
+&lt;class 'float'&gt; 66.6
+&lt;class 'int'&gt; 11
+</code></pre>
+<p>浮点数转整数会丢失精度.</p>
 <hr />
 <h2 id="19">1.9 标识符</h2>
 <ul>
@@ -962,55 +977,55 @@
 <p><code>//</code> : 取整除</p>
 <hr />
 <h2 id="111">1.11 字符串扩展</h2>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># 单引号字符串</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;wayne&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">name</span><span class="p">)</span>
-<span class="c1"># 双引号字符串</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;wayne&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">name</span><span class="p">)</span>
-<span class="c1"># 三引号字符串</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">bruce</span>
-<span class="s2">wayne</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">name</span><span class="p">)</span>
+<pre><code class="language-py"># 单引号字符串
+name = 'wayne'
+print(type(name), name)
+# 双引号字符串
+name = &quot;wayne&quot;
+print(type(name), name)
+# 三引号字符串
+name = &quot;&quot;&quot;
+bruce
+wayne
+&quot;&quot;&quot;
+print(type(name), name)
 
-<span class="c1"># 转义字符的使用</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">hello</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">name</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>&lt;class &#39;str&#39;&gt; wayne
-&lt;class &#39;str&#39;&gt; wayne
-&lt;class &#39;str&#39;&gt; 
+# 转义字符的使用
+name = &quot;\&quot;hello\&quot;&quot;
+print(type(name), name)
+</code></pre>
+<pre><code>&lt;class 'str'&gt; wayne
+&lt;class 'str'&gt; wayne
+&lt;class 'str'&gt; 
 bruce
 wayne
 
-&lt;class &#39;str&#39;&gt; &quot;hello&quot;
-</code></pre></div></p>
+&lt;class 'str'&gt; &quot;hello&quot;
+</code></pre>
 <hr />
-<p><div class="highlight"><pre><span></span><code><span class="c1"># 字符串拼接</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;wayne&quot;</span>
-<span class="n">address</span> <span class="o">=</span> <span class="s2">&quot;西北工业大学&quot;</span>
-<span class="n">tel</span> <span class="o">=</span> <span class="s2">&quot;15907218668&quot;</span> <span class="c1">#整型需要加双引号才能与字符串相接</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;我是&quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;来自&quot;</span> <span class="o">+</span> <span class="n">address</span> <span class="o">+</span> <span class="n">tel</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>我是wayne来自西北工业大学15907218668
-</code></pre></div></p>
+<pre><code class="language-py"># 字符串拼接
+name = &quot;wayne&quot;
+address = &quot;西北工业大学&quot;
+tel = &quot;15907218668&quot; #整型需要加双引号才能与字符串相接
+print(&quot;我是&quot; + name + &quot;来自&quot; + address + tel)
+</code></pre>
+<pre><code>我是wayne来自西北工业大学15907218668
+</code></pre>
 <hr />
-<p><div class="highlight"><pre><span></span><code><span class="c1"># 占位的方式完成拼接</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;西北工业大学&quot;</span>
-<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;世界顶尖院校：</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">name</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<pre><code class="language-py"># 占位的方式完成拼接
+name = &quot;西北工业大学&quot;
+message = &quot;世界顶尖院校：%s&quot; % name
+print(message)
 
-<span class="c1"># 完成数字与字符串的拼接</span>
-<span class="n">class_num</span> <span class="o">=</span> <span class="mi">2022</span>
-<span class="n">avg_salary</span> <span class="o">=</span> <span class="mi">2022301578</span>
-<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;西北工业大学机电学院</span><span class="si">%s</span><span class="s2">级本科生，学号</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">class_num</span><span class="p">,</span> <span class="n">avg_salary</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>世界顶尖院校：西北工业大学
+# 完成数字与字符串的拼接
+class_num = 2022
+avg_salary = 2022301578
+message = &quot;西北工业大学机电学院%s级本科生，学号%s&quot; % (class_num, avg_salary)
+print(message)
+</code></pre>
+<pre><code>世界顶尖院校：西北工业大学
 西北工业大学机电学院2022级本科生，学号2022301578
-</code></pre></div></p>
+</code></pre>
 <blockquote>
 <ul>
 <li>
@@ -1025,60 +1040,61 @@ wayne
 </ul>
 </blockquote>
 <hr />
-<p><div class="highlight"><pre><span></span><code><span class="c1"># 格式精确化</span>
-<span class="n">num1</span> <span class="o">=</span> <span class="mi">11</span>
-<span class="n">num2</span> <span class="o">=</span> <span class="mf">11.345</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%5d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">num1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%1d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">num1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%7.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">num2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">num2</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>   11
+<pre><code class="language-py"># 格式精确化
+num1 = 11
+num2 = 11.345
+print(&quot;%5d&quot; % num1)
+print(&quot;%1d&quot; % num1)
+print(&quot;%7.2f&quot; % num2)
+print(&quot;%.2f&quot; % num2)
+</code></pre>
+<pre><code>   11
 11
   11.35
 11.35
-</code></pre></div></p>
+</code></pre>
 <hr />
-<p><div class="highlight"><pre><span></span><code><span class="c1"># 第二种字符串的格式化方法：f{占位}</span>
+<pre><code class="language-python"># 第二种字符串的格式化方法：f{占位}
 
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;wayne&quot;</span>
-<span class="n">year</span> <span class="o">=</span> <span class="mi">2004</span>
-<span class="c1"># f: format</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;我是</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">出生&quot;</span><span class="p">)</span>
+name = &quot;wayne&quot;
+year = 2004
+# f: format
+print(f&quot;我是{name},{year}出生&quot;)
 
-<span class="c1"># 对表达式进行字符串格式化</span>
+# 对表达式进行字符串格式化
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1 * 1的结果是：</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="mi">1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 * 2的结果是：</span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;字符串在python中的类型名是：</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">type</span><span class="p">(</span><span class="s2">&quot;字符串&quot;</span><span class="p">))</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>我是wayne,2004出生
+print(&quot;1 * 1的结果是：%d&quot; % (1 * 1))
+print(f&quot;1 * 2的结果是：{1 * 2}&quot;)
+print(&quot;字符串在python中的类型名是：%s&quot; % type(&quot;字符串&quot;))
+</code></pre>
+<pre><code>我是wayne,2004出生
 1 * 1的结果是：1
 1 * 2的结果是：2
-字符串在python中的类型名是：&lt;class &#39;str&#39;&gt;
-</code></pre></div></p>
+字符串在python中的类型名是：&lt;class 'str'&gt;
+</code></pre>
 <h2 id="112">1.12 数据输入</h2>
 <blockquote>
-<p>使用input语句实现数据输入.
-<div class="highlight"><pre><span></span><code><span class="c1"># 使用input语句获取键盘的输入信息</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;give me a number&quot;</span><span class="p">)</span>
-<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;your number is </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+<p>使用input语句实现数据输入.</p>
+</blockquote>
+<pre><code class="language-python"># 使用input语句获取键盘的输入信息
+print(&quot;give me a number&quot;)
+name = input()
+print(&quot;your number is %s&quot; % name)
 
-<span class="c1"># 程序的改进：input(提示信息)，可以用在使用者输入内容之前显示提示信息.</span>
-<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;give me a number&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;your number is </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+# 程序的改进：input(提示信息)，可以用在使用者输入内容之前显示提示信息.
+name = input(&quot;give me a number&quot;)
+print(&quot;your number is %s&quot; % name)
 
-<span class="c1"># input语句中的数据类型</span>
-<span class="n">message</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;give me a message&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;your message type is </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+# input语句中的数据类型
+message = input(&quot;give me a message&quot;)
+print(&quot;your message type is %s&quot;, type(message))
 
-<span class="c1"># 数据类型的转换</span>
-<span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;give me a number&quot;</span><span class="p">)</span>
-<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the type is: &quot;</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>give me a number
+# 数据类型的转换
+num = input(&quot;give me a number&quot;)
+num = int(num)
+print(&quot;the type is: &quot;,type(num))
+</code></pre>
+<pre><code>give me a number
 3
 your number is 3
 give me a number
@@ -1086,24 +1102,23 @@ give me a number
 your number is 3
 give me a message
 123
-your message type is %s &lt;class &#39;str&#39;&gt;
+your message type is %s &lt;class 'str'&gt;
 give me a number
 123
-the type is:  &lt;class &#39;int&#39;&gt;
-</code></pre></div>
-<strong>注意：input语句默认接收的类型都是字符串！</strong></p>
-</blockquote>
+the type is:  &lt;class 'int'&gt;
+</code></pre>
+<p><strong>注意：input语句默认接收的类型都是字符串！</strong></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2023</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 18, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2023</span>
       
     
   </small>

@@ -409,6 +409,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Mkdocs-material/mkdocs%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        Customize your mkdocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Mkdocs-material/mkdocs%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE%E4%B8%ADerror%E7%9A%84%E8%A7%A3%E5%86%B3/" class="md-nav__link">
         mkdocs部署配置中error的解决
       </a>
@@ -759,55 +773,49 @@
 
 <h1 id="python">Python循环语句</h1>
 <h2 id="1-while">1. while循环的基础案例</h2>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># while基础应用</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>python
+<pre><code class="language-py"># while基础应用
+i = 0
+while i &lt; 3:
+    print(&quot;python&quot;)
+    i += 1
+</code></pre>
+<pre><code>python
 python
 python
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># while基础应用: 求1到100的和</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">sum_num</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
-    <span class="n">sum_num</span> <span class="o">=</span> <span class="n">sum_num</span> <span class="o">+</span> <span class="n">i</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sum_num</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>5050
-</code></pre></div></p>
+</code></pre>
+<pre><code class="language-py"># while基础应用: 求1到100的和
+i = 1
+sum_num = 0
+while i &lt;= 100:
+    sum_num = sum_num + i
+    i += 1
+print(sum_num)
+</code></pre>
+<pre><code>5050
+</code></pre>
 <hr />
 <h2 id="2-while">2. while的嵌套循环</h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>补充知识：</p>
-<ol>
-<li>
-<p>实现print()不换行：print("something", end='')</p>
-</li>
-<li>
-<p>实现对齐：加入制表符 \t</p>
-</li>
-<li>
-<p>实现print()换行：print()，空内容即可</p>
-</li>
-</ol>
-</div>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># 打印九九乘法表</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">:</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-        <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">()</span> <span class="c1">#print空内容以实现换行</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>1 * 1 = 1   
+<p>!!! note</p>
+<pre><code>补充知识：
+
+1. 实现print()不换行：print("something", end='')
+
+2. 实现对齐：加入制表符 \t
+
+3. 实现print()换行：print()，空内容即可
+</code></pre>
+<pre><code class="language-py"># 打印九九乘法表
+i = 1
+while i &lt; 10:
+    j = 1
+    while j &lt;= i:
+        p = i * j
+        print(f&quot;{i} * {j} = {p}\t&quot;, end='')
+        j += 1
+    i += 1
+    print() #print空内容以实现换行
+</code></pre>
+<pre><code>1 * 1 = 1   
 2 * 1 = 2   2 * 2 = 4   
 3 * 1 = 3   3 * 2 = 6   3 * 3 = 9   
 4 * 1 = 4   4 * 2 = 8   4 * 3 = 12  4 * 4 = 16  
@@ -816,67 +824,66 @@ python
 7 * 1 = 7   7 * 2 = 14  7 * 3 = 21  7 * 4 = 28  7 * 5 = 35  7 * 6 = 42  7 * 7 = 49  
 8 * 1 = 8   8 * 2 = 16  8 * 3 = 24  8 * 4 = 32  8 * 5 = 40  8 * 6 = 48  8 * 7 = 56  8 * 8 = 64  
 9 * 1 = 9   9 * 2 = 18  9 * 3 = 27  9 * 4 = 36  9 * 5 = 45  9 * 6 = 54  9 * 7 = 63  9 * 8 = 72  9 * 9 = 81  
-</code></pre></div></p>
+
+</code></pre>
 <hr />
 <h2 id="3-for">3. for 循环</h2>
 <h3 id="31-for">3.1 for循环基础语法</h3>
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">临时变量</span> <span class="ow">in</span> <span class="n">待处理数据集</span><span class="p">(</span><span class="n">序列类型</span><span class="p">)</span><span class="err">：</span>
-    <span class="n">循环满足条件时执行的代码</span>
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">数数有几个？</p>
-<p>定义字符串变量name， 统计有多少个英文字母“a”，内容为："my name is Wayne"</p>
-</div>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># for循环练习</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;my name is Wayne&quot;</span>
-<span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span><span class="p">:</span>
-        <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;my name is Wayne中有</span><span class="si">{</span><span class="n">cnt</span><span class="si">}</span><span class="s2">个a&quot;</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>my name is Wayne中有4个a
-</code></pre></div></p>
+<pre><code class="language-py">for 临时变量 in 待处理数据集(序列类型)：
+    循环满足条件时执行的代码
+</code></pre>
+<p>!!! note "数数有几个？"</p>
+<pre><code>定义字符串变量name， 统计有多少个英文字母“a”，内容为："my name is Wayne"
+</code></pre>
+<pre><code class="language-py"># for循环练习
+name = &quot;my name is Wayne&quot;
+cnt = 0
+for x in name:
+    if x == &quot;a&quot;:
+        cnt += 1
+print(f&quot;my name is Wayne中有{cnt}个a&quot;)
+</code></pre>
+<pre><code>my name is Wayne中有4个a
+</code></pre>
 <h3 id="32-range">3.2 range语句</h3>
 <blockquote>
 <p>range语句帮助我们生成数字序列.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="c1"># range基本用法</span>
-<span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="c1"># 获取一个从0开始到num结束的数字序列</span>
-<span class="nb">range</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span> <span class="c1"># 获取一个从num1开始到num2结束的数字序列</span>
-<span class="nb">range</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span> <span class="c1"># 获取一个从num1开始到num2结束的数字序列, 步长为step</span>
-</code></pre></div>
+<pre><code class="language-py"># range基本用法
+range(num) # 获取一个从0开始到num结束的数字序列
+range(num1, num2) # 获取一个从num1开始到num2结束的数字序列
+range(num1, num2, step) # 获取一个从num1开始到num2结束的数字序列, 步长为step
+</code></pre>
 <h3 id="33">3.3 变量作用域</h3>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># 一个规范问题</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<pre><code class="language-py"># 一个规范问题
+i = 0
+for i in range(5):
+    print(i)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># 若没有在for前加上对i的定义，程序会出现warning</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>0
+print(i) # 若没有在for前加上对i的定义，程序会出现warning
+</code></pre>
+<pre><code>0
 1
 2
 3
 4
 4
-</code></pre></div></p>
+</code></pre>
 <hr />
 <h2 id="4-for">4. for循环的嵌套</h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>用for循环嵌套打印九九乘法表.</p>
-</div>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># 用for循环打印九九乘法表</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">j</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">()</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>1 * 1 = 1   
+<p>!!! note </p>
+<pre><code>用for循环嵌套打印九九乘法表.
+</code></pre>
+<pre><code class="language-py"># 用for循环打印九九乘法表
+i = 1
+j = 1
+for i in range(1, 10):
+    for j in range(1, i+1):
+        p = i * j
+        print(f&quot;{i} * {j} = {p}\t&quot;, end='')
+    print()
+</code></pre>
+<pre><code>1 * 1 = 1   
 2 * 1 = 2   2 * 2 = 4   
 3 * 1 = 3   3 * 2 = 6   3 * 3 = 9   
 4 * 1 = 4   4 * 2 = 8   4 * 3 = 12  4 * 4 = 16  
@@ -885,37 +892,38 @@ python
 7 * 1 = 7   7 * 2 = 14  7 * 3 = 21  7 * 4 = 28  7 * 5 = 35  7 * 6 = 42  7 * 7 = 49  
 8 * 1 = 8   8 * 2 = 16  8 * 3 = 24  8 * 4 = 32  8 * 5 = 40  8 * 6 = 48  8 * 7 = 56  8 * 8 = 64  
 9 * 1 = 9   9 * 2 = 18  9 * 3 = 27  9 * 4 = 36  9 * 5 = 45  9 * 6 = 54  9 * 7 = 63  9 * 8 = 72  9 * 9 = 81  
-</code></pre></div></p>
+</code></pre>
 <h2 id="5-breakcontinue">5. break和continue</h2>
 <p>continue结束本次循环，进入下一次.</p>
 <p>break直接结束循环.</p>
 <h2 id="6">6. 循环综合练习</h2>
-<div class="admonition note">
-<p class="admonition-title">发工资</p>
-<p>某公司账户有10000元，给20名员工发工资。</p>
-<ol>
-<li>员工编号1到20，从编号1开始，一次领取工资，每人可领取1000元</li>
-</ol>
-<p>2.领工资时，判断员工的绩效分（1~10随机生成），低于5不发工资，换下一位。</p>
-<p>3.工资发完就结束。</p>
-<p>4.打印出发工资的情况。 </p>
-</div>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># 发工资</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="n">p</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">):</span>
-    <span class="n">num</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;员工</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">,绩效分</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">,低于5,不发工资&quot;</span><span class="p">)</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">:</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">-</span> <span class="mi">1000</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;向员工</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">发放工资1000元,账户余额</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;工资发完了&quot;</span><span class="p">)</span>
-            <span class="k">break</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>员工1,绩效分2,低于5,不发工资
+<p>!!! note "发工资"</p>
+<pre><code>某公司账户有10000元，给20名员工发工资。
+
+1. 员工编号1到20，从编号1开始，一次领取工资，每人可领取1000元
+
+   2.领工资时，判断员工的绩效分（1~10随机生成），低于5不发工资，换下一位。
+
+   3.工资发完就结束。
+
+   4.打印出发工资的情况。
+</code></pre>
+<pre><code class="language-py"># 发工资
+import random
+p = 10000
+for x in range(1, 21):
+    num = random.randint(1, 10)
+    if num &lt; 5:
+        print(f&quot;员工{x},绩效分{num},低于5,不发工资&quot;)
+        continue
+    if num &gt;= 5:
+        p = p - 1000
+        print(f&quot;向员工{x}发放工资1000元,账户余额{p}&quot;)
+        if p == 0:
+            print(&quot;工资发完了&quot;)
+            break
+</code></pre>
+<pre><code>员工1,绩效分2,低于5,不发工资
 员工2,绩效分1,低于5,不发工资
 向员工3发放工资1000元,账户余额9000
 向员工4发放工资1000元,账户余额8000
@@ -931,18 +939,18 @@ python
 向员工14发放工资1000元,账户余额1000
 向员工15发放工资1000元,账户余额0
 工资发完了
-</code></pre></div></p>
+</code></pre>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2023</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 18, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2023</span>
       
     
   </small>

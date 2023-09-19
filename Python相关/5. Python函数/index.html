@@ -409,6 +409,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Mkdocs-material/mkdocs%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        Customize your mkdocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Mkdocs-material/mkdocs%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE%E4%B8%ADerror%E7%9A%84%E8%A7%A3%E5%86%B3/" class="md-nav__link">
         mkdocs部署配置中error的解决
       </a>
@@ -691,53 +705,53 @@
 
 <h1 id="python">Python函数</h1>
 <h2 id="1">1. 函数的定义</h2>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">函数名</span><span class="p">(</span><span class="n">传入参数</span><span class="p">)</span><span class="err">：</span>
-    <span class="n">函数体</span>
-    <span class="k">return</span> <span class="n">返回值</span>
-</code></pre></div>
+<pre><code class="language-py">def 函数名(传入参数)：
+    函数体
+    return 返回值
+</code></pre>
 <hr />
 <h2 id="2">2. 函数的参数与返回值</h2>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># 函数的参数</span>
-<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>  <span class="c1"># x，y为形式参数</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-    <span class="k">return</span> <span class="n">result</span> <span class="c1"># 函数体return后的语句不执行</span>
+<pre><code class="language-py"># 函数的参数
+def add(x, y):  # x，y为形式参数
+    result = x + y
+    return result # 函数体return后的语句不执行
 
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># 1，2为实际参数</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>3
-</code></pre></div></p>
+r = add(1, 2)  # 1，2为实际参数
+print(r)
+</code></pre>
+<pre><code>3
+</code></pre>
 <hr />
 <h2 id="3-none">3. None类型</h2>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">say_hi</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hi&quot;</span><span class="p">)</span>
+<pre><code class="language-py">def say_hi():
+    print(&quot;hi&quot;)
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">say_hi</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;无返回值函数返回的是：</span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;无返回值函数返回的类型是：</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>hi
+result = say_hi()
+print(f&quot;无返回值函数返回的是：{result}&quot;)
+print(f&quot;无返回值函数返回的类型是：{type(result)}&quot;)
+</code></pre>
+<pre><code>hi
 无返回值函数返回的是：None
-无返回值函数返回的类型是：&lt;class &#39;NoneType&#39;&gt;
-</code></pre></div>
-<strong>None可以配合if判断做相关处理</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># None用于if判断</span>
-<span class="k">def</span> <span class="nf">check_age</span><span class="p">(</span><span class="n">age</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">&quot;good&quot;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
+无返回值函数返回的类型是：&lt;class 'NoneType'&gt;
+</code></pre>
+<p><strong>None可以配合if判断做相关处理</strong></p>
+<pre><code class="language-py"># None用于if判断
+def check_age(age):
+    if age &gt; 18:
+        return &quot;good&quot;
+    else:
+        return None
 
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">check_age</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;未成年&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;已成年&quot;</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>未成年
-</code></pre></div></p>
+result = check_age(16)
+if not result:
+    print(&quot;未成年&quot;)
+else:
+    print(&quot;已成年&quot;)
+</code></pre>
+<pre><code>未成年
+</code></pre>
 <h2 id="4">4. 变量作用域</h2>
 <blockquote>
 <ul>
@@ -745,107 +759,109 @@
 <li>全局变量定义在函数体外</li>
 </ul>
 </blockquote>
-<p>在函数体内修改全局变量需要用到关键字<code>global</code>.
-<div class="highlight"><pre><span></span><code><span class="c1"># 全局变量的修改</span>
-<span class="n">num</span> <span class="o">=</span> <span class="mi">200</span>
+<p>在函数体内修改全局变量需要用到关键字<code>global</code>.</p>
+<pre><code class="language-py"># 全局变量的修改
+num = 200
 
 
-<span class="k">def</span> <span class="nf">test_a</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;test_a: </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+def test_a():
+    print(f&quot;test_a: {num}&quot;)
 
 
-<span class="k">def</span> <span class="nf">test_b</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">num</span>  <span class="c1"># 设置内部定义的num为全局变量</span>
-    <span class="n">num</span> <span class="o">=</span> <span class="mi">500</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;test_b: </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+def test_b():
+    global num  # 设置内部定义的num为全局变量
+    num = 500
+    print(f&quot;test_b: {num}&quot;)
 
 
-<span class="n">test_a</span><span class="p">()</span>
-<span class="n">test_b</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>test_a: 200
+test_a()
+test_b()
+print(num)
+</code></pre>
+<pre><code>test_a: 200
 test_b: 500
 500
-</code></pre></div></p>
+</code></pre>
 <hr />
 <h2 id="_1">综合练习</h2>
-<div class="admonition question">
-<p class="admonition-title">ATM</p>
-<p>程序启动后要求输入客户姓名</p>
-<p>查询余额、存款、取款后都会返回主菜单</p>
-<p>存款取款后都显示当前余额</p>
-<p>程序只在客户退出或输入错误时结束运行</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="c1"># ATM</span>
+<p>!!! question "ATM"</p>
+<pre><code>程序启动后要求输入客户姓名
+
+查询余额、存款、取款后都会返回主菜单
+
+存款取款后都显示当前余额
+
+程序只在客户退出或输入错误时结束运行
+</code></pre>
+<pre><code class="language-py"># ATM
 
 
-<span class="k">def</span> <span class="nf">name</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">r</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;输入你的姓名：&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">r</span>
+def name():
+    global r
+    r = input(&quot;输入你的姓名：&quot;)
+    return r
 
 
-<span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">,你好，请选择操作：&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;查询余额输入1&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;存款输入2&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;取款输入3&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;退出输入4&quot;</span><span class="p">)</span>
+def menu():
+    print(f&quot;{r},你好，请选择操作：&quot;)
+    print(&quot;查询余额输入1&quot;)
+    print(&quot;存款输入2&quot;)
+    print(&quot;取款输入3&quot;)
+    print(&quot;退出输入4&quot;)
 
 
-<span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">money</span>
-    <span class="n">money</span> <span class="o">+=</span> <span class="n">x</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">,您存款</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">元成功&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">,您的余额为：</span><span class="si">{</span><span class="n">money</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+def deposit(x):
+    global money
+    money += x
+    print(f&quot;{r},您存款{x}元成功&quot;)
+    print(f&quot;{r},您的余额为：{money}&quot;)
 
 
-<span class="k">def</span> <span class="nf">withdrawal</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
-    <span class="n">money</span> <span class="o">-=</span> <span class="n">y</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">,您存款</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">元成功&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">,您的余额为：</span><span class="si">{</span><span class="n">money</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+def withdrawal(y):
+    money -= y
+    print(f&quot;{r},您存款{y}元成功&quot;)
+    print(f&quot;{r},您的余额为：{money}&quot;)
 
 
-<span class="n">money</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">name</span><span class="p">()</span>
-    <span class="n">menu</span><span class="p">()</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">money</span><span class="p">)</span>
-        <span class="n">menu</span><span class="p">()</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;输入存款金额：&quot;</span><span class="p">)</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-        <span class="n">deposit</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-        <span class="n">menu</span><span class="p">()</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;输入取款金额：&quot;</span><span class="p">)</span>
-        <span class="n">c</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-        <span class="n">c</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-        <span class="n">withdrawal</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-        <span class="n">menu</span><span class="p">()</span>
-        <span class="k">continue</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">break</span>
-</code></pre></div>
+money = 1000
+while True:
+    r = None
+    name()
+    menu()
+    a = input()
+    a = int(a)
+    if a == 1:
+        print(money)
+        menu()
+        continue
+    if a == 2:
+        print(&quot;输入存款金额：&quot;)
+        b = input()
+        b = int(b)
+        deposit(b)
+        menu()
+        continue
+    if a == 3:
+        print(&quot;输入取款金额：&quot;)
+        c = input()
+        c = int(c)
+        withdrawal(c)
+        menu()
+        continue
+    else:
+        break
+</code></pre>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2023</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 18, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2023</span>
       
     
   </small>

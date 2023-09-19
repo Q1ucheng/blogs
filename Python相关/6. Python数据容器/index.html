@@ -407,6 +407,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Mkdocs-material/mkdocs%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        Customize your mkdocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Mkdocs-material/mkdocs%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE%E4%B8%ADerror%E7%9A%84%E8%A7%A3%E5%86%B3/" class="md-nav__link">
         mkdocs部署配置中error的解决
       </a>
@@ -566,6 +580,33 @@
     1. 列表（list）
   </a>
   
+    <nav class="md-nav" aria-label="1. 列表（list）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    列表基础
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    列表方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    列表的遍历
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -614,6 +655,33 @@
     1. 列表（list）
   </a>
   
+    <nav class="md-nav" aria-label="1. 列表（list）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    列表基础
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    列表方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    列表的遍历
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -646,26 +714,130 @@
 </blockquote>
 <hr />
 <h2 id="1-list">1. 列表（list）</h2>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># 列表应用</span>
-<span class="n">name_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;wayne&#39;</span><span class="p">,</span> <span class="s1">&#39;666&#39;</span><span class="p">,</span> <span class="s1">&#39;True&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">name_list</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name_list</span><span class="p">))</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>[&#39;wayne&#39;, &#39;666&#39;, &#39;True&#39;, [1, 2, 3]]
-&lt;class &#39;list&#39;&gt;
-</code></pre></div>
-<strong>存储的元素类型可以是不同的数据类型,且可以嵌套.</strong></p>
+<h3 id="_1">列表基础</h3>
+<pre><code class="language-py"># 列表应用
+name_list = ['wayne', '666', 'True', [1, 2, 3]]
+print(name_list)
+print(type(name_list))
+print(name_list[1])  # 列表下标索引
+print(name_list[-1])  # 列表下标索引
+print(name_list[3][1])  # 列表中的列表数据提取
+</code></pre>
+<pre><code>['wayne', '666', 'True', [1, 2, 3]]
+&lt;class 'list'&gt;
+666
+[1, 2, 3]
+2
+</code></pre>
+<p><strong>存储的元素类型可以是不同的数据类型,且可以嵌套.</strong></p>
+<h3 id="_2">列表方法</h3>
+<blockquote>
+<p>类比函数：</p>
+<p>函数的使用：num = add(1, 2)</p>
+<p>方法的使用：</p>
+<p>student = Student()</p>
+<p>num = student.add(1, 2)</p>
+</blockquote>
+<p><strong>list内部提供了一系列可供使用的函数</strong></p>
+<pre><code class="language-py"># list常用操作
+my_list = [&quot;python&quot;, &quot;pycharm&quot;, &quot;vscode&quot;]
+
+# 查找某元素在列表中的下标索引
+index = my_list.index(&quot;python&quot;)
+print(f&quot;python的下标是{index}&quot;)
+
+# 修改列表中的元素
+my_list[0] = &quot;c++&quot;
+print(f&quot;列表修改后的结果是：{my_list}&quot;)
+
+# 在指定下标插入元素
+my_list.insert(1, &quot;java&quot;)
+print(f&quot;插入元素后的结果是：{my_list}&quot;)
+
+# 在尾部追加元素
+my_list.append(&quot;markdown&quot;)
+
+# 追加一批元素
+mylist2 = [1, 2, 3]
+my_list.extend(mylist2)
+
+# 删除指定元素（法一）
+del my_list[1]
+print(f&quot;列表删除元素后的结果是：{my_list}&quot;)
+
+# 删除指定元素（法二）
+element = my_list.pop(1)  # pop不仅能删除元素，还能将其作为返回值提取出来
+print(f&quot;列表取出元素后的结果是：{my_list}，取出的是{element}&quot;)
+
+# 删除某元素在列表中的第一个匹配项
+new_list = [&quot;py&quot;, &quot;py&quot;, &quot;py&quot;, &quot;c&quot;]
+new_list.remove(&quot;py&quot;)  # 从前向后搜索，移除第一个匹配的元素
+print(f&quot;remove方法移除元素后的结果是：{new_list}&quot;)
+
+# 清空列表
+new_list.clear()
+print(f&quot;清空后的列表结果是：{new_list}&quot;)
+
+# 统计列表中某元素的数量
+mylist3 = [1, 2, 3, 3, 3, 3, 1, 1, 2]
+count = mylist3.count(1)
+print(f&quot;列表中1的数量：{count}&quot;)
+
+# 列表总元素数量
+p = len(mylist3)
+print(f&quot;列表中元素总量：{p}&quot;)
+</code></pre>
+<pre><code>python的下标是0
+列表修改后的结果是：['c++', 'pycharm', 'vscode']
+插入元素后的结果是：['c++', 'java', 'pycharm', 'vscode']
+列表删除元素后的结果是：['c++', 'pycharm', 'vscode', 'markdown', 1, 2, 3]
+列表取出元素后的结果是：['c++', 'vscode', 'markdown', 1, 2, 3]，取出的是pycharm
+remove方法移除元素后的结果是：['py', 'py', 'c']
+清空后的列表结果是：[]
+列表中1的数量：3
+列表中元素总量：9
+</code></pre>
+<h3 id="_3">列表的遍历</h3>
+<p>借助while循环</p>
+<pre><code class="language-py"># 通过定义两个函数实现while和for循环对列表的遍历
+def list_while_func():  # 使用while循环遍历列表
+    mylist = [&quot;python&quot;, &quot;c++&quot;, &quot;java&quot;]
+    index = 0
+    while index &lt; len(mylist):
+        element = mylist[index]
+        print(f&quot;列表元素是：{element}&quot;)
+        index += 1
+
+
+def list_for_func():  # 使用while循环遍历列表
+    mylist = [&quot;python&quot;, &quot;c++&quot;, &quot;java&quot;]
+    for element in mylist:
+        print(f&quot;列表元素是：{element}&quot;)
+
+
+list_while_func()
+list_for_func()
+</code></pre>
+<pre><code>列表元素是：python
+列表元素是：c++
+列表元素是：java
+列表元素是：python
+列表元素是：c++
+列表元素是：java
+</code></pre>
+<p><strong>while循环适用于任何想要循环的场景</strong></p>
+<p><strong>for循环适用于遍历数据容器的场景或简单的固定次数循环场景</strong></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2023</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 18, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2023</span>
       
     
   </small>
