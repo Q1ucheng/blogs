@@ -795,15 +795,21 @@
 </code></pre></div></p>
 <hr />
 <h2 id="2-while">2. while的嵌套循环</h2>
-<p>!!! note</p>
-<div class="highlight"><pre><span></span><code>补充知识：
-
-1. 实现print()不换行：print(&quot;something&quot;, end=&#39;&#39;)
-
-2. 实现对齐：加入制表符 \t
-
-3. 实现print()换行：print()，空内容即可
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>补充知识：</p>
+<ol>
+<li>
+<p>实现print()不换行：print("something", end='')</p>
+</li>
+<li>
+<p>实现对齐：加入制表符 \t</p>
+</li>
+<li>
+<p>实现print()换行：print()，空内容即可</p>
+</li>
+</ol>
+</div>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># 打印九九乘法表</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
@@ -828,12 +834,13 @@
 <hr />
 <h2 id="3-for">3. for 循环</h2>
 <h3 id="31-for">3.1 for循环基础语法</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">for</span> <span class="n">临时变量</span> <span class="ow">in</span> <span class="n">待处理数据集</span><span class="p">(</span><span class="n">序列类型</span><span class="p">)</span><span class="err">：</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">for</span> <span class="n">临时变量</span> <span class="ow">in</span> <span class="n">待处理数据集</span><span class="p">(</span><span class="n">序列类型</span><span class="p">)</span><span class="err">：</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">循环满足条件时执行的代码</span>
 </code></pre></div>
-!!! note "数数有几个？"</p>
-<div class="highlight"><pre><span></span><code>定义字符串变量name， 统计有多少个英文字母“a”，内容为：&quot;my name is Wayne&quot;
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">数数有几个？</p>
+<p>定义字符串变量name， 统计有多少个英文字母“a”，内容为："my name is Wayne"</p>
+</div>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># for循环练习</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;my name is Wayne&quot;</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
@@ -870,9 +877,10 @@
 </code></pre></div></p>
 <hr />
 <h2 id="4-for">4. for循环的嵌套</h2>
-<p>!!! note </p>
-<div class="highlight"><pre><span></span><code>用for循环嵌套打印九九乘法表.
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>用for循环嵌套打印九九乘法表.</p>
+</div>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># 用for循环打印九九乘法表</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span>
@@ -896,17 +904,16 @@
 <p>continue结束本次循环，进入下一次.</p>
 <p>break直接结束循环.</p>
 <h2 id="6">6. 循环综合练习</h2>
-<p>!!! note "发工资"</p>
-<div class="highlight"><pre><span></span><code>某公司账户有10000元，给20名员工发工资。
-
-1. 员工编号1到20，从编号1开始，一次领取工资，每人可领取1000元
-
-   2.领工资时，判断员工的绩效分（1~10随机生成），低于5不发工资，换下一位。
-
-   3.工资发完就结束。
-
-   4.打印出发工资的情况。
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">发工资</p>
+<p>某公司账户有10000元，给20名员工发工资。</p>
+<ol>
+<li>员工编号1到20，从编号1开始，一次领取工资，每人可领取1000元</li>
+</ol>
+<p>2.领工资时，判断员工的绩效分（1~10随机生成），低于5不发工资，换下一位。</p>
+<p>3.工资发完就结束。</p>
+<p>4.打印出发工资的情况。 </p>
+</div>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># 发工资</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kn">import</span> <span class="nn">random</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">p</span> <span class="o">=</span> <span class="mi">10000</span>
