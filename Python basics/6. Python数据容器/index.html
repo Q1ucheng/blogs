@@ -1165,13 +1165,15 @@ difference_update(消除差集，如下)
 <summary>Chatgpt</summary>
 <p><strong>User:</strong> hello</p>
 <p><strong>ChatGPT:</strong> Hello! How can I assist you today?</p>
-<p><strong>User:</strong> set1 = {1, 2, 3}
-set2 = {1, 5, 6}
-set3 = set1.difference_update(set2) 
-print(set1)
-print(set2)
-print(set3)</p>
-<p><strong>ChatGPT:</strong> The <code>difference_update()</code> method modifies the set in place by removing elements    that are present in the specified set. It does not return a new set. Let's break down your code:</p>
+<p><strong>User:</strong> </p>
+<p>set1 = {1, 2, 3}</p>
+<p>set2 = {1, 5, 6}</p>
+<p>set3 = set1.difference_update(set2) </p>
+<p>print(set1)</p>
+<p>print(set2)</p>
+<p>print(set3)</p>
+<p><strong>ChatGPT:</strong> </p>
+<p>The <code>difference_update()</code> method modifies the set in place by removing elements    that are present in the specified set. It does not return a new set. Let's break down your code:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">set1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="n">set2</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="n">set3</span> <span class="o">=</span> <span class="n">set1</span><span class="o">.</span><span class="n">difference_update</span><span class="p">(</span><span class="n">set2</span><span class="p">)</span>
@@ -1195,8 +1197,10 @@ print(set3)</p>
 <a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">set3</span><span class="p">)</span>  <span class="c1"># Output: {2, 3}</span>
 </code></pre></div>
 <p>In this case, <code>set3</code> will be assigned a new set that contains the elements in <code>set1</code> but not in     <code>set2</code>.</p>
-<p><strong>User:</strong> Why the result of <code>print(set3)</code> is <code>None</code>?</p>
-<p><strong>ChatGPT:</strong> Apologies for the confusion in my previous response. The <code>difference_update()</code>     method does not return a new set but instead modifies the original set in-place and returns     <code>None</code>. Therefore, the result of <code>print(set3)</code> will indeed be <code>None</code>.</p>
+<p><strong>User:</strong> </p>
+<p>Why the result of <code>print(set3)</code> is <code>None</code>?</p>
+<p><strong>ChatGPT:</strong> </p>
+<p>Apologies for the confusion in my previous response. The <code>difference_update()</code>     method does not return a new set but instead modifies the original set in-place and returns     <code>None</code>. Therefore, the result of <code>print(set3)</code> will indeed be <code>None</code>.</p>
 <p>To clarify further, the <code>difference_update()</code> method is used to remove elements from the set    calling the method that are also present in the specified set(s). It modifies the set directly     without creating a new set.</p>
 <p>Here's a corrected version of your code:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">set1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
