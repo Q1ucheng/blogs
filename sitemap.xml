@@ -2,92 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://q1ucheng.github.io/blogs/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://q1ucheng.github.io/blogs/Blog/1/</loc>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/CET-6/1/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/CET-6/2023%2006%20%281%29/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/CET-6/3/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Course%20related/English-Chinese%20translation/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Course%20related/The%20Missing%20Semester%20of%20Your%20CS%20Education%282020%29/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/LaTeX%20related/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%AD%E7%9A%84LaTeX%E4%BB%A3%E7%A0%81/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Markdown%20related/practice/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Mkdocs-material/mkdocs%E8%AE%BE%E8%AE%A1/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Mkdocs-material/mkdocs%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE%E4%B8%ADerror%E7%9A%84%E8%A7%A3%E5%86%B3/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Python%20basics/1.%20Introduction%20to%20my%20Python%20learning/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Python%20basics/2.%20Python%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Python%20basics/3.%20Python%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Python%20basics/4.%20Python%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Python%20basics/5.%20Python%E5%87%BD%E6%95%B0/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Python%20basics/6.%20Python%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Python%20basics/7.%20Python%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://q1ucheng.github.io/blogs/Python%20basics/8.Python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://q1ucheng.github.io/blogs/Python%20basics/9.Python%E6%A8%A1%E5%9D%97/</loc>
+         <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
