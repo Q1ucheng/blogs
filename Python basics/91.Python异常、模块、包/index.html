@@ -10,18 +10,20 @@
         <meta name="author" content="Wayne">
       
       
-        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Python%20basics/9.Python%E6%A8%A1%E5%9D%97/">
+        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Python%20basics/91.Python%E5%BC%82%E5%B8%B8%E3%80%81%E6%A8%A1%E5%9D%97%E3%80%81%E5%8C%85/">
       
       
-        <link rel="prev" href="../8.Python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+        <link rel="prev" href="../9.Python%E6%96%87%E4%BB%B6/">
       
+      
+        <link rel="next" href="../92.%20Python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
     
     
       
-        <title>Python文件操作 - Wayne's blogs</title>
+        <title>Python异常、模块、包 - Wayne's blogs</title>
       
     
     
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python文件操作
+              Python异常、模块、包
             
           </span>
         </div>
@@ -416,20 +418,6 @@
     <li class="md-nav__item">
       <a href="../../Course%20related/English-Chinese%20translation/" class="md-nav__link">
         English-Chinese translation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Course%20related/The%20Missing%20Semester%20of%20Your%20CS%20Education%282020%29/" class="md-nav__link">
-        The Missing Semester of Your CS Education(2020)
       </a>
     </li>
   
@@ -750,6 +738,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../9.Python%E6%96%87%E4%BB%B6/" class="md-nav__link">
+        Python文件操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -762,12 +764,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Python文件操作
+          Python异常、模块、包
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Python文件操作
+        Python异常、模块、包
       </a>
       
         
@@ -786,29 +788,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    文件编码
+  <a href="#python_1" class="md-nav__link">
+    Python模块
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    文件操作
-  </a>
-  
-    <nav class="md-nav" aria-label="文件操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    文件打开
+  <a href="#_1" class="md-nav__link">
+    自定义模块
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#python_2" class="md-nav__link">
+    Python包
+  </a>
   
 </li>
       
@@ -816,6 +812,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../92.%20Python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" class="md-nav__link">
+        Python数据可视化
+      </a>
     </li>
   
 
@@ -854,29 +864,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    文件编码
+  <a href="#python_1" class="md-nav__link">
+    Python模块
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    文件操作
-  </a>
-  
-    <nav class="md-nav" aria-label="文件操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    文件打开
+  <a href="#_1" class="md-nav__link">
+    自定义模块
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#python_2" class="md-nav__link">
+    Python包
+  </a>
   
 </li>
       
@@ -898,65 +902,71 @@
   
 
 
-<h1 id="python">Python文件操作</h1>
-<h2 id="_1">文件编码</h2>
-<p>UTF-8是目前全球通用的编码格式.</p>
-<h2 id="_2">文件操作</h2>
-<h3 id="_3">文件打开</h3>
-<p><code>open()</code> 函数实现打开文件</p>
-<p><code>.read()</code> 读取文件中的数据</p>
-<p><code>readlines()</code> 方法按照行的方式把整个文件中的内容一次性读取，返回一个列表</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 打开文件</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;F:/python learning/文件测试.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># 读取文件</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;读取20个字节的结果是：</span><span class="si">{</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;读取全部内容的结果是：</span><span class="si">{</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># readlines方法</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;F:/python learning/文件测试1.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;lines对象的类型：</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;lines对象的内容：</span><span class="si">{</span><span class="n">lines</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># for循环读取文件</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;F:/python learning/文件测试1.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;每行数据为：</span><span class="si">{</span><span class="n">line</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># 关闭文件</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="c1"># with open可以实现文件的自动关闭</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;F:/python learning/文件测试1.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;每行数据为：</span><span class="si">{</span><span class="n">line</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<h1 id="python">Python异常、模块、包</h1>
+<h2 id="python_1">Python模块</h2>
+<blockquote>
+<p>模块就是一个工具包.</p>
+</blockquote>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 演示模块的使用</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># 使用time模块</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span> <span class="nn">time</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># 通过. 就可以使用模块内部的全部功能</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;world&quot;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;class &#39;_io.TextIOWrapper&#39;&gt;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>读取20个字节的结果是：Python open() 方法用于打开
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>读取全部内容的结果是：一个文件
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>并返回文件对象。
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>lines对象的类型：&lt;class &#39;list&#39;&gt;
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>lines对象的内容：[&#39;Python open() 方法用于打开一个文件\n&#39;, &#39;并返回文件对象。&#39;]
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>每行数据为：Python open() 方法用于打开一个文件
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>每行数据为：并返回文件对象。
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>每行数据为：Python open() 方法用于打开一个文件
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>每行数据为：并返回文件对象。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>hello
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>world
+</code></pre></div>
+如果只使用模块中的一种功能，则：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 只使用time模块</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;world&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hello
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>world
+</code></pre></div>
+使用<code>*</code>可以使用模块中的所有功能：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div>
+这样在之后的程序中我们可以省略类似<code>time.</code>的调用方式，与第一种方法相区别</p>
+<p>当然，我们也可以用别名的方式简化程序;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">time</span> <span class="k">as</span> <span class="n">t</span>
+</code></pre></div>
+此后的模块使用可为：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">t</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+也可以是：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span> <span class="k">as</span> <span class="n">sl</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">sl</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </code></pre></div></p>
+<h2 id="_1">自定义模块</h2>
+<p>新建一个Python文件，命名为XXX.py即可调用</p>
+<h2 id="python_2">Python包</h2>
+<blockquote>
+<p>包含一堆Python模块</p>
+</blockquote>
+<ul>
+<li>科学计算：numpy</li>
+<li>数据分析：pandas</li>
+<li>图形可视化：matplotlib, pyecharts</li>
+<li>人工智能：tensorflow</li>
+<li>......</li>
+</ul>
+<p>安装第三方包使用<code>pip</code>程序，不多赘述</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 8, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 13, 2023</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 8, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 13, 2023</span>
       
     
   </small>
@@ -987,7 +997,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../8.Python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Python数据结构" rel="prev">
+          <a href="../9.Python%E6%96%87%E4%BB%B6/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Python文件操作" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -996,11 +1006,26 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Python数据结构
+                Python文件操作
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../92.%20Python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" class="md-footer__link md-footer__link--next" aria-label="Next: Python数据可视化" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Python数据可视化
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
