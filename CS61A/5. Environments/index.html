@@ -10,13 +10,13 @@
         <meta name="author" content="Wayne">
       
       
-        <link rel="canonical" href="https://q1ucheng.github.io/blogs/CS61A/4.%20Higher-Order%20Function/">
+        <link rel="canonical" href="https://q1ucheng.github.io/blogs/CS61A/5.%20Environments/">
       
       
-        <link rel="prev" href="../3.%20Control/">
+        <link rel="prev" href="../4.%20Higher-Order%20Function/">
       
       
-        <link rel="next" href="../5.%20Environments/">
+        <link rel="next" href="../../LaTeX%20related/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%AD%E7%9A%84LaTeX%E4%BB%A3%E7%A0%81/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Higher-Order Function - Wayne's blogs</title>
+        <title>Environments - Wayne's blogs</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#higher-order-function" class="md-skip">
+        <a href="#environments" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Higher-Order Function
+              Environments
             
           </span>
         </div>
@@ -460,6 +460,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../4.%20Higher-Order%20Function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Higher-Order Function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -475,7 +495,7 @@
           
   
   <span class="md-ellipsis">
-    Higher-Order Function
+    Environments
   </span>
   
 
@@ -486,7 +506,7 @@
         
   
   <span class="md-ellipsis">
-    Higher-Order Function
+    Environments
   </span>
   
 
@@ -508,23 +528,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lambda" class="md-nav__link">
-    lambda
+  <a href="#self-reference" class="md-nav__link">
+    Self-Reference
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#return" class="md-nav__link">
-    Return*
+  <a href="#function-curring" class="md-nav__link">
+    Function Curring（柯里化）
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conditional-expressions" class="md-nav__link">
-    Conditional Expressions
+  <a href="#lab02" class="md-nav__link">
+    lab02
   </a>
+  
+    <nav class="md-nav" aria-label="lab02">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -532,26 +572,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../5.%20Environments/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Environments
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1083,23 +1103,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lambda" class="md-nav__link">
-    lambda
+  <a href="#self-reference" class="md-nav__link">
+    Self-Reference
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#return" class="md-nav__link">
-    Return*
+  <a href="#function-curring" class="md-nav__link">
+    Function Curring（柯里化）
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conditional-expressions" class="md-nav__link">
-    Conditional Expressions
+  <a href="#lab02" class="md-nav__link">
+    lab02
   </a>
+  
+    <nav class="md-nav" aria-label="lab02">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1121,204 +1161,70 @@
   
 
 
-<h1 id="higher-order-function">Higher-Order Function</h1>
+<h1 id="environments">Environments</h1>
+<h2 id="self-reference">Self-Reference</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">print_sum</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="k">def</span> <span class="nf">next_sum</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="k">return</span> <span class="n">print_sum</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">return</span> <span class="n">next_sum</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">print_sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">3</span><span class="p">)(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20print_sum%28x%29%3A%0A%20%20%20%20print%28x%29%0A%20%20%20%20def%20next_sum%28y%29%3A%0A%20%20%20%20%20%20%20%20return%20print_sum%28x%20%2B%20y%29%0A%20%20%20%20return%20next_sum%0A%0Aprint_sum%281%29%283%29%285%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+<h2 id="function-curring">Function Curring（柯里化）</h2>
 <blockquote>
-<p><strong>A Guide to Design Functions:</strong></p>
-<ul>
-<li><strong>Give each function exactly one job.</strong></li>
-<li><strong>Don't repeat yourself (DRY). Implement a process just once, but execute it many times.</strong></li>
-<li><strong>Define functions generally.</strong> </li>
-</ul>
+<p>我们可以使用高阶函数将一个接受多个参数的函数转换为一个函数链，每个函数接受一个参数。更具体地说，给定一个函数 <code>f(x, y)</code>，我们可以定义另一个函数 <code>g</code> 使得 <code>g(x)(y)</code> 等价于 <code>f(x, y)</code>。在这里，<code>g</code> 是一个高阶函数，它接受单个参数 <code>x</code> 并返回另一个接受单个参数 <code>y</code> 的函数。这种转换称为柯里化（Curring）。</p>
 </blockquote>
-<p>John给出了一个简单的例子（计算已知边长的几何形状的面积）演示：</p>
-<p><img alt="" src="../picture/high01.png" /></p>
-<p>现在可以写出一个简单的程序：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="sd">&quot;&quot;&quot;Generalization.&quot;&quot;&quot;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sqrt</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">def</span> <span class="nf">area_square</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">return</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">def</span> <span class="nf">area_circle</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">return</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r</span> <span class="o">*</span> <span class="n">pi</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">def</span> <span class="nf">area_hexagon</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="k">return</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">def</span> <span class="nf">curry2</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>            <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="k">return</span> <span class="n">h</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="k">return</span> <span class="n">g</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">m</span> <span class="o">=</span> <span class="n">curry2</span><span class="p">(</span><span class="n">add</span><span class="p">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">add_three</span> <span class="o">=</span> <span class="n">m</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">add_three</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
-<p>现在其实已经可以计算了，但发现一个问题：当我们输入负数时也能得出结果，而显然几何图形的边长是不可能为负的。这里老师介绍了关键字<code>assert</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">assert</span> <span class="n">expression</span>
-</code></pre></div>
-<p><code>expression</code>是一个布尔语句，如果为真就没有任何反应，如果为假就会报错：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">3</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="ne">AssertionError</span>
-</code></pre></div>
-<p>现在就可以对之前的程序进行完善：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">area_square</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="k">assert</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">0</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">return</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r</span>
-</code></pre></div>
-<p>但现在就要在三个函数中添加<code>assert</code>语句，我们不应该重复（John told me so ）所以我们要分解三个函数中共同的部分：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="sd">&quot;&quot;&quot;Generalization.&quot;&quot;&quot;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sqrt</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">shape_constant</span><span class="p">):</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="k">assert</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;A length must be postive&#39;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="k">return</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r</span> <span class="o">*</span> <span class="n">shape_constant</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="k">def</span> <span class="nf">area_square</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="k">return</span> <span class="n">area</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="k">def</span> <span class="nf">area_circle</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="k">return</span> <span class="n">area</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">pi</span><span class="p">)</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="k">def</span> <span class="nf">area_hexagon</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="k">return</span> <span class="n">area</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-<p>现在当我们输入<code>area_square(-10)</code>时，就会出现以下报错信息：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> File &quot;E:\ex.py&quot;, line 6, in area
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    assert r &gt; 0, &#39;A length must be postive&#39;
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>           ^^^^^
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>AssertionError: A length must be postive
-</code></pre></div>
-<p>有了上述铺垫，我们可以将这个思想推广到一些计算中，因为函数之间的共同结构可能会是一个计算过程，而不是像单一的<code>r * r</code></p>
-<p><img alt="" src="../picture/high02.png" /></p>
-<p>对于前两个算式，我们可以写出其对应的函数：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">sum_naturals</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;sum the first N natural number</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="sd">    &gt;&gt;&gt; sum_naturals(5)</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="sd">    15</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="n">total</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="n">total</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">k</span><span class="p">,</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    <span class="k">return</span> <span class="n">total</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="k">def</span> <span class="nf">sum_cubes</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Sum the N cubes of natural numbers</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="sd">    &gt;&gt;&gt; sum_cubes(5)</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="sd">    225</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="n">total</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>    <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>        <span class="n">total</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="nb">pow</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>    <span class="k">return</span> <span class="n">total</span>
-</code></pre></div>
-<p>现在John对他们继续优化，将赋值与立方也写作了函数：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">identity</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">return</span> <span class="n">k</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">def</span> <span class="nf">cube</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-</code></pre></div>
-<p>接下来完成总的求和函数，需要能识别每一种情况分别求和：（其中cube函数被作为参数传递）</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">summation</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Sum the first N terms of sequence</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="sd">    &gt;&gt;&gt; summation(5, cube)</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="sd">    225</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="n">total</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>        <span class="n">total</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">term</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="k">return</span> <span class="n">total</span>
-</code></pre></div>
-<p>那么之前写的函数可以修改得更简洁易读：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">sum_naturals</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="k">return</span> <span class="n">summation</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">identity</span><span class="p">)</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">def</span> <span class="nf">sum_cubes</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="k">return</span> <span class="n">summation</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">cube</span><span class="p">)</span>
-</code></pre></div>
-<p>现在可以对<code>pi</code>进行求解了：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">mul</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">pi_term</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="o">...</span>     <span class="k">return</span> <span class="mi">8</span> <span class="o">/</span> <span class="n">mul</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="o">...</span> 
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">sum_pi</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="o">...</span>     <span class="k">return</span> <span class="n">summation</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">pi_term</span><span class="p">)</span> 
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="o">...</span> 
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">sum_pi</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> 
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="mf">3.041839618929402</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">sum_pi</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> 
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="mf">3.141092653621038</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">sum_pi</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)</span> 
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="mf">3.141592153589902</span>
-</code></pre></div>
-<p>完成这个小练习后，John向我们介绍了如何定义一个函数，并将函数作为值返回：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">make_adder</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a function that takes one argument k and returns k + n</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="sd">    &gt;&gt;&gt; add_three = make_adder(3)</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="sd">    &gt;&gt;&gt; add_three(4)</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="sd">    7</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>        <span class="k">return</span> <span class="n">k</span> <span class="o">+</span> <span class="n">n</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    <span class="k">return</span> <span class="n">adder</span>
-</code></pre></div>
-<p><img alt="" src="../picture/high03.png" /></p>
-<h2 id="lambda">lambda</h2>
-<p>现在介绍一个函数：lambda</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">square</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="mi">10</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">square</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="mi">100</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">square</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">square</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="o">&lt;</span><span class="n">function</span> <span class="o">&lt;</span><span class="k">lambda</span><span class="o">&gt;</span> <span class="n">at</span> <span class="mh">0x0000019B59CB0AE0</span><span class="o">&gt;</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">square</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="mi">100</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">)(</span><span class="mi">3</span><span class="p">)</span>
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="mi">9</span>
-</code></pre></div>
-<p><img alt="high04" src="../picture/high04.png" /></p>
-<p><img alt="" src="../picture/high05.png" /></p>
-<h2 id="return">Return*</h2>
-<p>John给出了一个例子，他想写一个反函数：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>        <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>            <span class="k">return</span> <span class="n">x</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return g(y) such that g(f(x)) -&gt; x&quot;&quot;&quot;</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>    <span class="k">return</span> <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">search</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">y</span><span class="err">）</span>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20operator%20import%20add%0Adef%20curry2%28f%29%3A%0A%20%20%20%20def%20g%28x%29%3A%0A%20%20%20%20%20%20%20%20def%20h%28y%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20f%28x,%20y%29%0A%20%20%20%20%20%20%20%20return%20h%0A%20%20%20%20return%20g%0A%0Am%20%3D%20curry2%28add%29%0Aadd_three%20%3D%20m%283%29%0Aadd_three%282%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+<h2 id="lab02">lab02</h2>
+<h3 id="1">1</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">higher_order_lambda</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">f</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">higher_order_lambda</span><span class="p">(</span><span class="n">g</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 <ul>
-<li>这个函数接受一个函数 <code>f</code> 作为参数，然后返回一个新的函数。</li>
-<li>新函数使用 <code>search</code> 函数来找到满足 <code>f(x) == y</code> 条件的 <code>x</code> 值。</li>
+<li>
+<p><code>g = lambda x: x * x</code>：这行代码定义了一个 lambda 函数 <code>g</code>，该函数接受一个参数 <code>x</code>，并返回 <code>x * x</code>，即输入值的平方。</p>
+</li>
+<li>
+<p><code>higher_order_lambda = lambda f: lambda x: f(x)</code>：这是一个高阶 lambda 函数，接受一个函数 <code>f</code> 作为参数，然后返回一个新的 lambda 函数，这个新函数接受一个参数 <code>x</code> 并将其应用于函数 <code>f</code>。实际上，它创建了一个函数，该函数将传递给它的函数应用到一个参数上。</p>
+</li>
+<li><code>higher_order_lambda(g)(2)</code>：通过调用 <code>higher_order_lambda</code> 函数，并传递 <code>g</code> 作为参数，然后再将结果函数应用到参数 <code>2</code> 上。这将产生结果 <code>g(2)</code>，即 <code>2 * 2</code>，最终返回 <code>4</code>。</li>
 </ul>
-<blockquote>
-<p>换句话说，<code>inverse</code> 函数返回了一个函数 <code>g</code>，使得 <code>g(f(x))</code> 返回 <code>x</code>。这样的函数可以被认为是原函数 <code>f</code> 的逆函数。</p>
-</blockquote>
-<h2 id="conditional-expressions">Conditional Expressions</h2>
-<p>条件语句有以下形式：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">&lt;</span><span class="n">consequent</span><span class="o">&gt;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">predicate</span><span class="o">&gt;</span> <span class="k">else</span> <span class="o">&lt;</span><span class="n">alternative</span><span class="o">&gt;</span>
+<h3 id="2">2</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">cake</span><span class="p">():</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">...</span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;beets&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">...</span>    <span class="k">def</span> <span class="nf">pie</span><span class="p">():</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="o">...</span>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;sweets&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="o">...</span>        <span class="k">return</span> <span class="s1">&#39;cake&#39;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="o">...</span>    <span class="k">return</span> <span class="n">pie</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">chocolate</span> <span class="o">=</span> <span class="n">cake</span><span class="p">()</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">chocolate</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">chocolate</span><span class="p">()</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">more_chocolate</span><span class="p">,</span> <span class="n">more_cake</span> <span class="o">=</span> <span class="n">chocolate</span><span class="p">(),</span> <span class="n">cake</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">more_chocolate</span>
 </code></pre></div>
 <ul>
-<li>它会先评估<code>&lt;predicate&gt;</code>表达式</li>
-<li>如果为真，就会直接计算<code>&lt;consequent&gt;</code></li>
-<li>如果为假，就是<code>&lt;alternative&gt;</code></li>
+<li>先是定义了一个<code>cake（）</code>函数，打印<code>beets</code>，返回<code>pie</code>函数</li>
+<li><code>chocolate = cake()</code>先是打印<code>beets</code>，将<code>pie</code>函数返回，此时<code>chocolate</code>就是<code>pie</code>函数，故<code>&gt;&gt;&gt; chocolate</code>为<code>Function</code></li>
+<li><code>chocolate()</code>相当于调用<code>pie</code>函数，即打印<code>sweets</code>，返回<code>cake</code>字符串</li>
+<li><code>more_chocolate, more_cake = chocolate(), cake</code>：<code>more_chocolate</code>接收<code>chocolate()</code>的返回值<code>cake</code>字符串</li>
 </ul>
-<p>一个小例子：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="mi">0</span>
-</code></pre></div>
 
   <hr>
 <div class="md-source-file">
@@ -1361,7 +1267,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../3.%20Control/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Control">
+          <a href="../4.%20Higher-Order%20Function/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Higher-Order Function">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1371,20 +1277,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Control
+                Higher-Order Function
               </div>
             </div>
           </a>
         
         
           
-          <a href="../5.%20Environments/" class="md-footer__link md-footer__link--next" aria-label="Next: Environments">
+          <a href="../../LaTeX%20related/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%AD%E7%9A%84LaTeX%E4%BB%A3%E7%A0%81/" class="md-footer__link md-footer__link--next" aria-label="Next: 数学建模中的LaTeX代码">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Environments
+                数学建模中的LaTeX代码
               </div>
             </div>
             <div class="md-footer__button md-icon">
