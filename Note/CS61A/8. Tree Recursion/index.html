@@ -10,13 +10,9 @@
         <meta name="author" content="Wayne">
       
       
-        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/CS61A/2.%20Functions/">
+        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/CS61A/8.%20Tree%20Recursion/">
       
       
-        <link rel="prev" href="../1.%20CS61A%20Structure%20and%20Interpretation%20of%20Computer%20Programs/">
-      
-      
-        <link rel="next" href="../3.%20Control/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +20,7 @@
     
     
       
-        <title>Functions - Wayne's blogs</title>
+        <title>Tree Recursion - Wayne's blogs</title>
       
     
     
@@ -87,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#functions" class="md-skip">
+        <a href="#tree-recursion" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Functions
+              Tree Recursion
             
           </span>
         </div>
@@ -266,20 +262,16 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../1.%20CS61A%20Structure%20and%20Interpretation%20of%20Computer%20Programs/" class="md-tabs__link">
           
   
@@ -379,8 +371,6 @@
       
   
   
-    
-  
   
     
     
@@ -390,12 +380,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -409,7 +399,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Note
@@ -420,8 +410,6 @@
                 
   
   
-    
-  
   
     
     
@@ -431,12 +419,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
@@ -450,7 +438,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             CS61A Fall20
@@ -481,29 +469,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Functions
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../2.%20Functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -512,53 +480,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hw01" class="md-nav__link">
-    hw01
-  </a>
-  
-    <nav class="md-nav" aria-label="hw01">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#q3-two-of-three" class="md-nav__link">
-    Q3: Two of Three
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q5-if-function-vs-statement" class="md-nav__link">
-    Q5: If Function vs Statement
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -973,23 +894,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hw01" class="md-nav__link">
-    hw01
-  </a>
-  
-    <nav class="md-nav" aria-label="hw01">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#q3-two-of-three" class="md-nav__link">
-    Q3: Two of Three
+  <a href="#order-of-recursive-calls" class="md-nav__link">
+    Order of Recursive Calls
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#tree-recursive" class="md-nav__link">
+    Tree Recursive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hanoi" class="md-nav__link">
+    Hanoi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw02" class="md-nav__link">
+    HW02
+  </a>
+  
+    <nav class="md-nav" aria-label="HW02">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#q5-if-function-vs-statement" class="md-nav__link">
-    Q5: If Function vs Statement
+  <a href="#count_coins" class="md-nav__link">
+    count_coins
   </a>
   
 </li>
@@ -1017,143 +952,123 @@
   
 
 
-<h1 id="functions">Functions</h1>
-<p>导入内置的pi值：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">pi</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="mf">3.141592653589793</span>
+<h1 id="tree-recursion">Tree Recursion</h1>
+<h2 id="order-of-recursive-calls">Order of Recursive Calls</h2>
+<p>John在<code>cascade</code>函数中说到：</p>
+<blockquote>
+<p>我们的代码要尽量简单些，能方便别人理解</p>
+</blockquote>
+<p>结果在<code>inverse_cascade</code>函数中给出了一种“玄幻”的解答。这个函数要求输入一个数字，输出下列<code>cascade</code>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&gt;&gt;&gt; inverse_cascade(1234)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>1
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>12
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>123
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>1234
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>123
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>12
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>1
 </code></pre></div>
-<p>为<code>radius</code>变量赋值，定义了<code>area</code>, <code>circ</code>的计算方法</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">radius</span> <span class="o">=</span> <span class="mi">10</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">area</span><span class="p">,</span> <span class="n">circ</span> <span class="o">=</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">area</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="mf">314.1592653589793</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">circ</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="mf">628.3185307179587</span>
+<p>John的解答是这样的：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">inverse_cascade</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">grow</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">shrink</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">def</span> <span class="nf">f_then_g</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="k">if</span> <span class="n">n</span><span class="p">:</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="n">g</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">grow</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="n">f_then_g</span><span class="p">(</span><span class="n">grow</span><span class="p">,</span> <span class="nb">print</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">shrink</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="n">f_then_g</span><span class="p">(</span><span class="nb">print</span><span class="p">,</span> <span class="n">shrink</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
-<p>然而当我们改变<code>radius</code>的值后，<code>area</code>仍为314</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">radius</span> <span class="o">=</span> <span class="mi">20</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">area</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="mf">314.1592653589793</span>
+<p>有点抽象，第一眼难以理解代码的逻辑，不过在我自己用直观的递归写了一遍之后发现，John的代码逻辑就像下面所展示的函数一样：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">grow</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="k">return</span> <span class="mi">1</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="n">grow</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">def</span> <span class="nf">shrink</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="k">return</span> <span class="mi">1</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="n">shrink</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="k">def</span> <span class="nf">inverse_cascade</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="n">grow</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="n">shrink</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </code></pre></div>
-<p>这说明<code>area</code>只是绑定了314这个值，至于这个值是怎么来的它并不清楚，也就是说他们是不同步的，想要让他们同步，我们就需要函数来实现:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">area</span><span class="p">():</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">...</span>     <span class="k">return</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">...</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">area</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="o">&lt;</span><span class="n">function</span> <span class="n">area</span> <span class="n">at</span> <span class="mh">0x0000014E574FB920</span><span class="o">&gt;</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">area</span><span class="p">()</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="mf">1256.6370614359173</span>
+<p>不过也确实，John的代码及其简洁，<code>if</code>判断用直接用n实现，对于<code>grow</code>，<code>shrink</code>函数直接用<code>lambda</code>一段描述，值得学习。</p>
+<h2 id="tree-recursive">Tree Recursive</h2>
+<p><img alt="Tree Recursive" src="C:\Users\PC\AppData\Roaming\Typora\typora-user-images\image-20240308145748046.png" /></p>
+<h2 id="hanoi">Hanoi</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">move_disk</span><span class="p">(</span><span class="n">disk_number</span><span class="p">,</span> <span class="n">from_peg</span><span class="p">,</span> <span class="n">to_peg</span><span class="p">):</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Move disk&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">disk_number</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;from peg&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">from_peg</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;to peg&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">to_peg</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">def</span> <span class="nf">solve_hanoi</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">start_peg</span><span class="p">,</span> <span class="n">end_peg</span><span class="p">):</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="n">move_disk</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">start_peg</span><span class="p">,</span> <span class="n">end_peg</span><span class="p">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="n">spare_peg</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">-</span> <span class="n">start_peg</span> <span class="o">-</span> <span class="n">end_peg</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="n">solve_hanoi</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">start_peg</span><span class="p">,</span> <span class="n">spare_peg</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="n">move_disk</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">start_peg</span><span class="p">,</span> <span class="n">end_peg</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="n">solve_hanoi</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">spare_peg</span><span class="p">,</span> <span class="n">end_peg</span><span class="p">)</span>
 </code></pre></div>
-<p>现在，如果我们改变<code>radius</code>的值，<code>area</code>就会随之改变</p>
-<p>补充：课堂小问题的解答</p>
-<p><img alt="课堂小问题" src="../picture/function02.png" /></p>
-<h2 id="hw01">hw01</h2>
-<h3 id="q3-two-of-three">Q3: Two of Three</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">two_of_three</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a*a + b*b, where a and b are the two smallest members of the</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="sd">    positive numbers x, y, and z.</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="sd">    &gt;&gt;&gt; two_of_three(1, 2, 3)</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="sd">    5</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="sd">    &gt;&gt;&gt; two_of_three(5, 3, 1)</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="sd">    10</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="sd">    &gt;&gt;&gt; two_of_three(10, 2, 8)</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="sd">    68</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="sd">    &gt;&gt;&gt; two_of_three(5, 5, 5)</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="sd">    50</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="sd">    &gt;&gt;&gt; # check that your code consists of nothing but an expression (this docstring)</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="sd">    &gt;&gt;&gt; # a return statement</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="sd">    &gt;&gt;&gt; import inspect, ast</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="sd">    &gt;&gt;&gt; [type(x).__name__ for x in ast.parse(inspect.getsource(two_of_three)).body[0].body]</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="sd">    [&#39;Expr&#39;, &#39;Return&#39;]</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="k">return</span> <span class="n">_____</span>
+<h2 id="hw02">HW02</h2>
+<h3 id="count_coins">count_coins</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">next_largest_coin</span><span class="p">(</span><span class="n">coin</span><span class="p">):</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the next coin. </span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="sd">    &gt;&gt;&gt; next_largest_coin(1)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="sd">    5</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="sd">    &gt;&gt;&gt; next_largest_coin(5)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="sd">    10</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="sd">    &gt;&gt;&gt; next_largest_coin(10)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="sd">    25</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="sd">    &gt;&gt;&gt; next_largest_coin(2) # Other values return None</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="k">if</span> <span class="n">coin</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        <span class="k">return</span> <span class="mi">5</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="k">elif</span> <span class="n">coin</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        <span class="k">return</span> <span class="mi">10</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="k">elif</span> <span class="n">coin</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        <span class="k">return</span> <span class="mi">25</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="k">def</span> <span class="nf">count_coins</span><span class="p">(</span><span class="n">total</span><span class="p">):</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the number of ways to make change for total using coins of value of 1, 5, 10, 25.</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="sd">    &gt;&gt;&gt; count_coins(15)</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="sd">    6</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="sd">    &gt;&gt;&gt; count_coins(10)</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="sd">    4</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="sd">    &gt;&gt;&gt; count_coins(20)</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="sd">    9</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="sd">    &gt;&gt;&gt; count_coins(100) # How many ways to make change for a dollar?</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="sd">    242</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="sd">    &gt;&gt;&gt; from construct_check import check</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="sd">    &gt;&gt;&gt; # ban iteration</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="sd">    &gt;&gt;&gt; check(HW_SOURCE_FILE, &#39;count_coins&#39;, [&#39;While&#39;, &#39;For&#39;])                                          </span>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="sd">    True</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>    <span class="s2">&quot;*** YOUR CODE HERE ***&quot;</span>
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>    <span class="k">def</span> <span class="nf">count_partitions</span><span class="p">(</span><span class="n">total</span><span class="p">,</span> <span class="n">current_coin</span><span class="p">):</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>        <span class="k">if</span> <span class="n">total</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>            <span class="k">return</span> <span class="mi">1</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>        <span class="k">elif</span> <span class="n">total</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>            <span class="k">return</span> <span class="mi">0</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>        <span class="k">elif</span> <span class="ow">not</span> <span class="n">current_coin</span><span class="p">:</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>            <span class="k">return</span> <span class="mi">0</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>            <span class="n">next_coin</span> <span class="o">=</span> <span class="n">next_largest_coin</span><span class="p">(</span><span class="n">current_coin</span><span class="p">)</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>            <span class="n">with_current</span> <span class="o">=</span> <span class="n">count_partitions</span><span class="p">(</span><span class="n">total</span><span class="o">-</span><span class="n">current_coin</span><span class="p">,</span> <span class="n">current_coin</span><span class="p">)</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>            <span class="n">without_current</span> <span class="o">=</span> <span class="n">count_partitions</span><span class="p">(</span><span class="n">total</span><span class="p">,</span> <span class="n">next_coin</span><span class="p">)</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>            <span class="k">return</span> <span class="n">with_current</span> <span class="o">+</span> <span class="n">without_current</span>
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>    <span class="k">return</span> <span class="n">count_partitions</span><span class="p">(</span><span class="n">total</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
-<p>此题中让我们求出三个数中最小的两个数的平方和，需要思考的点就是如何提取出第二小的数。我的想法是用<code>sorted</code>函数将三个数排序，此时取出下标为1的数即可：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">])[</span><span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span>
-</code></pre></div>
-<p>不过在Hint Video中我看到了更好的思路，其实只需要用三个数的平方和减去最大数的平方即可：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">z</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
-</code></pre></div>
-<h3 id="q5-if-function-vs-statement">Q5: If Function vs Statement</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">if_function</span><span class="p">(</span><span class="n">condition</span><span class="p">,</span> <span class="n">true_result</span><span class="p">,</span> <span class="n">false_result</span><span class="p">):</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return true_result if condition is a true value, and</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="sd">    false_result otherwise.</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="sd">    &gt;&gt;&gt; if_function(True, 2, 3)</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="sd">    2</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="sd">    &gt;&gt;&gt; if_function(False, 2, 3)</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="sd">    3</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="sd">    &gt;&gt;&gt; if_function(3==2, 3+2, 3-2)</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="sd">    1</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="sd">    &gt;&gt;&gt; if_function(3&gt;2, 3+2, 3-2)</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="sd">    5</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>        <span class="k">return</span> <span class="n">true_result</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>        <span class="k">return</span> <span class="n">false_result</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
-<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="k">def</span> <span class="nf">with_if_statement</span><span class="p">():</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="sd">    &gt;&gt;&gt; result = with_if_statement()</span>
-<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="sd">    47</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="sd">    &gt;&gt;&gt; print(result)</span>
-<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="sd">    None</span>
-<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>    <span class="k">if</span> <span class="n">cond</span><span class="p">():</span>
-<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>        <span class="k">return</span> <span class="n">true_func</span><span class="p">()</span>
-<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>    <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>        <span class="k">return</span> <span class="n">false_func</span><span class="p">()</span>
-<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>
-<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="k">def</span> <span class="nf">with_if_function</span><span class="p">():</span>
-<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="sd">    &gt;&gt;&gt; result = with_if_function()</span>
-<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="sd">    42</span>
-<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="sd">    47</span>
-<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="sd">    &gt;&gt;&gt; print(result)</span>
-<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="sd">    None</span>
-<a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>    <span class="k">return</span> <span class="n">if_function</span><span class="p">(</span><span class="n">cond</span><span class="p">(),</span> <span class="n">true_func</span><span class="p">(),</span> <span class="n">false_func</span><span class="p">())</span>
-<a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>
-<a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a><span class="k">def</span> <span class="nf">cond</span><span class="p">():</span>
-<a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a>    <span class="s2">&quot;*** YOUR CODE HERE ***&quot;</span>
-<a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>
-<a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a><span class="k">def</span> <span class="nf">true_func</span><span class="p">():</span>
-<a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a>    <span class="s2">&quot;*** YOUR CODE HERE ***&quot;</span>
-<a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a>
-<a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a><span class="k">def</span> <span class="nf">false_func</span><span class="p">():</span>
-<a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a>    <span class="s2">&quot;*** YOUR CODE HERE ***&quot;</span>
-</code></pre></div>
-<p>这个题困扰了我许久，起初一直不明白为什么调用<code>with_if_function</code>会出来两个值，直到我想起课程中提到的用树的视角去分析函数调用的过程：</p>
-<p>在调用<code>if_function(cond(), true_func(), false_func())</code>时，要先计算<code>cond()</code>, <code>true_func()</code>, <code>false_func()</code>，所以无论condition如何，这三个函数都会被调用（这就是<code>with_if_function</code>与<code>with_if_statement</code>的区别所在）</p>
-<p>明白了这一点，答案显而易见：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">cond</span><span class="p">():</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="k">return</span> <span class="kc">False</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">def</span> <span class="nf">true_func</span><span class="p">():</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="k">def</span> <span class="nf">false_func</span><span class="p">():</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="mi">47</span><span class="p">)</span>
-</code></pre></div>
-<p>之后我还犹豫了一下为什么输出不是42，47，47，于是我去请教pythontutor:</p>
-<p><img alt="tutor" src="../picture/function01.png" /></p>
-<p>原来是在调用<code>true_func()</code>等时其返回的值是None（因为我没有写return，默认返回None），此时的传参也就相当于：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">if_function</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-</code></pre></div>
-<p>如果把函数设计成这样：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">true_func</span><span class="p">():</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>  <span class="c1"># 返回值仍为None，这里的print也要执行</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">def</span> <span class="nf">false_func</span><span class="p">():</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="mi">47</span><span class="p">)</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="mi">47</span><span class="p">)</span>
-</code></pre></div>
-<p>此时结果就会是42，42，47，47</p>
 
   <hr>
 <div class="md-source-file">
@@ -1191,44 +1106,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../1.%20CS61A%20Structure%20and%20Interpretation%20of%20Computer%20Programs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: introduction">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                introduction
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../3.%20Control/" class="md-footer__link md-footer__link--next" aria-label="Next: Control">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Control
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
