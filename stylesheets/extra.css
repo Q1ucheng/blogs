@@ -32,6 +32,7 @@ body {
   animation: typing 5s steps(37, end), blink-caret .75s step-end infinite;
   font-family: JetBrains Mono;
   font-size: 22px;
+  word-wrap: break-word;
   word-break: break-all;
   overflow: hidden;
 }
