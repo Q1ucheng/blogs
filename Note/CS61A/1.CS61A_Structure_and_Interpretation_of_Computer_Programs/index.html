@@ -325,7 +325,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../Blog/Blog/" class="md-tabs__link">
+      <a href="../../../Blog/Blog.md" class="md-tabs__link">
         
   
     
@@ -1214,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Blog/Blog/" class="md-nav__link">
+      <a href="../../../Blog/Blog.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1304,39 +1304,44 @@
   
 
 
-<h1 id="cs61a-structure-and-interpretation-of-computer-programs">CS61A: Structure and Interpretation of Computer Programs</h1>
-<div class="admonition info">
-<p class="admonition-title">INFO</p>
-<p>CS61A course website:<a href="https://inst.eecs.berkeley.edu/~cs61a/su20/">https://inst.eecs.berkeley.edu/~cs61a/su20/</a></p>
-<p>CS61A course materials:<a href="https://composingprograms.netlify.app/">https://composingprograms.netlify.app/</a></p>
-</div>
-<h2 id="lab00">lab00</h2>
+<h1 id="cs61a-structure-and-interpretation-of-computer-programs">CS61A: Structure and Interpretation of Computer Programs<a class="headerlink" href="#cs61a-structure-and-interpretation-of-computer-programs" title="Permanent link">&para;</a></h1>
+<p>!!! info "INFO"</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>CS61A course website:[https://inst.eecs.berkeley.edu/~cs61a/su20/](https://inst.eecs.berkeley.edu/~cs61a/su20/)
+
+CS61A course materials:[https://composingprograms.netlify.app/](https://composingprograms.netlify.app/)
+</code></pre></div></td></tr></table></div>
+<h2 id="lab00">lab00<a class="headerlink" href="#lab00" title="Permanent link">&para;</a></h2>
 <p>lab00主要介绍了CS61A课程作业的提交流程以及一些简单的PowerShell命令</p>
-<h3 id="_1">一些基础的文件操作</h3>
+<h3 id="_1">一些基础的文件操作<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>先建立一个文件夹用于存放所有的课程文件，PowerShell中执行：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>desktop
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mkdir<span class="w"> </span>CS61A
-</code></pre></div>
+<div class="language-shell highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>desktop
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>mkdir<span class="w"> </span>CS61A
+</span></code></pre></div></td></tr></table></div>
 <p>再在<code>CS61A</code>目录下建立<code>lab</code>和<code>project</code>两个文件夹用于存放两类作业</p>
 <p>在课程网站上下载<code>lab00.zip</code>作业文件，下载好后的文件默认位于<code>downloads</code>目录下，解压<code>lab00.zip</code>，并将解压后的文件移动至<code>lab</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>unzip<span class="w"> </span>lab00.zip
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mv<span class="w"> </span>~/Downloads/lab00<span class="w"> </span>~/Desktop/cs61a/lab
-</code></pre></div>
+<div class="language-shell highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>unzip<span class="w"> </span>lab00.zip
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>mv<span class="w"> </span>~/Downloads/lab00<span class="w"> </span>~/Desktop/cs61a/lab
+</span></code></pre></div></td></tr></table></div>
 <p>我向来是不习惯桌面上有太多图标的，所以我将<code>CS61A</code>文件夹移动到<code>F</code>盘存储</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Move-Item<span class="w"> </span>-Path<span class="w"> </span>./cs61a<span class="w"> </span>-Destination<span class="w"> </span>F:/
-</code></pre></div>
+<div class="language-shell highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Move-Item<span class="w"> </span>-Path<span class="w"> </span>./cs61a<span class="w"> </span>-Destination<span class="w"> </span>F:/
+</span></code></pre></div></td></tr></table></div>
 <p>关于PowerShell的命令的补充：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ls<span class="w">                   </span><span class="c1"># 列出当前文件目录下的所有文件</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Remove-Item<span class="w"> </span>.<span class="se">\X</span>XX<span class="w">    </span><span class="c1"># 删除文件</span>
-</code></pre></div>
-<h3 id="_2">作业操作</h3>
+<div class="language-shell highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>ls<span class="w">                   </span><span class="c1"># 列出当前文件目录下的所有文件</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>Remove-Item<span class="w"> </span>.<span class="se">\X</span>XX<span class="w">    </span><span class="c1"># 删除文件</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="_2">作业操作<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>在<code>lab00</code>目录下执行：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>ok<span class="w"> </span>-q<span class="w"> </span>python-basics<span class="w"> </span>-u<span class="w"> </span>--local
-</code></pre></div>
+<div class="language-shell highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>python<span class="w"> </span>ok<span class="w"> </span>-q<span class="w"> </span>python-basics<span class="w"> </span>-u<span class="w"> </span>--local
+</span></code></pre></div></td></tr></table></div>
 <p>随后即可在PowerShell中完成<code>python-basics</code>的练习</p>
 <p>对于<code>lab00</code>中的<code>lab00.py</code>，在文本编辑器中完成后执行下列命令即可检验正误：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>ok<span class="w"> </span>--local
-</code></pre></div>
+<div class="language-shell highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>python<span class="w"> </span>ok<span class="w"> </span>--local
+</span></code></pre></div></td></tr></table></div>
 
 
 
