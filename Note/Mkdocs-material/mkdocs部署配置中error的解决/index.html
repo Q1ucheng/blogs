@@ -738,6 +738,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/14.Iterators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iterators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1277,29 +1298,15 @@
 <p>Here are the errors I encountered when deploying the mkdocs page and their solutions.</p>
 </blockquote>
 <h2 id="1">1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p>!!! failure</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>PS D:\blogs\mydocs&gt; mkdocs gh-deploy
-
-INFO     -  Cleaning site directory
-
-INFO     -  Building documentation to directory: D:\blogs\mydocs\site
-
-INFO     -  Documentation built in 0.83 seconds
-
-INFO     -  Copying &#39;D:\blogs\mydocs\site&#39; to &#39;gh-pages&#39; branch and pushing to GitHub.
-
-fatal: unable to access &#39;https://github.com/Q1ucheng/blogs.git/&#39;: Failed to connect to github.com port 443 after 21127 ms: Couldn&#39;t connect to server.
-</code></pre></div></td></tr></table></div>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>PS D:\blogs\mydocs&gt; mkdocs gh-deploy</p>
+<p>INFO     -  Cleaning site directory</p>
+<p>INFO     -  Building documentation to directory: D:\blogs\mydocs\site</p>
+<p>INFO     -  Documentation built in 0.83 seconds</p>
+<p>INFO     -  Copying 'D:\blogs\mydocs\site' to 'gh-pages' branch and pushing to GitHub.</p>
+<p>fatal: unable to access 'https://github.com/Q1ucheng/blogs.git/': Failed to connect to github.com port 443 after 21127 ms: Couldn't connect to server.</p>
+</div>
 <p><strong>Solution: Just execute it on the command line.</strong>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git config --global --unset http.proxy 
@@ -1311,49 +1318,21 @@ or
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>git config --global https.proxy http://127.0.0.1:7890
 </span></code></pre></div></td></tr></table></div>
 <strong>Then it works !</strong></p>
-<p>!!! success</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>INFO     -  Documentation built in 0.83 seconds
-
-INFO     -  Copying &#39;D:\blogs\mydocs\site&#39; to &#39;gh-pages&#39; branch and pushing to GitHub.
-
-Enumerating objects: 37, done.
-
-Counting objects: 100% (37/37), done.
-
-Delta compression using up to 20 threads
-Compressing objects: 100% (12/12), done.
-
-Writing objects: 100% (19/19), 4.05 KiB | 2.02 MiB/s, done.
-
-Total 19 (delta 9), reused 0 (delta 0), pack-reused 0
-
-remote: Resolving deltas: 100% (9/9), completed with 9 local objects.
-
-To https://github.com/Q1ucheng/blogs.git
-2001d0b..f16f3ff  gh-pages -&gt; gh-pages
-
-INFO     -  Your documentation should shortly be available at: https://Q1ucheng.github.io/blogs/
-</code></pre></div></td></tr></table></div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>INFO     -  Documentation built in 0.83 seconds</p>
+<p>INFO     -  Copying 'D:\blogs\mydocs\site' to 'gh-pages' branch and pushing to GitHub.</p>
+<p>Enumerating objects: 37, done.</p>
+<p>Counting objects: 100% (37/37), done.</p>
+<p>Delta compression using up to 20 threads
+Compressing objects: 100% (12/12), done.</p>
+<p>Writing objects: 100% (19/19), 4.05 KiB | 2.02 MiB/s, done.</p>
+<p>Total 19 (delta 9), reused 0 (delta 0), pack-reused 0</p>
+<p>remote: Resolving deltas: 100% (9/9), completed with 9 local objects.</p>
+<p>To https://github.com/Q1ucheng/blogs.git
+2001d0b..f16f3ff  gh-pages -&gt; gh-pages</p>
+<p>INFO     -  Your documentation should shortly be available at: https://Q1ucheng.github.io/blogs/</p>
+</div>
 
 
 
@@ -1376,7 +1355,7 @@ INFO     -  Your documentation should shortly be available at: https://Q1ucheng.
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 27, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 1, 2024</span>
   </span>
 
     
@@ -1386,7 +1365,7 @@ INFO     -  Your documentation should shortly be available at: https://Q1ucheng.
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 27, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 1, 2024</span>
   </span>
 
     

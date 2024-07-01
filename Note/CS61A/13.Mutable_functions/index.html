@@ -16,7 +16,7 @@
         <link rel="prev" href="../HW03/">
       
       
-        <link rel="next" href="../../Numerical%20analysis/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%AC%AC%E4%BA%8C%E7%AB%A0/">
+        <link rel="next" href="../14.Iterators/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -814,6 +814,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14.Iterators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iterators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1325,7 +1346,7 @@
 <p>表达式 <code>withdraw(25)</code> 被执行了两次，但是返回了不同的结果。因此，我们定义的这个函数不是纯函数（in-pure）。执行这个函数在返回内容的同时，还产生了其它副作用（side effects），导致多次调用同一个函数得到的结果却不相同。这里的副作用之所以会出现，<strong>是因为 <code>withdraw</code> 函数更改了它所在的栈帧之外的变量。</strong></p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">withdraw</span> <span class="o">=</span> <span class="n">make_withdraw</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># withdraw的调用修改了它所在的栈帧之外的变量（100）</span>
 </span></code></pre></div></td></tr></table></div>
-<p>引入新知识点：<strong>非局部（nonlocal）声明</strong>：当我们调用 <code>make_withdraw</code> 的时候，我们将初始余额声明为 <code>balance</code> 变量，然后我们再定义并返回一个局部函数 <code>withdraw</code>，它会在调用时更新并返回 balance 的值。</p>
+<p>引入新知识点：<mark>非局部（nonlocal）声明</mark>：当我们调用 <code>make_withdraw</code> 的时候，我们将初始余额声明为 <code>balance</code> 变量，然后我们再定义并返回一个局部函数 <code>withdraw</code>，它会在调用时更新并返回 balance 的值。</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -1350,147 +1371,91 @@
 <p>Python pre-computes which frame contains each name before executing the body of a function. Within the body of a function, all instances of a name must refer to the same frame</p>
 </blockquote>
 <p>在函数执行之前，Python会先确定每个变量名属于哪个作用域，并且在函数内部，所有同名变量都指向这个确定的作用域。这种机制确保了函数内部变量引用的一致性，避免了由于外部变量修改导致的混乱。</p>
-<p>??? note "GPT-4o"</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span></pre></div></td><td class="code"><div><pre><span></span><code>这个Python特性涉及到函数作用域和名字解析，下面我来通俗易懂地解释一下。
-
-**作用域和名字解析**
-
-在Python中，变量名（或者叫“名字”）是有作用域的。作用域决定了变量名可以在哪些地方被访问。函数是一个典型的作用域边界。
-
-**名字解析的两步过程**
-
-当Python解释器在执行一个函数时，会提前计算出每个变量名所在的“帧”（frame）。帧可以理解为一个上下文环境，比如一个函数的局部变量、全局变量等等。变量名的解析过程如下：
-
-1. **预计算（pre-computation）**：在函数执行之前，Python会先确定每个变量名属于哪个作用域，是局部变量、全局变量还是更外层作用域的变量。
-2. **一致性（consistency）**：在函数内部，所有同名的变量都必须指向同一个预先确定的帧。也就是说，函数内部的所有同名变量实际上指向的是同一个变量。
-
-**示例代码**
-
-```python
-x = 10
-
-def foo():
-    print(x)  # 尝试打印局部变量x
-    x = 20    # 在局部作用域中赋值x
-    print(x)  # 打印局部变量x
-
-foo()
-```
-
-**发生了什么**
-
-1. **预计算阶段**：
-   - 在预计算阶段，Python解释器看到在函数 `foo` 中有一个赋值语句 `x = 20`，所以它会认为 `x` 是 `foo` 函数的局部变量。
-
-2. **一致性原则**：
-   - 根据一致性原则，`foo` 函数内部的所有 `x` 都指向局部变量 `x`。
-
-3. **执行阶段**：
-   - 当 `foo` 执行时，Python发现第一个 `print(x)` 尝试访问 `x`。由于 `x` 被认为是局部变量，但此时局部变量 `x` 尚未赋值，因此会抛出 `UnboundLocalError` 错误。
-
-**为什么这样设计**
-
-这种设计方式确保了函数内部变量的引用一致性，也避免了由于外部变量修改导致函数内部行为不确定的问题。
-
-**更直观的示例**
-
-考虑以下代码：
-
-```python
-def bar():
-    y = 5
-    def inner():
-        print(y)
-        y = 10
-    inner()
-
-bar()
-```
-
-**解释**
-
-1. **预计算阶段**：
-   - `inner` 函数中有赋值语句 `y = 10`，因此 `y` 被认为是 `inner` 的局部变量。
-
-2. **一致性原则**：
-   - `inner` 函数内部所有的 `y` 都指向 `inner` 的局部变量 `y`。
-
-3. **执行阶段**：
-   - 当 `inner` 函数执行时，尝试打印 `y`。但此时局部变量 `y` 尚未赋值，因此会抛出 `UnboundLocalError`。
-
-**总结**
-
-简单来说，在函数执行之前，Python会先确定每个变量名属于哪个作用域，并且在函数内部，所有同名变量都指向这个确定的作用域。这种机制确保了函数内部变量引用的一致性，避免了由于外部变量修改导致的混乱。这就是为什么在函数内部定义变量时，要注意变量名是否和外部作用域变量名冲突。
-</code></pre></div></td></tr></table></div>
+<details class="note">
+<summary>GPT-4o</summary>
+<p>这个Python特性涉及到函数作用域和名字解析，下面我来通俗易懂地解释一下。</p>
+<p><strong>作用域和名字解析</strong></p>
+<p>在Python中，变量名（或者叫“名字”）是有作用域的。作用域决定了变量名可以在哪些地方被访问。函数是一个典型的作用域边界。</p>
+<p><strong>名字解析的两步过程</strong></p>
+<p>当Python解释器在执行一个函数时，会提前计算出每个变量名所在的“帧”（frame）。帧可以理解为一个上下文环境，比如一个函数的局部变量、全局变量等等。变量名的解析过程如下：</p>
+<ol>
+<li><strong>预计算（pre-computation）</strong>：在函数执行之前，Python会先确定每个变量名属于哪个作用域，是局部变量、全局变量还是更外层作用域的变量。</li>
+<li><strong>一致性（consistency）</strong>：在函数内部，所有同名的变量都必须指向同一个预先确定的帧。也就是说，函数内部的所有同名变量实际上指向的是同一个变量。</li>
+</ol>
+<p><strong>示例代码</strong></p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># 尝试打印局部变量x</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>    <span class="c1"># 在局部作用域中赋值x</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># 打印局部变量x</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">foo</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+<p><strong>发生了什么</strong></p>
+<ol>
+<li><strong>预计算阶段</strong>：</li>
+<li>
+<p>在预计算阶段，Python解释器看到在函数 <code>foo</code> 中有一个赋值语句 <code>x = 20</code>，所以它会认为 <code>x</code> 是 <code>foo</code> 函数的局部变量。</p>
+</li>
+<li>
+<p><strong>一致性原则</strong>：</p>
+</li>
+<li>
+<p>根据一致性原则，<code>foo</code> 函数内部的所有 <code>x</code> 都指向局部变量 <code>x</code>。</p>
+</li>
+<li>
+<p><strong>执行阶段</strong>：</p>
+</li>
+<li>当 <code>foo</code> 执行时，Python发现第一个 <code>print(x)</code> 尝试访问 <code>x</code>。由于 <code>x</code> 被认为是局部变量，但此时局部变量 <code>x</code> 尚未赋值，因此会抛出 <code>UnboundLocalError</code> 错误。</li>
+</ol>
+<p><strong>为什么这样设计</strong></p>
+<p>这种设计方式确保了函数内部变量的引用一致性，也避免了由于外部变量修改导致函数内部行为不确定的问题。</p>
+<p><strong>更直观的示例</strong></p>
+<p>考虑以下代码：</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="k">def</span> <span class="nf">inner</span><span class="p">():</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>        <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="n">inner</span><span class="p">()</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">bar</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+<p><strong>解释</strong></p>
+<ol>
+<li><strong>预计算阶段</strong>：</li>
+<li>
+<p><code>inner</code> 函数中有赋值语句 <code>y = 10</code>，因此 <code>y</code> 被认为是 <code>inner</code> 的局部变量。</p>
+</li>
+<li>
+<p><strong>一致性原则</strong>：</p>
+</li>
+<li>
+<p><code>inner</code> 函数内部所有的 <code>y</code> 都指向 <code>inner</code> 的局部变量 <code>y</code>。</p>
+</li>
+<li>
+<p><strong>执行阶段</strong>：</p>
+</li>
+<li>当 <code>inner</code> 函数执行时，尝试打印 <code>y</code>。但此时局部变量 <code>y</code> 尚未赋值，因此会抛出 <code>UnboundLocalError</code>。</li>
+</ol>
+<p><strong>总结</strong></p>
+<p>简单来说，在函数执行之前，Python会先确定每个变量名属于哪个作用域，并且在函数内部，所有同名变量都指向这个确定的作用域。这种机制确保了函数内部变量引用的一致性，避免了由于外部变量修改导致的混乱。这就是为什么在函数内部定义变量时，要注意变量名是否和外部作用域变量名冲突。</p>
+</details>
 <p>如果注释掉<code>nonlocal balance</code>，再次运行时产生错误</p>
 <div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
@@ -1669,7 +1634,7 @@ bar()
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 27, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 1, 2024</span>
   </span>
 
     
@@ -1679,7 +1644,7 @@ bar()
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 27, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 1, 2024</span>
   </span>
 
     
@@ -1775,13 +1740,13 @@ bar()
         
         
           
-          <a href="../../Numerical%20analysis/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%AC%AC%E4%BA%8C%E7%AB%A0/" class="md-footer__link md-footer__link--next" aria-label="Next: 计算方法第二章">
+          <a href="../14.Iterators/" class="md-footer__link md-footer__link--next" aria-label="Next: Iterators">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                计算方法第二章
+                Iterators
               </div>
             </div>
             <div class="md-footer__button md-icon">
