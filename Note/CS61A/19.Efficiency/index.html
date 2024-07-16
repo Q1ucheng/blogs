@@ -10,13 +10,13 @@
         <meta name="author" content="Wayne">
       
       
-        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/CS61A/13.Mutable_functions/">
+        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/CS61A/19.Efficiency/">
       
       
-        <link rel="prev" href="../HW03/">
+        <link rel="prev" href="../18.Composition/">
       
       
-        <link rel="next" href="../14.Iterators/">
+        <link rel="next" href="../../Numerical%20analysis/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%AC%AC%E4%BA%8C%E7%AB%A0/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Mutable Function - Wayne's blogs</title>
+        <title>Efficiency - Wayne's blogs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mutable-functions" class="md-skip">
+        <a href="#efficiency" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mutable Function
+              Efficiency
             
           </span>
         </div>
@@ -724,30 +724,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Mutable Function
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../13.Mutable_functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -756,59 +736,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#lab06" class="md-nav__link">
-    <span class="md-ellipsis">
-      lab06
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="lab06">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#list-mutation" class="md-nav__link">
-    <span class="md-ellipsis">
-      list mutation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q4-insert-items" class="md-nav__link">
-    <span class="md-ellipsis">
-      Q4: Insert Items
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -965,10 +892,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../19.Efficiency/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Efficiency
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -977,6 +924,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      实现指数函数
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1422,35 +1398,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lab06" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      lab06
+      实现指数函数
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="lab06">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#list-mutation" class="md-nav__link">
-    <span class="md-ellipsis">
-      list mutation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q4-insert-items" class="md-nav__link">
-    <span class="md-ellipsis">
-      Q4: Insert Items
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1472,293 +1424,91 @@
   
 
 
-<h1 id="mutable-functions">Mutable Functions<a class="headerlink" href="#mutable-functions" title="Permanent link">&para;</a></h1>
-<p>John引入了一个函数</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">withdraw</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="mi">75</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">withdraw</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="mi">50</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">withdraw</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="s1">&#39;余额不足&#39;</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">withdraw</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="mi">35</span>
+<h1 id="efficiency">Efficiency<a class="headerlink" href="#efficiency" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="../picture/19.01.png" /></p>
+<p>函数内的值也可以像类中的属性一样被调用</p>
+<p>添加memo函数将已经计算过的<code>fib(n)</code>存储在<code>cache</code>中，每次计算前先判断<code>fib(n)</code>是否已经计算过（空间换时间）</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="k">return</span> <span class="n">n</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="k">def</span> <span class="nf">counted</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>        <span class="n">counted</span><span class="o">.</span><span class="n">call_count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="n">counted</span><span class="o">.</span><span class="n">call_count</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="k">return</span> <span class="n">counted</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="k">def</span> <span class="nf">memo</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>    <span class="n">cache</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="k">def</span> <span class="nf">memoized</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>        <span class="k">if</span> <span class="n">n</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cache</span><span class="p">:</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>            <span class="n">cache</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>        <span class="k">return</span> <span class="n">cache</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="k">return</span> <span class="n">memoized</span>
 </span></code></pre></div></td></tr></table></div>
-<p>表达式 <code>withdraw(25)</code> 被执行了两次，但是返回了不同的结果。因此，我们定义的这个函数不是纯函数（in-pure）。执行这个函数在返回内容的同时，还产生了其它副作用（side effects），导致多次调用同一个函数得到的结果却不相同。这里的副作用之所以会出现，<strong>是因为 <code>withdraw</code> 函数更改了它所在的栈帧之外的变量。</strong></p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">withdraw</span> <span class="o">=</span> <span class="n">make_withdraw</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># withdraw的调用修改了它所在的栈帧之外的变量（100）</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fib</span> <span class="o">=</span> <span class="n">count</span><span class="p">(</span><span class="n">fib</span><span class="p">)</span> 
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">counted_fib</span> <span class="o">=</span> <span class="n">fib</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fib</span> <span class="o">=</span> <span class="n">memo</span><span class="p">(</span><span class="n">fib</span><span class="p">)</span> 
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fib</span> <span class="o">=</span> <span class="n">count</span><span class="p">(</span><span class="n">fib</span><span class="p">)</span> 
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fib</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="mi">832040</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fib</span><span class="o">.</span><span class="n">call_count</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="mi">59</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">counted_fib</span><span class="o">.</span><span class="n">call_count</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="mi">31</span>
 </span></code></pre></div></td></tr></table></div>
-<p>引入新知识点：<mark>非局部（nonlocal）声明</mark>：当我们调用 <code>make_withdraw</code> 的时候，我们将初始余额声明为 <code>balance</code> 变量，然后我们再定义并返回一个局部函数 <code>withdraw</code>，它会在调用时更新并返回 balance 的值。</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span>
-<span class="normal"><a href="#__codelineno-2-6">6</a></span>
-<span class="normal"><a href="#__codelineno-2-7">7</a></span>
-<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">make_withdraw</span><span class="p">(</span><span class="n">balance</span><span class="p">):</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="n">amount</span><span class="p">):</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="hll">        <span class="k">nonlocal</span> <span class="n">balance</span>  <span class="c1"># 声明 balance 是非局部的</span>
-</span></span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="k">if</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="n">balance</span><span class="p">:</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>            <span class="k">return</span> <span class="s1">&#39;Insufficient funds&#39;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>        <span class="n">balance</span> <span class="o">=</span> <span class="n">balance</span> <span class="o">-</span> <span class="n">amount</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>        <span class="k">return</span> <span class="n">balance</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="k">return</span> <span class="n">withdraw</span>
-</span></code></pre></div></td></tr></table></div>
-<p>当 balance 属性为声明为 nonlocal 后，每当它的值发生更改时，相应的变化都会同步更新到 <code>balance</code> 属性第一次被声明的位置</p>
-<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20make_withdraw%28balance%29%3A%0A%20%20%20%20def%20withdraw%28amount%29%3A%0A%20%20%20%20%20%20%20%20nonlocal%20balance%0A%20%20%20%20%20%20%20%20if%20amount%20%3E%20balance%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20'Insufficient%20funds'%0A%20%20%20%20%20%20%20%20balance%20%3D%20balance%20-%20amount%0A%20%20%20%20%20%20%20%20return%20balance%0A%20%20%20%20return%20withdraw%0A%0Awd%20%3D%20make_withdraw%2820%29%0Awd%285%29%0Awd%283%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=1&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
-
-<p>由这个例子可以引出一个Python的特性：</p>
-<blockquote>
-<p>Python pre-computes which frame contains each name before executing the body of a function. Within the body of a function, all instances of a name must refer to the same frame</p>
-</blockquote>
-<p>在函数执行之前，Python会先确定每个变量名属于哪个作用域，并且在函数内部，所有同名变量都指向这个确定的作用域。这种机制确保了函数内部变量引用的一致性，避免了由于外部变量修改导致的混乱。</p>
-<details class="note">
-<summary>GPT-4o</summary>
-<p>这个Python特性涉及到函数作用域和名字解析，下面我来通俗易懂地解释一下。</p>
-<p><strong>作用域和名字解析</strong></p>
-<p>在Python中，变量名（或者叫“名字”）是有作用域的。作用域决定了变量名可以在哪些地方被访问。函数是一个典型的作用域边界。</p>
-<p><strong>名字解析的两步过程</strong></p>
-<p>当Python解释器在执行一个函数时，会提前计算出每个变量名所在的“帧”（frame）。帧可以理解为一个上下文环境，比如一个函数的局部变量、全局变量等等。变量名的解析过程如下：</p>
-<ol>
-<li><strong>预计算（pre-computation）</strong>：在函数执行之前，Python会先确定每个变量名属于哪个作用域，是局部变量、全局变量还是更外层作用域的变量。</li>
-<li><strong>一致性（consistency）</strong>：在函数内部，所有同名的变量都必须指向同一个预先确定的帧。也就是说，函数内部的所有同名变量实际上指向的是同一个变量。</li>
-</ol>
-<p><strong>示例代码</strong></p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span>
-<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># 尝试打印局部变量x</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>    <span class="c1"># 在局部作用域中赋值x</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># 打印局部变量x</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">foo</span><span class="p">()</span>
-</span></code></pre></div></td></tr></table></div>
-<p><strong>发生了什么</strong></p>
-<ol>
-<li><strong>预计算阶段</strong>：</li>
-<li>
-<p>在预计算阶段，Python解释器看到在函数 <code>foo</code> 中有一个赋值语句 <code>x = 20</code>，所以它会认为 <code>x</code> 是 <code>foo</code> 函数的局部变量。</p>
-</li>
-<li>
-<p><strong>一致性原则</strong>：</p>
-</li>
-<li>
-<p>根据一致性原则，<code>foo</code> 函数内部的所有 <code>x</code> 都指向局部变量 <code>x</code>。</p>
-</li>
-<li>
-<p><strong>执行阶段</strong>：</p>
-</li>
-<li>当 <code>foo</code> 执行时，Python发现第一个 <code>print(x)</code> 尝试访问 <code>x</code>。由于 <code>x</code> 被认为是局部变量，但此时局部变量 <code>x</code> 尚未赋值，因此会抛出 <code>UnboundLocalError</code> 错误。</li>
-</ol>
-<p><strong>为什么这样设计</strong></p>
-<p>这种设计方式确保了函数内部变量的引用一致性，也避免了由于外部变量修改导致函数内部行为不确定的问题。</p>
-<p><strong>更直观的示例</strong></p>
-<p>考虑以下代码：</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span>
-<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="k">def</span> <span class="nf">inner</span><span class="p">():</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>        <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="n">inner</span><span class="p">()</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">bar</span><span class="p">()</span>
-</span></code></pre></div></td></tr></table></div>
-<p><strong>解释</strong></p>
-<ol>
-<li><strong>预计算阶段</strong>：</li>
-<li>
-<p><code>inner</code> 函数中有赋值语句 <code>y = 10</code>，因此 <code>y</code> 被认为是 <code>inner</code> 的局部变量。</p>
-</li>
-<li>
-<p><strong>一致性原则</strong>：</p>
-</li>
-<li>
-<p><code>inner</code> 函数内部所有的 <code>y</code> 都指向 <code>inner</code> 的局部变量 <code>y</code>。</p>
-</li>
-<li>
-<p><strong>执行阶段</strong>：</p>
-</li>
-<li>当 <code>inner</code> 函数执行时，尝试打印 <code>y</code>。但此时局部变量 <code>y</code> 尚未赋值，因此会抛出 <code>UnboundLocalError</code>。</li>
-</ol>
-<p><strong>总结</strong></p>
-<p>简单来说，在函数执行之前，Python会先确定每个变量名属于哪个作用域，并且在函数内部，所有同名变量都指向这个确定的作用域。这种机制确保了函数内部变量引用的一致性，避免了由于外部变量修改导致的混乱。这就是为什么在函数内部定义变量时，要注意变量名是否和外部作用域变量名冲突。</p>
-</details>
-<p>如果注释掉<code>nonlocal balance</code>，再次运行时产生错误</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">make_withdraw</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="o">&lt;</span><span class="n">function</span> <span class="n">make_withdraw</span><span class="o">.&lt;</span><span class="nb">locals</span><span class="o">&gt;.</span><span class="n">withdraw</span> <span class="n">at</span> <span class="mh">0x000002371B778B80</span><span class="o">&gt;</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">w</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>  <span class="n">File</span> <span class="s2">&quot;E:\CS 61A Fall 2020</span><span class="se">\t</span><span class="s2">est.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span><span class="p">,</span> <span class="ow">in</span> <span class="n">withdraw</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a>    <span class="k">if</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="n">balance</span><span class="p">:</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a>                <span class="o">^^^^^^^</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="hll"><span class="ne">UnboundLocalError</span><span class="p">:</span> <span class="n">cannot</span> <span class="n">access</span> <span class="n">local</span> <span class="n">variable</span> <span class="s1">&#39;balance&#39;</span> <span class="n">where</span> <span class="n">it</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">a</span> <span class="n">value</span>
-</span></span></code></pre></div></td></tr></table></div>
-<p>一个程序中也可以含有多个可变函数</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span>
-<span class="normal"><a href="#__codelineno-6-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">wayne</span> <span class="o">=</span> <span class="n">make_withdraw</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">ronald</span> <span class="o">=</span> <span class="n">make_withdraw</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> 
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="hll"><span class="o">&gt;&gt;&gt;</span> <span class="n">wayne</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">ronald</span>
-</span></span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="hll"><span class="kc">True</span>
-</span></span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">wayne</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>                    
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="mi">90</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">wayne</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="mi">80</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">ronald</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>  
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="mi">900</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">ronald</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="mi">800</span>
-</span></code></pre></div></td></tr></table></div>
-<p><img alt="" src="../picture/13_1.png" /></p>
-<p>John给了一个有趣的例子</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">total是多少</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>    <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>        <span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>            <span class="k">nonlocal</span> <span class="n">x</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a>            <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a>        <span class="k">return</span> <span class="n">h</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a>    <span class="k">return</span> <span class="n">g</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="n">a</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="n">total</span> <span class="o">=</span> <span class="n">b</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
-<p>答案是22，其实只需要注意<code>nonlocal x</code>后对<code>x</code>加1改变的是定义<code>x</code>的位置的值，也就是在计算<code>b(3)</code>时将4改为了5，在计算<code>b(4)</code>时将5改为6</p>
 <hr />
-<h2 id="lab06">lab06<a class="headerlink" href="#lab06" title="Permanent link">&para;</a></h2>
-<h3 id="list-mutation">list mutation<a class="headerlink" href="#list-mutation" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>remove()</code> 方法用于从列表中移除第一个匹配的元素。它接受一个参数，即要移除的元素的值</li>
-<li><code>pop()</code> 方法用于从列表中移除一个元素（默认是最后一个元素），并返回该元素的值。它也可以接受一个可选的索引参数，用于指定要移除的元素的位置。</li>
-<li><code>insert()</code> 方法用于在列表的指定位置插入一个元素。它接受两个参数：要插入元素的索引和要插入的元素本身。</li>
-</ul>
-<h3 id="q4-insert-items">Q4: Insert Items<a class="headerlink" href="#q4-insert-items" title="Permanent link">&para;</a></h3>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Q4: Insert Items</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-8-10">10</a></span>
-<span class="normal"><a href="#__codelineno-8-11">11</a></span>
-<span class="normal"><a href="#__codelineno-8-12">12</a></span>
-<span class="normal"><a href="#__codelineno-8-13">13</a></span>
-<span class="normal"><a href="#__codelineno-8-14">14</a></span>
-<span class="normal"><a href="#__codelineno-8-15">15</a></span>
-<span class="normal"><a href="#__codelineno-8-16">16</a></span>
-<span class="normal"><a href="#__codelineno-8-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">insert_items</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">entry</span><span class="p">,</span> <span class="n">elem</span><span class="p">):</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="sd">    &gt;&gt;&gt; test_lst = [1, 5, 8, 5, 2, 3]</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="sd">    &gt;&gt;&gt; new_lst = insert_items(test_lst, 5, 7)</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="sd">    &gt;&gt;&gt; new_lst</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="sd">    [1, 5, 7, 8, 5, 7, 2, 3]</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="sd">    &gt;&gt;&gt; large_lst = [1, 4, 8]</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="sd">    &gt;&gt;&gt; large_lst2 = insert_items(large_lst, 4, 4)</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="sd">    &gt;&gt;&gt; large_lst2</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="sd">    [1, 4, 4, 8]</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="sd">    &gt;&gt;&gt; large_lst3 = insert_items(large_lst2, 4, 6)</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="sd">    &gt;&gt;&gt; large_lst3</span>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="sd">    [1, 4, 6, 4, 6, 8]</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="sd">    &gt;&gt;&gt; large_lst3 is large_lst</span>
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="sd">    True</span>
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17"></a>    <span class="s2">&quot;*** YOUR CODE HERE ***&quot;</span>
-</span></code></pre></div></td></tr></table></div>
-<p>我的想法很简单</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">My answer</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span>
-<span class="normal"><a href="#__codelineno-9-6">6</a></span>
-<span class="normal"><a href="#__codelineno-9-7">7</a></span>
-<span class="normal"><a href="#__codelineno-9-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">def</span> <span class="nf">insert_items</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">entry</span><span class="p">,</span> <span class="n">elem</span><span class="p">):</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a>    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a>        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">entry</span><span class="p">:</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a>            <span class="n">lst</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">elem</span><span class="p">)</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6"></a>            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Skip the inserted element</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a>        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8"></a>    <span class="k">return</span> <span class="n">lst</span>
-</span></code></pre></div></td></tr></table></div>
-<p>在网上看到一种更好的思路：通过首先找到所有 <code>entry</code> 的索引位置，然后反向遍历这些索引，并在每个索引后插入 <code>elem</code>。这个方法也能达到我们的目的，并且通过反向遍历索引来避免插入新元素时影响后续元素的位置。</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Another answer</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-10-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">def</span> <span class="nf">insert_items</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">entry</span><span class="p">,</span> <span class="n">elem</span><span class="p">):</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a>    <span class="c1"># 找到所有 entry 的索引位置</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a>    <span class="n">entries_indices</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">entry</span><span class="p">]</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a>    <span class="c1"># 将索引位置逆序排列</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a>    <span class="n">entries_indices</span> <span class="o">=</span> <span class="n">entries_indices</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a>    <span class="c1"># 在每个索引位置后插入 elem</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7"></a>    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">entries_indices</span><span class="p">:</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8"></a>        <span class="n">lst</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">elem</span><span class="p">)</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9"></a>    <span class="c1"># 返回修改后的列表</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10"></a>    <span class="k">return</span> <span class="n">lst</span>
-</span></code></pre></div></td></tr></table></div>
+<h2 id="_1">实现指数函数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../picture/19.02.png" /></p>
+<p>演示时John介绍了Jupiter book，常用于编译输出图表的代码</p>
+<p>对于<code>exp()</code>函数而言，其运算时间与<code>n</code>呈线性关系；对于<code>exp_fast</code>函数，运算时间与<code>n</code>呈对数关系</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>exp</code></label><label for="__tabbed_1_2"><code>exp_fast</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="../picture/19.03.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="" src="../picture/19.04.png" /></p>
+</div>
+</div>
+</div>
 
 
 
@@ -1870,7 +1620,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../HW03/" class="md-footer__link md-footer__link--prev" aria-label="Previous: HW03">
+          <a href="../18.Composition/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Composition">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1880,20 +1630,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                HW03
+                Composition
               </div>
             </div>
           </a>
         
         
           
-          <a href="../14.Iterators/" class="md-footer__link md-footer__link--next" aria-label="Next: Iterators">
+          <a href="../../Numerical%20analysis/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%AC%AC%E4%BA%8C%E7%AB%A0/" class="md-footer__link md-footer__link--next" aria-label="Next: 计算方法第二章">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Iterators
+                计算方法第二章
               </div>
             </div>
             <div class="md-footer__button md-icon">
