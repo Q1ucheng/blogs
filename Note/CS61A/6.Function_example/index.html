@@ -958,6 +958,111 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20.Decomposition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decomposition & Data example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21.Scheme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scheme
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22.Calculation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23.Interpreters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpreters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24.Scheme%E9%83%A8%E5%88%86%E6%80%BB%E5%92%8C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scals.zip
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1460,7 +1565,28 @@
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="k">return</span> <span class="n">kept</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="decorators">Decorators<a class="headerlink" href="#decorators" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Python 提供了一种特殊的语法来使用高阶函数作为执行 <code>def</code> 语句的一部分，称为装饰器（decorator）。</p>
+</blockquote>
+<p><img alt="" src="../picture/deco_1.png" /></p>
+<p>添加装饰器<code>@trace</code>后，在在函数执行前会打印出一些东西</p>
+<p>可以构建一个高阶函数来实现这一功能：</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">trace1</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">def</span> <span class="nf">traced</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Calling&#39;</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="s1">&#39;on argument&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="k">return</span> <span class="n">fn</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="k">return</span> <span class="n">traced</span>
+</span></code></pre></div></td></tr></table></div>
+<p><img alt="" src="../picture/deco_02.png" /></p>
+<p>在演示中可以看到，<code>@trace1</code>和<code>square = trace1(square)</code>有相同的效果（如下图）</p>
 <p><img alt="decorators" src="../picture/decorators.png" /></p>
+<blockquote>
+<p>使用装饰器可以让你提前知道函数被怎样修饰过，这样做还有一个好处：并不是所有Python开发者都懂高阶函数，应用装饰器可以方便所有人看懂理解你的代码</p>
+</blockquote>
 
 
 
@@ -1483,7 +1609,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 26, 2024</span>
   </span>
 
     
@@ -1493,7 +1619,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 26, 2024</span>
   </span>
 
     
