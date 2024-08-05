@@ -10,13 +10,13 @@
         <meta name="author" content="Wayne">
       
       
-        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/CS61A/31.Macros/">
+        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/CS61A/Conclusions/">
       
       
-        <link rel="prev" href="../30.Tail_Calls/">
+        <link rel="prev" href="../32.Final_Example/">
       
       
-        <link rel="next" href="../32.Final_Example/">
+        <link rel="next" href="../../MySQL/Mysql_learning/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Macros(optional) - Wayne's blogs</title>
+        <title>Conclusions🎉 - Wayne's blogs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macros" class="md-skip">
+        <a href="#conclusions" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Macros(optional)
+              Conclusions🎉
             
           </span>
         </div>
@@ -1165,19 +1165,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../31.Macros/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1186,7 +1177,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1217,10 +1207,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Conclusions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1229,6 +1228,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1752,54 +1752,25 @@
   
 
 
-<h1 id="macros">Macros（宏）<a class="headerlink" href="#macros" title="Permanent link">&para;</a></h1>
-<p>宏是一种用于扩展编程语言功能的强大工具，允许程序员定义新的语法结构和抽象</p>
-<blockquote>
-<p>宏是程序代码中的代码生成器。它们在代码编译或解释之前对代码进行转换，从而扩展语言的语法和功能。</p>
-</blockquote>
-<p><img alt="" src="../picture/27.01.png" /></p>
-<blockquote>
-<p><strong>宏是一种在程序求值之前对源代码进行的操作。</strong></p>
-<p><strong>宏存在于许多编程语言中，但在像Lisp这样的语言中最容易正确定义。</strong></p>
-<p><strong>Scheme语言中有一个<code>define-macro</code>特殊形式，用于定义源代码转换。</strong></p>
-<p>宏调用表达式的求值过程：</p>
-<ul>
-<li>求值运算符子表达式，该子表达式会被求值为一个宏。</li>
-<li>在不先求值操作数表达式的情况下，将这些表达式传递给宏过程。</li>
-<li>对从宏过程中返回的表达式进行求值。</li>
-</ul>
-</blockquote>
-<p>例如执行重复打印的操作：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">未采用宏</label><label for="__tabbed_1_2">采用宏定义</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-scheme highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Scheme</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nv">scm&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">twice</span><span class="w"> </span><span class="nv">expr</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">list</span><span class="w"> </span><span class="ss">&#39;begin</span><span class="w"> </span><span class="nv">expr</span><span class="w"> </span><span class="nv">expr</span><span class="p">))</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nv">twice</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nv">scm&gt;</span><span class="w"> </span><span class="p">(</span><span class="nf">twice</span><span class="w"> </span><span class="p">(</span><span class="nf">print</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="mi">2</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">(</span><span class="k">begin</span><span class="w"> </span><span class="nv">undefined</span><span class="w"> </span><span class="nv">undefined</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
+<h1 id="conclusions">Conclusions 🎉<a class="headerlink" href="#conclusions" title="Permanent link">&para;</a></h1>
+<p>完结🎉🎉🎉</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>John:</p>
+<p>既然我开始谈论期末考试，我就以相关内容结束，这是我结婚时得到的建议之一。</p>
+<p>当时我是个博士生。在我结婚那天，我妈妈把我拉到一边说，John，我想给你一些建议。我当时想，她会告诉我听我妻子的话什么的。但她没有。她只说了两个词，一直在我心中回响。她说，不要比较。然后她说，好吧，你可以继续做你之前在做的事情了。</p>
+<p>当时，我很难理解这句话，因为我在一所大学，那里的一切都是基于比较人们的考试成绩。但事实证明，世界上再也没有所有人都参加的标准化考试了。所有重要的是你自己做了什么，在自己的道路上完成了什么。</p>
+<p>所以比较自己和其他人很快变得毫无意义，真正重要的是你自己能做什么，你做了什么，以及你如何选择花费你的时间。但这句话花了多年时间才在我心中沉淀，对我来说，我的自我价值与其他人能做什么无关，无论我能做得比他们好还是差。重要的是我自己做了什么，我接下来要做什么，以及我如何花时间提高自己，忘记其他人在做什么。</p>
+<p>你要参加一个期末考试，其他很多人也要参加这个考试，但谁在乎呢？这门课程不是按曲线评分的。尽自己最大的努力，确保你得到充足的睡眠。但同时，我认为你不需要担心统计数据以及你的朋友做得怎么样，只要互相帮助，专注于自己。</p>
+<p>Hany:</p>
+<p>John，我想说两件事。首先，我要去找我妈妈，因为我小时候没有得到这么好的建议。所以我要和她谈谈。这是我花了很长时间才理解的一件事，不要比较。这也是一个陷阱，我们会比较，例如，和那一个朋友相比我们的房子有多大，和另一个朋友相比我们赚了多少钱，和另一个朋友相比我们穿的衣服，和那个朋友相比我们有多聪明...</p>
+<p>首先，单独这样做是毫无意义的，这也是一个陷阱。这是社交媒体的问题，你会看到其他人这些经过精心策划的世界。这是一个陷阱，随着年龄的增长，你会意识到这是一个陷阱，毫无意义。真正重要的是，你在做什么？你想成为什么样的人？你如何度过这个世界？你如何对待其他人，到头来，这些几乎才是重要的。</p>
+<p>我期待着这个，也期待听到大家的消息。真的很高兴。</p>
+<p>这就是61A课程的全部内容，谢谢大家。保重，注意安全，好日子在前方。祝期末考试好运。谢谢，John，谢谢。</p>
+<p>祝大家假期愉快，谢谢John。</p>
+<p>谢谢，祝大家假期愉快。</p>
 </div>
-<div class="tabbed-block">
-<div class="language-scheme highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Scheme</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nv">scm&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">define-macro</span><span class="w"> </span><span class="p">(</span><span class="nf">twice</span><span class="w"> </span><span class="nv">expr</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">list</span><span class="w"> </span><span class="ss">&#39;begin</span><span class="w"> </span><span class="nv">expr</span><span class="w"> </span><span class="nv">expr</span><span class="p">))</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nv">twice</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nv">scm&gt;</span><span class="w"> </span><span class="p">(</span><span class="nf">twice</span><span class="w"> </span><span class="p">(</span><span class="nf">print</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="mi">2</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="mi">2</span>
-</span></code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-<p>介绍了如何采用宏实现<code>for</code>语句</p>
-<p><img alt="" src="../picture/27.02.png" /></p>
+<p><img alt="" src="../picture/conclusion.png" /></p>
 
 
 
@@ -1911,7 +1882,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../30.Tail_Calls/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tail Calls(optional)">
+          <a href="../32.Final_Example/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Final Example">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1921,20 +1892,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Tail Calls(optional)
+                Final Example
               </div>
             </div>
           </a>
         
         
           
-          <a href="../32.Final_Example/" class="md-footer__link md-footer__link--next" aria-label="Next: Final Example">
+          <a href="../../MySQL/Mysql_learning/" class="md-footer__link md-footer__link--next" aria-label="Next: 记录学习使用MySQL的过程">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Final Example
+                记录学习使用MySQL的过程
               </div>
             </div>
             <div class="md-footer__button md-icon">

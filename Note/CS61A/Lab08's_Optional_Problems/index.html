@@ -10,13 +10,13 @@
         <meta name="author" content="Wayne">
       
       
-        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/CS61A/31.Macros/">
+        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/CS61A/Lab08%27s_Optional_Problems/">
       
       
-        <link rel="prev" href="../30.Tail_Calls/">
+        <link rel="prev" href="../19.Efficiency/">
       
       
-        <link rel="next" href="../32.Final_Example/">
+        <link rel="next" href="../20.Decomposition/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Macros(optional) - Wayne's blogs</title>
+        <title>Lab08's Option Problems - Wayne's blogs</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macros" class="md-skip">
+        <a href="#lab08s-optional-problems" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Macros(optional)
+              Lab08's Option Problems
             
           </span>
         </div>
@@ -913,10 +913,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Lab08%27s_Optional_Problems/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lab08's Option Problems
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -925,6 +945,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q5-cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q5 Cycles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6-reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q6 Reverse
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1165,19 +1223,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../31.Macros/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1186,7 +1235,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1736,6 +1784,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q5-cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q5 Cycles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6-reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q6 Reverse
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1752,54 +1826,124 @@
   
 
 
-<h1 id="macros">Macros（宏）<a class="headerlink" href="#macros" title="Permanent link">&para;</a></h1>
-<p>宏是一种用于扩展编程语言功能的强大工具，允许程序员定义新的语法结构和抽象</p>
-<blockquote>
-<p>宏是程序代码中的代码生成器。它们在代码编译或解释之前对代码进行转换，从而扩展语言的语法和功能。</p>
-</blockquote>
-<p><img alt="" src="../picture/27.01.png" /></p>
-<blockquote>
-<p><strong>宏是一种在程序求值之前对源代码进行的操作。</strong></p>
-<p><strong>宏存在于许多编程语言中，但在像Lisp这样的语言中最容易正确定义。</strong></p>
-<p><strong>Scheme语言中有一个<code>define-macro</code>特殊形式，用于定义源代码转换。</strong></p>
-<p>宏调用表达式的求值过程：</p>
-<ul>
-<li>求值运算符子表达式，该子表达式会被求值为一个宏。</li>
-<li>在不先求值操作数表达式的情况下，将这些表达式传递给宏过程。</li>
-<li>对从宏过程中返回的表达式进行求值。</li>
-</ul>
-</blockquote>
-<p>例如执行重复打印的操作：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">未采用宏</label><label for="__tabbed_1_2">采用宏定义</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-scheme highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Scheme</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<h1 id="lab08s-optional-problems">Lab08's Optional Problems<a class="headerlink" href="#lab08s-optional-problems" title="Permanent link">&para;</a></h1>
+<h2 id="q5-cycles">Q5 Cycles<a class="headerlink" href="#q5-cycles" title="Permanent link">&para;</a></h2>
+<p>Link类可以表示带有循环的链表。也就是说，一个链表可以包含自身作为子链表。</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nv">scm&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">define</span><span class="w"> </span><span class="p">(</span><span class="nf">twice</span><span class="w"> </span><span class="nv">expr</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">list</span><span class="w"> </span><span class="ss">&#39;begin</span><span class="w"> </span><span class="nv">expr</span><span class="w"> </span><span class="nv">expr</span><span class="p">))</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nv">twice</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nv">scm&gt;</span><span class="w"> </span><span class="p">(</span><span class="nf">twice</span><span class="w"> </span><span class="p">(</span><span class="nf">print</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="mi">2</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">(</span><span class="k">begin</span><span class="w"> </span><span class="nv">undefined</span><span class="w"> </span><span class="nv">undefined</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="n">Link</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Link</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">Link</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">rest</span><span class="o">.</span><span class="n">rest</span><span class="o">.</span><span class="n">rest</span> <span class="o">=</span> <span class="n">s</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">rest</span><span class="o">.</span><span class="n">rest</span><span class="o">.</span><span class="n">rest</span><span class="o">.</span><span class="n">rest</span><span class="o">.</span><span class="n">rest</span><span class="o">.</span><span class="n">first</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="mi">3</span>
 </span></code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<div class="language-scheme highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Scheme</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<p>实现 <code>has_cycle</code> 函数，该函数返回其参数（一个Link实例）是否包含循环。</p>
+<blockquote>
+<p>提示：遍历链表，并尝试记录你已经见过哪些Link对象。</p>
+</blockquote>
+<p>记得之前在leecode上看过一种方法叫快慢指针，如果链表中有环，快指针会先于慢指针，并困于环中，慢指针进入环后必将有一个时刻，即快指针追上慢指针（套圈）：</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nv">scm&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">define-macro</span><span class="w"> </span><span class="p">(</span><span class="nf">twice</span><span class="w"> </span><span class="nv">expr</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">list</span><span class="w"> </span><span class="ss">&#39;begin</span><span class="w"> </span><span class="nv">expr</span><span class="w"> </span><span class="nv">expr</span><span class="p">))</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nv">twice</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nv">scm&gt;</span><span class="w"> </span><span class="p">(</span><span class="nf">twice</span><span class="w"> </span><span class="p">(</span><span class="nf">print</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="mi">2</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="mi">2</span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">has_cycle</span><span class="p">(</span><span class="n">link</span><span class="p">):</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">slow</span> <span class="o">=</span> <span class="n">link</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="n">fast</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">rest</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="k">while</span> <span class="n">slow</span> <span class="ow">and</span> <span class="n">fast</span><span class="p">:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="k">if</span> <span class="n">slow</span> <span class="ow">is</span> <span class="n">fast</span><span class="p">:</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>            <span class="k">return</span> <span class="kc">True</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>        <span class="n">slow</span> <span class="o">=</span> <span class="n">slow</span><span class="o">.</span><span class="n">rest</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>        <span class="n">fast</span> <span class="o">=</span> <span class="n">fast</span><span class="o">.</span><span class="n">rest</span><span class="o">.</span><span class="n">rest</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="k">return</span> <span class="kc">False</span>
+</span></code></pre></div></td></tr></table></div>
+<p>但是作业提示的方法有点不太会，不太清楚该用什么来存储已经遍历过的节点，遂询问GPT：</p>
+<div class="admonition success">
+<p class="admonition-title">GPT-4o's Answer</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">has_cycle</span><span class="p">(</span><span class="n">link</span><span class="p">):</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="n">seen</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="k">while</span> <span class="n">link</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">Link</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="k">if</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>            <span class="k">return</span> <span class="kc">True</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>        <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>        <span class="n">link</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">rest</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="k">return</span> <span class="kc">False</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
+<p>但我不太理解为什么可以<code>if link in seen</code>，GPT回答道：</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在 Python 中，集合（set）是基于哈希表实现的，因此它能够快速地检查一个对象是否存在于集合中。对于 Link 类的实例，Python 会默认使用对象的内存地址来计算哈希值和进行比较。</p>
+<p>在 has_cycle 函数中，link 是一个 Link 类的实例，每个 Link 实例在内存中都有一个唯一的地址。这样，集合 seen 可以使用这些唯一的对象地址来判断一个 Link 实例是否已经存在于集合中。<mark>换句话说，集合可以利用对象的唯一标识来判断其是否已被访问过。</mark></p>
+<p>为什么 if link in seen 能够工作？
+- 对象的唯一性: 每个 Link 对象在内存中的地址是唯一的，因此 link 对象在 seen 集合中是通过其唯一的内存地址来进行比较的。
+- 集合的哈希机制: 集合会计算对象的哈希值（通常是对象的内存地址），然后通过哈希值快速查找对象是否存在。</p>
 </div>
-</div>
-<p>介绍了如何采用宏实现<code>for</code>语句</p>
-<p><img alt="" src="../picture/27.02.png" /></p>
+<p>相比之下，快慢指针的空间复杂度为<em>O</em>(1)，只使用了两个指针的额外空间，而后一种方法空间复杂度为<em>O</em>(<em>N</em>)，其中 <em>N</em> 是链表中的节点数。主要为集合的开销（最坏情况下需要将每个节点都记录到集合中一次）</p>
+<hr />
+<h2 id="q6-reverse">Q6 Reverse<a class="headerlink" href="#q6-reverse" title="Permanent link">&para;</a></h2>
+<p>编写一个函数 <code>reverse_other</code>，该函数会改变树的结构，==使得每一层（奇数深度）的标签顺序被反转。==例如，<code>Tree(1, [Tree(2, [Tree(4)]), Tree(3)])</code> 变成 <code>Tree(1, [Tree(3, [Tree(4)]), Tree(2)])</code>。注意，这里反转的是标签而不是节点本身。</p>
+<p>没什么好的想法，需要引入奇偶的标记就构造辅助函数：</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">reverse_other</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Mutates the tree such that nodes on every other (odd-depth) level</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="sd">    have the labels of their branches all reversed.</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="sd">    &gt;&gt;&gt; t = Tree(1, [Tree(2), Tree(3), Tree(4)])</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="sd">    &gt;&gt;&gt; reverse_other(t)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="sd">    &gt;&gt;&gt; t</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="sd">    Tree(1, [Tree(4), Tree(3), Tree(2)])</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="sd">    &gt;&gt;&gt; t = Tree(1, [Tree(2, [Tree(3, [Tree(4), Tree(5)]), Tree(6, [Tree(7)])]), Tree(8)])</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="sd">    &gt;&gt;&gt; reverse_other(t)</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="sd">    &gt;&gt;&gt; t</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="sd">    Tree(1, [Tree(8, [Tree(3, [Tree(5), Tree(4)]), Tree(6, [Tree(7)])]), Tree(2)])</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>    <span class="k">def</span> <span class="nf">help_func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">mark</span><span class="p">):</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>        <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">is_leaf</span><span class="p">():</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a>            <span class="k">pass</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a>            <span class="k">if</span> <span class="n">mark</span><span class="p">:</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a>                <span class="n">org_tree_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">b</span><span class="o">.</span><span class="n">label</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">branches</span><span class="p">]</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a>                <span class="n">new_tree_list</span> <span class="o">=</span> <span class="n">org_tree_list</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">org_tree_list</span><span class="p">)):</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>                    <span class="n">t</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">new_tree_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a>        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">branches</span><span class="p">:</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>            <span class="n">help_func</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="ow">not</span> <span class="n">mark</span><span class="p">)</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a>    <span class="n">help_func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
 
 
 
@@ -1911,7 +2055,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../30.Tail_Calls/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tail Calls(optional)">
+          <a href="../19.Efficiency/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Efficiency">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1921,20 +2065,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Tail Calls(optional)
+                Efficiency
               </div>
             </div>
           </a>
         
         
           
-          <a href="../32.Final_Example/" class="md-footer__link md-footer__link--next" aria-label="Next: Final Example">
+          <a href="../20.Decomposition/" class="md-footer__link md-footer__link--next" aria-label="Next: Decomposition &amp; Data example">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Final Example
+                Decomposition & Data example
               </div>
             </div>
             <div class="md-footer__button md-icon">
