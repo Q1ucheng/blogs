@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://q1ucheng.github.io/blogs/Blog/Blog/</loc>
+         <lastmod>2024-08-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://q1ucheng.github.io/blogs/Note/CS61A/1.CS61A_Structure_and_Interpretation_of_Computer_Programs/</loc>
          <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
