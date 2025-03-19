@@ -995,27 +995,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/23.Interpreters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Interpreters
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../CS61A/24.Scheme%E9%83%A8%E5%88%86%E6%80%BB%E5%92%8C/" class="md-nav__link">
         
   
@@ -1485,6 +1464,30 @@
       Ubuntu 22.04 下配置 Rviz2
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      一些报错与解决办法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一些报错与解决办法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2080,6 +2083,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      一些报错与解决办法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一些报错与解决办法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2409,6 +2436,80 @@
 <p><div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>rviz2<span class="w"> </span>rviz2
 </span></code></pre></div></td></tr></table></div>
 即可启动Rviz</p>
+<hr />
+<h2 id="_2">一些报错与解决办法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="1">1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>ros2中创建一个python节点时出现错误，节点程序与报错信息如下：</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kn">import</span> <span class="nn">rclpy</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6"></a>    <span class="n">node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;py_node&quot;</span><span class="p">)</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7"></a>    <span class="c1"># 这条信息将在节点运行时显示在控制台，可用于验证节点正常运行</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8"></a>    <span class="n">node</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Hello ROS2!&quot;</span><span class="p">)</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11"></a>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13"></a>    <span class="n">main</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>ModuleNotFoundError:<span class="w"> </span>No<span class="w"> </span>module<span class="w"> </span>named<span class="w"> </span><span class="s1">&#39;rclpy._rclpy_pybind11&#39;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a>The<span class="w"> </span>C<span class="w"> </span>extension<span class="w"> </span><span class="s1">&#39;/opt/ros/humble/lib/python3.10/site-packages/_rclpy_pybind11.cpython-312-x86_6</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="s1">4-linux-gnu.so&#39;</span><span class="w"> </span>isn<span class="s1">&#39;t present on the system. Please refer to &#39;</span>https://docs.ros.org/en/humble/Guides/Installation-Troubleshooting.html#import-failing-without-library-present-on-the-system<span class="err">&#39;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>possible<span class="w"> </span>solutions<span class="w">    </span>
+</span></code></pre></div></td></tr></table></div>
+<p>发现是python版本不适配，于是创建一个虚拟环境得以解决</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ros2_humble<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.10
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a>conda<span class="w"> </span>activate<span class="w"> </span>ros2_humble
+</span></code></pre></div></td></tr></table></div>
+<p>运行python程序，又出现新的报错：</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>ImportError:<span class="w"> </span>/home/wayne/miniconda3/envs/ros2_env/bin/../lib/libstdc++.so.6:<span class="w"> </span>version<span class="w"> </span><span class="sb">`</span>GLIBCXX_3
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a>.4.30<span class="s1">&#39; not found (required by /opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/_rclpy_pybind11.cpython-310-x86_64-linux-gnu.so)                                                       The C extension &#39;</span>/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/_rclpy_pybind11.cpyth
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3"></a>on-310-x86_64-linux-gnu.so<span class="s1">&#39; failed to be imported while being present on the system. Please refer to &#39;</span>https://docs.ros.org/en/<span class="o">{</span>distro<span class="o">}</span>/Guides/Installation-Troubleshooting.html#import-failing-even-with-library-present-on-the-system<span class="err">&#39;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>possible<span class="w"> </span>solutions<span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+<p>先用<code>strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX</code>查看，发现我的Ubuntu 22.04系统中的<code>libstdc++.so.6</code>确实包含<code>GLIBCXX_3.4.30</code>版本。这说明系统本身的库是符合要求的，问题可能出在conda环境中使用的<code>libstdc++</code>版本。之前可能错误地在conda环境中链接了旧版本的库</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="c1"># 1. 删除conda环境中的错误配置</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a>rm<span class="w"> </span>-f<span class="w"> </span>~/miniconda3/envs/ros2_env/lib/libstdc++.so*
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3"></a>rm<span class="w"> </span>-f<span class="w"> </span>~/miniconda3/envs/ros2_env/lib/libstdc++.so.6.bak
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="c1"># 2. 创建必要的目录结构</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/miniconda3/envs/ros2_env/etc/conda/activate.d
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="c1"># 3. 创建环境变量配置文件</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/miniconda3/envs/ros2_env/etc/conda/activate.d/env_vars.sh
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="c1"># 4. 设置文件权限</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9"></a>chmod<span class="w"> </span>+x<span class="w"> </span>~/miniconda3/envs/ros2_env/etc/conda/activate.d/env_vars.sh
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10"></a>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11"></a>conda<span class="w"> </span>deactivate
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12"></a>conda<span class="w"> </span>activate<span class="w"> </span>ros2_env
+</span></code></pre></div></td></tr></table></div>
+<p>此时再cd到python文件位置运行程序就没有问题了</p>
 
 
 
@@ -2431,7 +2532,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 19, 2025</span>
   </span>
 
     
@@ -2441,7 +2542,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 19, 2025</span>
   </span>
 
     
