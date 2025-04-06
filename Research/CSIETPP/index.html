@@ -10,24 +10,28 @@
         <meta name="author" content="Wayne">
       
       
-        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/MIT%2018.06/lecture01/">
+        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Research/CSIETPP/">
       
       
+        <link rel="prev" href="../../Note/Mkdocs-material/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%EF%BC%88github.io%EF%BC%89%E7%9A%84%E8%BF%87%E7%A8%8B/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+        <link rel="next" href="../../Blog/Blog/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>Lecture01 - Wayne's blogs</title>
+        <title>多模态信息融合感知的手势识别方法与系统设计 - Wayne's blogs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,13 +50,13 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
       <link rel="stylesheet" href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -87,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -97,7 +106,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Wayne&#39;s blogs" class="md-header__button md-logo" aria-label="Wayne's blogs" data-md-component="logo">
+    <a href="../.." title="Wayne&#39;s blogs" class="md-header__button md-logo" aria-label="Wayne's blogs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.5 1.15c-.53 0-1.04.19-1.43.58l-5.81 5.82 5.65 5.65 5.82-5.81c.77-.78.77-2.04 0-2.83l-2.84-2.83c-.39-.39-.89-.58-1.39-.58M10.3 8.5l-5.96 5.96c-.78.78-.78 2.04.02 2.85C3.14 18.54 1.9 19.77.67 21h5.66l.86-.86c.78.76 2.03.75 2.81-.02l5.95-5.96"/></svg>
@@ -117,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lecture01
+              多模态信息融合感知的手势识别方法与系统设计
             
           </span>
         </div>
@@ -250,7 +259,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -269,7 +278,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../CS61A/1.CS61A_Structure_and_Interpretation_of_Computer_Programs/" class="md-tabs__link">
+        <a href="../../Note/CS61A/1.CS61A_Structure_and_Interpretation_of_Computer_Programs/" class="md-tabs__link">
           
   
   CS61A
@@ -293,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Git%20related/Git/" class="md-tabs__link">
+        <a href="../../Note/Git%20related/Git/" class="md-tabs__link">
           
   
   Note
@@ -310,9 +319,29 @@
         
   
   
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Research
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
   
     <li class="md-tabs__item">
-      <a href="../../../Blog/Blog/" class="md-tabs__link">
+      <a href="../../Blog/Blog/" class="md-tabs__link">
         
   
     
@@ -346,7 +375,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Wayne&#39;s blogs" class="md-nav__button md-logo" aria-label="Wayne's blogs" data-md-component="logo">
+    <a href="../.." title="Wayne&#39;s blogs" class="md-nav__button md-logo" aria-label="Wayne's blogs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.5 1.15c-.53 0-1.04.19-1.43.58l-5.81 5.82 5.65 5.65 5.82-5.81c.77-.78.77-2.04 0-2.83l-2.84-2.83c-.39-.39-.89-.58-1.39-.58M10.3 8.5l-5.96 5.96c-.78.78-.78 2.04.02 2.85C3.14 18.54 1.9 19.77.67 21h5.66l.86-.86c.78.76 2.03.75 2.81-.02l5.95-5.96"/></svg>
@@ -376,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -436,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/1.CS61A_Structure_and_Interpretation_of_Computer_Programs/" class="md-nav__link">
+      <a href="../../Note/CS61A/1.CS61A_Structure_and_Interpretation_of_Computer_Programs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/2.Functions/" class="md-nav__link">
+      <a href="../../Note/CS61A/2.Functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -478,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/3.Control/" class="md-nav__link">
+      <a href="../../Note/CS61A/3.Control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/4.Higher-Order_function/" class="md-nav__link">
+      <a href="../../Note/CS61A/4.Higher-Order_function/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/5.Environments/" class="md-nav__link">
+      <a href="../../Note/CS61A/5.Environments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/6.Function_example/" class="md-nav__link">
+      <a href="../../Note/CS61A/6.Function_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/7.Recursive_function/" class="md-nav__link">
+      <a href="../../Note/CS61A/7.Recursive_function/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -583,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/8.Tree_recursion/" class="md-nav__link">
+      <a href="../../Note/CS61A/8.Tree_recursion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -604,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/9.Containers/" class="md-nav__link">
+      <a href="../../Note/CS61A/9.Containers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/10.Data_abstraction/" class="md-nav__link">
+      <a href="../../Note/CS61A/10.Data_abstraction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/11.Trees/" class="md-nav__link">
+      <a href="../../Note/CS61A/11.Trees/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/12.Mutable_values/" class="md-nav__link">
+      <a href="../../Note/CS61A/12.Mutable_values/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/HW03/" class="md-nav__link">
+      <a href="../../Note/CS61A/HW03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/13.Mutable_functions/" class="md-nav__link">
+      <a href="../../Note/CS61A/13.Mutable_functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -730,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/14.Iterators/" class="md-nav__link">
+      <a href="../../Note/CS61A/14.Iterators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/15.Object/" class="md-nav__link">
+      <a href="../../Note/CS61A/15.Object/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/HW04/" class="md-nav__link">
+      <a href="../../Note/CS61A/HW04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/16.Inheritance/" class="md-nav__link">
+      <a href="../../Note/CS61A/16.Inheritance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -814,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/Ants/" class="md-nav__link">
+      <a href="../../Note/CS61A/Ants/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -835,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/17.Representation/" class="md-nav__link">
+      <a href="../../Note/CS61A/17.Representation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -856,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/18.Composition/" class="md-nav__link">
+      <a href="../../Note/CS61A/18.Composition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -877,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/19.Efficiency/" class="md-nav__link">
+      <a href="../../Note/CS61A/19.Efficiency/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -898,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/Lab08%27s_Optional_Problems/" class="md-nav__link">
+      <a href="../../Note/CS61A/Lab08%27s_Optional_Problems/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -919,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/20.Decomposition/" class="md-nav__link">
+      <a href="../../Note/CS61A/20.Decomposition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/21.Scheme/" class="md-nav__link">
+      <a href="../../Note/CS61A/21.Scheme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -961,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/22.Calculation/" class="md-nav__link">
+      <a href="../../Note/CS61A/22.Calculation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/24.Scheme%E9%83%A8%E5%88%86%E6%80%BB%E5%92%8C/" class="md-nav__link">
+      <a href="../../Note/CS61A/24.Scheme%E9%83%A8%E5%88%86%E6%80%BB%E5%92%8C/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1003,7 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/25.Lab11/" class="md-nav__link">
+      <a href="../../Note/CS61A/25.Lab11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1024,7 +1053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/26.Declarative_Programming/" class="md-nav__link">
+      <a href="../../Note/CS61A/26.Declarative_Programming/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1045,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/27.Tables/" class="md-nav__link">
+      <a href="../../Note/CS61A/27.Tables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1066,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/28.Aggregation/" class="md-nav__link">
+      <a href="../../Note/CS61A/28.Aggregation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1087,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/29.Database/" class="md-nav__link">
+      <a href="../../Note/CS61A/29.Database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1108,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/30.Tail_Calls/" class="md-nav__link">
+      <a href="../../Note/CS61A/30.Tail_Calls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1129,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/31.Macros/" class="md-nav__link">
+      <a href="../../Note/CS61A/31.Macros/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1150,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/32.Final_Example/" class="md-nav__link">
+      <a href="../../Note/CS61A/32.Final_Example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CS61A/Conclusions/" class="md-nav__link">
+      <a href="../../Note/CS61A/Conclusions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1258,7 +1287,7 @@
             
   
   <span class="md-ellipsis">
-    Git & Github & GitLab
+    Tools
   </span>
   
 
@@ -1268,7 +1297,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
-            Git & Github & GitLab
+            Tools
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1279,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Git%20related/Git/" class="md-nav__link">
+      <a href="../../Note/Git%20related/Git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1300,11 +1329,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Git%20related/Github/" class="md-nav__link">
+      <a href="../../Note/Git%20related/Github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/PyQt6%26PySide6/Numpy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numpy
   </span>
   
 
@@ -1369,7 +1419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ubuntu%20related/%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9A%84%E9%85%8D%E7%BD%AE/" class="md-nav__link">
+      <a href="../../Note/Ubuntu%20related/%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E7%9A%84%E9%85%8D%E7%BD%AE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1438,7 +1488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MySQL/Mysql_learning/" class="md-nav__link">
+      <a href="../../Note/MySQL/Mysql_learning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1507,7 +1557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQt6%26PySide6/PyQt6PySide6/" class="md-nav__link">
+      <a href="../../Note/PyQt6%26PySide6/PyQt6PySide6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1576,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Numerical%20analysis/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%AC%AC%E4%BA%8C%E7%AB%A0/" class="md-nav__link">
+      <a href="../../Note/Numerical%20analysis/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%AC%AC%E4%BA%8C%E7%AB%A0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1597,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Numerical%20analysis/%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+      <a href="../../Note/Numerical%20analysis/%E8%AE%B0%E5%BD%95/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1666,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../LaTeX%20related/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%AD%E7%9A%84LaTeX%E4%BB%A3%E7%A0%81/" class="md-nav__link">
+      <a href="../../Note/LaTeX%20related/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%AD%E7%9A%84LaTeX%E4%BB%A3%E7%A0%81/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1735,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Markdown%20related/practice/" class="md-nav__link">
+      <a href="../../Note/Markdown%20related/practice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1804,7 +1854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Mkdocs-material/mkdocs%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE%E4%B8%ADerror%E7%9A%84%E8%A7%A3%E5%86%B3/" class="md-nav__link">
+      <a href="../../Note/Mkdocs-material/mkdocs%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE%E4%B8%ADerror%E7%9A%84%E8%A7%A3%E5%86%B3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1825,7 +1875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Mkdocs-material/mkdocs%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+      <a href="../../Note/Mkdocs-material/mkdocs%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1846,11 +1896,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Mkdocs-material/%E7%94%A8HTML%2BCSS%E5%AE%9E%E7%8E%B0%E9%A6%96%E9%A1%B5%E6%89%93%E5%AD%97%E6%95%88%E6%9E%9C%E6%B8%B2%E6%9F%93/" class="md-nav__link">
+      <a href="../../Note/Mkdocs-material/%E7%94%A8HTML%2BCSS%E5%AE%9E%E7%8E%B0%E9%A6%96%E9%A1%B5%E6%89%93%E5%AD%97%E6%95%88%E6%9E%9C%E6%B8%B2%E6%9F%93/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     尝试用HTML+CSS实现首页打字效果渲染
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Note/Mkdocs-material/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%EF%BC%88github.io%EF%BC%89%E7%9A%84%E8%BF%87%E7%A8%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    搭建个人主页(github.io)的过程
   </span>
   
 
@@ -1879,10 +1950,174 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Research
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    多模态信息融合感知的手势识别方法与系统设计
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    多模态信息融合感知的手势识别方法与系统设计
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目初期：阅读论文了解开发流程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="项目初期：阅读论文了解开发流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      初步规划
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      一些概念的理解和数理推导
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据预处理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目中期：算法搭建，识别手语
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../../Blog/Blog/" class="md-nav__link">
+      <a href="../../Blog/Blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1912,6 +2147,67 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目初期：阅读论文了解开发流程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="项目初期：阅读论文了解开发流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      初步规划
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      一些概念的理解和数理推导
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据预处理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目中期：算法搭建，识别手语
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1929,9 +2225,61 @@
   
 
 
-  <h1>Lecture01</h1>
-
-
+<h1 id="_1">多模态信息融合感知的手势识别方法与系统设计<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>本科二年级时做的大学生创新创业项目，由王文东老师指导，我主要负责数据处理和手语识别算法部分的搭建。</p>
+</blockquote>
+<h2 id="_2">项目初期：阅读论文了解开发流程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">初步规划<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>这个项目的初衷就是：<strong>设计一套可穿戴的嵌入式智能感知系统，能够不依靠视觉也可高效准确地识别军事手语并传递信息</strong></p>
+<p>整个项目核心的理念就是采用<strong>多模信息融合</strong>的方式去“表示”军事手语</p>
+<blockquote>
+<p>人体在做出动作的过程中，信息会通过不同的形式展现出来，单一传感器获得的数据过于片面，且由于传感器自身的零漂和温漂，使得测量结果产生较大误差。通过多种不同类型的传感器共同采集手语动作的信号可使不同信号的优势进行互补，提高识别鲁棒性。</p>
+</blockquote>
+<p>之后再对这些融合好的数据，选用合理的算法去识别这些手语。研究生学长的论文中选用的算法是<strong>深度卷积神经网络</strong>，在使用他攻读研究生期间制成的成品手语识别手套时，发现其识别准确率还是很可观的。所以我想的是在大创研究期间，先去复现他的方法（深度卷积神经网络）来熟悉数据采集、处理和算法搭建这一整套流程，再根据自己的理解来寻找一个更好的算法来提高识别速度或提升准确率。</p>
+<h3 id="_4">一些概念的理解和数理推导<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>首先是模态，它可以理解为系统或对象的一种特定状态、模式或行为方式，它通常与系统的动态特性、结构特征以及信息的表现形式等相关。</p>
+<blockquote>
+<p>在自动控制原理课程的学习中就已经接触过模态了：</p>
+<p><em>线性微分方程的解由齐次方程的通解（反映系统自由运动的规律）和输入信号对应的特解组成。如果微分方程的特征根时单实根<span class="arithmatex">\(\lambda_{1}\)</span>,<span class="arithmatex">\(\lambda_{2}\)</span>,...,<span class="arithmatex">\(\lambda_{n}\)</span>，则把函数<span class="arithmatex">\(e^{\lambda_{1}t}\)</span>,<span class="arithmatex">\(e^{\lambda_{2}t}\)</span>,...,<span class="arithmatex">\(e^{\lambda_{n}t}\)</span>称为该微分方程所描述运动的模态，也叫振型</em>（源自《自动控制原理》卢京潮编著）</p>
+<p>例如，一个二阶线性系统，其系统矩阵的特征值可能是两个实数，这就对应着两种不同的模态，可能是一个模态是指数衰减的，另一个模态是指数增长的（如果系统不稳定）；或者特征值是一对共轭复数，那么系统的响应就会呈现出振荡的模态，振荡的频率和衰减速度由特征值的实部和虚部共同决定。</p>
+</blockquote>
+<p>如何进行多模态数据融合？论文中给了三个阶段：</p>
+<ul>
+<li><strong>多模态数据的汇聚：</strong>将每个模态传感器的数据信息汇聚成较大的集合</li>
+<li><strong>多模态数据的合并与消除：</strong>主要是通过将重合度与相关度较高或者同样的信息进行剔除</li>
+<li><strong>多模态数据的整合：</strong>将第二阶段的结果继续整合，得到新的融合数据</li>
+</ul>
+<p>按照融合阶段的不同将融合分为三个层次：</p>
+<ul>
+<li><strong>数据层融合</strong>（先对数据进行融合，再提取特征进行决策）</li>
+</ul>
+<p>多传感器数据（如加速度计、陀螺仪、弯曲传感器）需同步分析，动作的时空关联性强</p>
+<ul>
+<li>
+<p><strong>特征层融合</strong>（对每路数据进行特征提取并融合特征，再决策）
+  自动驾驶中，融合激光雷达（3D点云特征）与摄像头（2D图像特征），提取联合特征用于目标检测</p>
+</li>
+<li>
+<p><strong>决策层融合</strong>（先对每路数据提取特征并决策，最后将所有决策结果融合）
+  无人机导航中，GPS信号丢失时，优先依赖视觉SLAM和惯性导航的融合决策</p>
+</li>
+</ul>
+<p>军事手语识别需要综合手指弯曲度、加速度、角速度等多种传感器的时序数据，所以我们选择在数据层对信息进行融合，采用的方法是加权平均法。</p>
+<h3 id="_5">数据预处理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>组员已经将数据采集整理好了，由我对其进行处理，我暂时选取了三种“特征明显”的手语数据进行分析：停止，敌人，观察。由于原始数据呈现锯齿状，我先进行数据降噪再做分析。我选择先通过<strong>移动平均滤波</strong>进行初步的平滑处理，去除高频噪声，再利用 <strong>Savitzky - Golay 滤波</strong>在保留信号特征的前提下进一步提高滤波效果，结果如下：</p>
+<blockquote>
+<p>Savitzky - Golay 滤波基于最小二乘法多项式拟合。它的基本思想是在每个数据点的邻域内，用一个低阶多项式来拟合该邻域内的数据点，然后用拟合多项式在该点的值来代替原始数据点的值，从而达到平滑数据、去除噪声的目的</p>
+</blockquote>
+<p><img alt="" src="../pic/04.png" /></p>
+<p><img alt="" src="../pic/05.png" /></p>
+<p><img alt="" src="../pic/06.png" /></p>
+<p>后两者原始数据中波动不大，但还是顺手将它们处理了。观察可知欧拉角、四元数和手指弯曲度的数据幅值也有较大差异，所以最后进行归一化，数据预处理结束
+$$
+\overline{X} = \frac{X - X_{\min}}{X_{\max} - X_{\min}}
+$$
+五个手指弯曲度可直接反映出手指状态，而欧拉角和四元数直接描述了手臂和手掌的姿态，因已可以直接作为特征值使用。（后来发现以上三种信息只能描述静态的军事手语，而对于动态的手语（如掩护）需要加入速度与加速度来和静态手语做区分，组员还没有采集速度和加速度的数据，所以我先行学习算法，搭建框架，用静态手语做个测试）</p>
+<h2 id="_6">项目中期：算法搭建，识别手语<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 
 
 
@@ -1954,7 +2302,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 6, 2025</span>
   </span>
 
     
@@ -1964,7 +2312,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 6, 2025</span>
   </span>
 
     
@@ -2039,6 +2387,44 @@
         <footer class="md-footer">
   
     
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../Note/Mkdocs-material/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%EF%BC%88github.io%EF%BC%89%E7%9A%84%E8%BF%87%E7%A8%8B/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 搭建个人主页(github.io)的过程">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                搭建个人主页(github.io)的过程
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../Blog/Blog/" class="md-footer__link md-footer__link--next" aria-label="Next: Blog">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Blog
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2098,12 +2484,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "admonition", "navigation.footer", "navigation.tabs", "navigation.sections", "navigation.path", "toc.follow", "content.tabs.link", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "admonition", "navigation.footer", "navigation.tabs", "navigation.sections", "navigation.path", "toc.follow", "content.tabs.link", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
-        <script src="../../../javascripts/katex.js"></script>
+        <script src="../../javascripts/katex.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
       
