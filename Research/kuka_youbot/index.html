@@ -10,13 +10,13 @@
         <meta name="author" content="Wayne">
       
       
-        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Research/CSIETPP/">
+        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Research/kuka_youbot/">
       
       
-        <link rel="prev" href="../../Note/Numerical%20analysis/NPUCM/">
+        <link rel="prev" href="../CSIETPP/">
       
       
-        <link rel="next" href="../kuka_youbot/">
+        <link rel="next" href="../../Blog/Blog/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>多模态信息融合感知的手势识别方法与系统设计 - Wayne's blogs</title>
+        <title>Ubuntu22.04下的KUKA youbot仿真 - Wayne's blogs</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#ubuntu2204kuka-youbot" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              多模态信息融合感知的手势识别方法与系统设计
+              Ubuntu22.04下的KUKA youbot仿真
             
           </span>
         </div>
@@ -325,7 +325,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../CSIETPP/" class="md-tabs__link">
           
   
   Research
@@ -1968,6 +1968,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSIETPP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    多模态信息融合感知的手势识别方法与系统设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1984,7 +2005,7 @@
           
   
   <span class="md-ellipsis">
-    多模态信息融合感知的手势识别方法与系统设计
+    Ubuntu22.04下的KUKA youbot仿真
   </span>
   
 
@@ -1995,7 +2016,7 @@
         
   
   <span class="md-ellipsis">
-    多模态信息融合感知的手势识别方法与系统设计
+    Ubuntu22.04下的KUKA youbot仿真
   </span>
   
 
@@ -2017,37 +2038,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#urdf" class="md-nav__link">
     <span class="md-ellipsis">
-      项目初期：阅读论文了解开发流程
+      初始化工作区与urdf
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="项目初期：阅读论文了解开发流程">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rvizyoubot" class="md-nav__link">
+    <span class="md-ellipsis">
+      在Rviz中进行youbot可视化
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="在Rviz中进行youbot可视化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#display_youbotlaunchpy" class="md-nav__link">
     <span class="md-ellipsis">
-      初步规划
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      一些概念的理解和数理推导
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      数据预处理
+      编写display_youbot.launch.py
     </span>
   </a>
   
@@ -2059,90 +2071,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#gazebo" class="md-nav__link">
     <span class="md-ellipsis">
-      项目中期：算法搭建，识别手语
+      在gazebo中仿真
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="项目中期：算法搭建，识别手语">
+    <nav class="md-nav" aria-label="在gazebo中仿真">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dcnn" class="md-nav__link">
+  <a href="#gazebo_simlaunchpy" class="md-nav__link">
     <span class="md-ellipsis">
-      深度卷积神经网络（DCNN）简介
+      编写gazebo_sim.launch.py
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dcnn_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      为什么能使用DCNN?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dcnn_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      我实现的DCNN
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="我实现的DCNN">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      导入库部分
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      定义动作列表并合并数据
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      提取特征和标签并进行预处理
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dcnn_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      编译DCNN
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      训练并输出结果
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2155,27 +2098,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../kuka_youbot/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Ubuntu22.04下的KUKA youbot仿真
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2235,37 +2157,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#urdf" class="md-nav__link">
     <span class="md-ellipsis">
-      项目初期：阅读论文了解开发流程
+      初始化工作区与urdf
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="项目初期：阅读论文了解开发流程">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rvizyoubot" class="md-nav__link">
+    <span class="md-ellipsis">
+      在Rviz中进行youbot可视化
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="在Rviz中进行youbot可视化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#display_youbotlaunchpy" class="md-nav__link">
     <span class="md-ellipsis">
-      初步规划
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      一些概念的理解和数理推导
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      数据预处理
+      编写display_youbot.launch.py
     </span>
   </a>
   
@@ -2277,90 +2190,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#gazebo" class="md-nav__link">
     <span class="md-ellipsis">
-      项目中期：算法搭建，识别手语
+      在gazebo中仿真
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="项目中期：算法搭建，识别手语">
+    <nav class="md-nav" aria-label="在gazebo中仿真">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dcnn" class="md-nav__link">
+  <a href="#gazebo_simlaunchpy" class="md-nav__link">
     <span class="md-ellipsis">
-      深度卷积神经网络（DCNN）简介
+      编写gazebo_sim.launch.py
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dcnn_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      为什么能使用DCNN?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dcnn_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      我实现的DCNN
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="我实现的DCNN">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      导入库部分
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      定义动作列表并合并数据
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      提取特征和标签并进行预处理
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dcnn_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      编译DCNN
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      训练并输出结果
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2387,179 +2231,41 @@
   
 
 
-<h1 id="_1">多模态信息融合感知的手势识别方法与系统设计<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>本科二年级时做的大学生创新创业项目，由王文东老师指导，我主要负责数据处理和手语识别算法部分的搭建。</p>
-</blockquote>
-<h2 id="_2">项目初期：阅读论文了解开发流程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">初步规划<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>这个项目的初衷就是：<strong>设计一套可穿戴的嵌入式智能感知系统，能够不依靠视觉也可高效准确地识别军事手语并传递信息</strong></p>
-<p>整个项目核心的理念就是采用<strong>多模信息融合</strong>的方式去“表示”军事手语</p>
-<blockquote>
-<p>人体在做出动作的过程中，信息会通过不同的形式展现出来，单一传感器获得的数据过于片面，且由于传感器自身的零漂和温漂，使得测量结果产生较大误差。通过多种不同类型的传感器共同采集手语动作的信号可使不同信号的优势进行互补，提高识别鲁棒性。</p>
-</blockquote>
-<p>之后再对这些融合好的数据，选用合理的算法去识别这些手语。研究生学长的论文中选用的算法是<strong>深度卷积神经网络</strong>，在使用他攻读研究生期间制成的成品手语识别手套时，发现其识别准确率还是很可观的。所以我想的是在大创研究期间，先去复现他的方法（深度卷积神经网络）来熟悉数据采集、处理和算法搭建这一整套流程，再根据自己的理解来寻找一个更好的算法来提高识别速度或提升准确率。</p>
-<h3 id="_4">一些概念的理解和数理推导<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>首先是模态，它可以理解为系统或对象的一种特定状态、模式或行为方式，它通常与系统的动态特性、结构特征以及信息的表现形式等相关。</p>
-<blockquote>
-<p>在自动控制原理课程的学习中就已经接触过模态了：</p>
-<p><em>线性微分方程的解由齐次方程的通解（反映系统自由运动的规律）和输入信号对应的特解组成。如果微分方程的特征根时单实根<span class="arithmatex">\(\lambda_{1}\)</span>,<span class="arithmatex">\(\lambda_{2}\)</span>,...,<span class="arithmatex">\(\lambda_{n}\)</span>，则把函数<span class="arithmatex">\(e^{\lambda_{1}t}\)</span>,<span class="arithmatex">\(e^{\lambda_{2}t}\)</span>,...,<span class="arithmatex">\(e^{\lambda_{n}t}\)</span>称为该微分方程所描述运动的模态，也叫振型</em>（源自《自动控制原理》卢京潮编著）</p>
-<p>例如，一个二阶线性系统，其系统矩阵的特征值可能是两个实数，这就对应着两种不同的模态，可能是一个模态是指数衰减的，另一个模态是指数增长的（如果系统不稳定）；或者特征值是一对共轭复数，那么系统的响应就会呈现出振荡的模态，振荡的频率和衰减速度由特征值的实部和虚部共同决定。</p>
-</blockquote>
-<p>如何进行多模态数据融合？论文中给了三个阶段：</p>
-<ul>
-<li><strong>多模态数据的汇聚：</strong>将每个模态传感器的数据信息汇聚成较大的集合</li>
-<li><strong>多模态数据的合并与消除：</strong>主要是通过将重合度与相关度较高或者同样的信息进行剔除</li>
-<li><strong>多模态数据的整合：</strong>将第二阶段的结果继续整合，得到新的融合数据</li>
-</ul>
-<p>按照融合阶段的不同将融合分为三个层次：</p>
-<ul>
-<li><strong>数据层融合</strong>（先对数据进行融合，再提取特征进行决策）</li>
-</ul>
-<p>多传感器数据（如加速度计、陀螺仪、弯曲传感器）需同步分析，动作的时空关联性强</p>
-<ul>
-<li>
-<p><strong>特征层融合</strong>（对每路数据进行特征提取并融合特征，再决策）
-  自动驾驶中，融合激光雷达（3D点云特征）与摄像头（2D图像特征），提取联合特征用于目标检测</p>
-</li>
-<li>
-<p><strong>决策层融合</strong>（先对每路数据提取特征并决策，最后将所有决策结果融合）
-  无人机导航中，GPS信号丢失时，优先依赖视觉SLAM和惯性导航的融合决策</p>
-</li>
-</ul>
-<p>军事手语识别需要综合手指弯曲度、加速度、角速度等多种传感器的时序数据，所以我们选择在数据层对信息进行融合，采用的方法是加权平均法。</p>
-<h3 id="_5">数据预处理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>组员已经将数据采集整理好了，由我对其进行处理，我暂时选取了三种“特征明显”的手语数据进行分析：停止，敌人，观察。由于原始数据呈现锯齿状，我先进行数据降噪再做分析。我选择先通过<strong>移动平均滤波</strong>进行初步的平滑处理，去除高频噪声，再利用 <strong>Savitzky - Golay 滤波</strong>在保留信号特征的前提下进一步提高滤波效果，结果如下：</p>
-<blockquote>
-<p>Savitzky - Golay 滤波基于最小二乘法多项式拟合。它的基本思想是在每个数据点的邻域内，用一个低阶多项式来拟合该邻域内的数据点，然后用拟合多项式在该点的值来代替原始数据点的值，从而达到平滑数据、去除噪声的目的</p>
-</blockquote>
-<p><img alt="" src="../pic/04.png" /></p>
-<p><img alt="" src="../pic/05.png" /></p>
-<p><img alt="" src="../pic/06.png" /></p>
-<p>后两者原始数据中波动不大，但还是顺手将它们处理了。观察可知欧拉角、四元数和手指弯曲度的数据幅值也有较大差异，所以最后进行归一化，数据预处理结束
-$$
-\overline{X} = \frac{X - X_{\min}}{X_{\max} - X_{\min}}
-$$
-五个手指弯曲度可直接反映出手指状态，而欧拉角和四元数直接描述了手臂和手掌的姿态，因已可以直接作为特征值使用。（后来发现以上三种信息只能描述静态的军事手语，而对于动态的手语（如掩护）需要加入速度与加速度来和静态手语做区分，组员还没有采集速度和加速度的数据，所以我先行学习算法，搭建框架，用静态手语做个测试）</p>
-<h2 id="_6">项目中期：算法搭建，识别手语<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>现在的问题背景是：<strong>通过数据手套去采集5个手指弯曲传感器、一个小臂传感器，一个大臂传感器的数据，实现对手势的识别</strong></p>
-<p>论文中研究生学长给出的最终算法方案是<strong>深度卷积神经网络</strong>，我在想还有没有能用的，之后也可以做个比较，于是询问GPT，它给我的建议是：<strong>RNN变体</strong>（LSTM/GRU/BiLSTM），<strong>CNN-LSTM混合架构</strong>，<strong>Transformer</strong>（Informer、Autoformer）。我决定先复现学长的代码，之后再尝试一下Transformer</p>
-<h3 id="dcnn">深度卷积神经网络（DCNN）简介<a class="headerlink" href="#dcnn" title="Permanent link">&para;</a></h3>
-<p>深度卷积神经网络（Deep Convolutional Neural Network，DCNN）是一种特殊的深度学习模型，它在卷积神经网络（CNN）的基础上进行了深度扩展，包含多个卷积层、池化层和全连接层。以下是 DCNN 的一些关键组件及其功能：</p>
-<ul>
-<li><strong>卷积层（Convolutional Layer）</strong>：通过卷积核（滤波器）在输入数据上滑动，进行卷积操作，提取数据中的局部特征。卷积核可以学习到不同的特征模式，如边缘、纹理等。</li>
-</ul>
-<blockquote>
-<p>卷积层的作用就像是：假设我们正在看一堆不同的图片，每张图片里都有各种各样的小细节。卷积层就像是拿着放大镜在这些图片上仔细观察。卷积核，它在图片上一格一格地滑动。每滑动到一个地方，就会把这个小区域的信息进行整合和分析。通过不断地滑动，卷积核可以发现一些固定的特征模式，就好比它能找出图片里手指弯曲的样子、手臂倾斜的角度</p>
-<p>后续我实现了一维卷积层（Conv1D），它沿着传感器数据的时间线去寻找特征，看看在不同时刻手指和手臂的状态有什么规律。</p>
-</blockquote>
-<ul>
-<li><strong>池化层（Pooling Layer）</strong>：用于降低特征图的维度，减少计算量，同时增强模型的鲁棒性</li>
-</ul>
-<blockquote>
-<p>池化层就是筛选出最重要的特征，我实现的是最大池化层<code>MaxPooling1D</code>，它会在一维的传感器数据特征里，每隔一段距离就挑出最大的值</p>
-</blockquote>
-<ul>
-<li><strong>全连接层（Fully Connected Layer）</strong>：将卷积层和池化层提取的特征进行整合，用于最终的分类或回归任务。</li>
-</ul>
-<blockquote>
-<p>我实现的Dense就是全连接层，它会把前面卷积和池化得到的特征进行整合，最后通过激活函数（比如 <code>softmax</code>）给出一个最可能的手势分类结果</p>
-</blockquote>
-<h3 id="dcnn_1">为什么能使用DCNN?<a class="headerlink" href="#dcnn_1" title="Permanent link">&para;</a></h3>
-<p>一开始看到采用CNN相关的算法有点不解（我印象里一般是用来处理图像的），稍微了解一点后DCNN的如下优点让它适合解决这个手势识别的任务：</p>
-<ul>
-<li>
-<p>DCNN 可以自动从原始数据中提取有效的特征，无需手动设计特征。</p>
-</li>
-<li>
-<p>卷积操作可以捕捉数据中的局部特征，而手势的特征通常是局部的。</p>
-</li>
-<li>DCNN 具有平移不变性，即无论特征出现在数据的哪个位置，模型都可以识别。在手势识别中，不同的人可能以不同的位置和角度做出相同的手势，DCNN 可以很好地处理这种情况。</li>
-<li>DCNN 的深度结构可以学习到数据中的复杂非线性关系。</li>
-</ul>
-<p>DCNN将我们的数据集看作是一维的时间序列数据</p>
-<h3 id="dcnn_2">我实现的DCNN<a class="headerlink" href="#dcnn_2" title="Permanent link">&para;</a></h3>
-<p>大概了解一些后握着手开始编写算法主体，主要是基于<strong><code>tensorflow.keras</code></strong>这个高级神经网络 API，它简化了构建和训练深度学习模型的过程。</p>
-<h4 id="_7">导入库部分<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kn">from</span> <span class="nn">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kn">from</span> <span class="nn">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Conv1D</span><span class="p">,</span> <span class="n">MaxPooling1D</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dense</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="kn">from</span> <span class="nn">tensorflow.keras.utils</span> <span class="kn">import</span> <span class="n">to_categorical</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<h1 id="ubuntu2204kuka-youbot">Ubuntu22.04下的KUKA youbot仿真<a class="headerlink" href="#ubuntu2204kuka-youbot" title="Permanent link">&para;</a></h1>
+<h2 id="urdf">初始化工作区与urdf<a class="headerlink" href="#urdf" title="Permanent link">&para;</a></h2>
+<p>先创建一个工作区文件夹，我主目录下创建<code>robot_workspace</code>，方便以后将不同的机器人仿真工作区都放在其中便于管理。接着创建<code>youbot_ws</code>（这个就是<code>youbot</code>的工作空间），进入<code>youbot_ws</code>新建<code>src</code>，在<code>src</code>中创建<code>youbot_description</code> 软件包：</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>ros2<span class="w"> </span>pkg<span class="w"> </span>create<span class="w"> </span>youbot_description<span class="w"> </span>--build-type<span class="w"> </span>ament_cmake<span class="w"> </span>--license<span class="w"> </span>Apache-2.0
 </span></code></pre></div></td></tr></table></div>
-<h4 id="_8">定义动作列表并合并数据<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 定义动作列表</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">actions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;processed_watch&#39;</span><span class="p">,</span> <span class="s1">&#39;processed_enemy&#39;</span><span class="p">,</span> <span class="s1">&#39;processed_stop&#39;</span><span class="p">,</span> <span class="s1">&#39;processed_see&#39;</span><span class="p">,</span> <span class="s1">&#39;processed_hide&#39;</span><span class="p">]</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># 初始化一个空的 DataFrame 用于存储合并后的数据</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">train_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1"># 遍历每个动作的数据文件</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="k">for</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">actions</span><span class="p">:</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="n">file_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;./processed_data/</span><span class="si">{</span><span class="n">action</span><span class="si">}</span><span class="s1">.xlsx&#39;</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>    <span class="c1"># 添加动作标签列</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;action&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">action</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>    <span class="c1"># 合并数据</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="n">train_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">train_data</span><span class="p">,</span> <span class="n">data</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<p>生成模板之后从<code>youbot_ws</code>打开vscode，在<code>youbot_ws/src/youbot_description/</code>下创建<code>urdf</code>文件夹用于存放机器人的urdf文件，由于之前将youbot的urdf源码重构为了xacro形式，所以我直接从原有的文件里cv过来，同时在<code>youbot_description</code>下创建<code>meshes</code>文件夹存放youbot的3D模型<code>stl</code>文件</p>
+<blockquote>
+<p>之前因为想看看youbot的3D模型，但我ubuntu中没有sw，于是找到这个在线可视化网站：</p>
+<p>https://imagetostl.com/cn/view-stl-online#convert</p>
+<p>它还支持很多其他格式的模型文件的查看</p>
+</blockquote>
+<p>关于youbot的模型文件差不多齐全了，现在开始准备将其加载到rviz中</p>
+<h2 id="rvizyoubot">在Rviz中进行youbot可视化<a class="headerlink" href="#rvizyoubot" title="Permanent link">&para;</a></h2>
+<h3 id="display_youbotlaunchpy">编写<code>display_youbot.launch.py</code><a class="headerlink" href="#display_youbotlaunchpy" title="Permanent link">&para;</a></h3>
+<p>先导一些包：</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">launch.actions</span> <span class="kn">import</span> <span class="n">DeclareLaunchArgument</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">launch.substitutions</span> <span class="kn">import</span> <span class="n">Command</span><span class="p">,</span> <span class="n">FindExecutable</span><span class="p">,</span> <span class="n">PathJoinSubstitution</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kn">from</span> <span class="nn">launch_ros.actions</span> <span class="kn">import</span> <span class="n">Node</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="kn">from</span> <span class="nn">launch_ros.substitutions</span> <span class="kn">import</span> <span class="n">FindPackageShare</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="kn">from</span> <span class="nn">launch_ros.parameter_descriptions</span> <span class="kn">import</span> <span class="n">ParameterValue</span>
 </span></code></pre></div></td></tr></table></div>
-<p>定义了一个动作列表，然后遍历每个动作的数据文件，将其读取为 <code>DataFrame</code> 并添加动作标签列，最后将所有数据合并为一个 <code>DataFrame</code></p>
-<h4 id="_9">提取特征和标签并进行预处理<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 提取特征和标签</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">X</span> <span class="o">=</span> <span class="n">train_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;action&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span> <span class="c1"># 从 train_data 中删除 action 列，得到只包含特征的 DataFrame</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">y</span> <span class="o">=</span> <span class="n">train_data</span><span class="p">[</span><span class="s1">&#39;action&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>  <span class="c1"># y 是包含所有标签的 numpy 数组</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c1"># 标签编码</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">label_encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>  <span class="c1"># 将字符串类型的标签转换为整数类型，方便机器学习模型处理</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">y_encoded</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>  <span class="c1"># 每个元素对应一个标签的编码</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">y_categorical</span> <span class="o">=</span> <span class="n">to_categorical</span><span class="p">(</span><span class="n">y_encoded</span><span class="p">)</span>  <span class="c1"># 二维的 numpy 数组，每一行对应一个样本的独热编码</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="c1"># 划分训练集和测试集</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_categorical</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>  <span class="c1"># 设置20% 作为测试集，80% 作为训练集</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1"># 调整输入数据的形状以适应 Conv1D 层</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="n">X_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="n">X_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<p>新建一个函数<code>generate_launch_description()</code>，首先读一下模型文件的位置</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">xacro_path</span> <span class="o">=</span> <span class="n">PathJoinSubstitution</span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="p">[</span><span class="n">FindPackageShare</span><span class="p">(</span><span class="s2">&quot;youbot_description&quot;</span><span class="p">),</span> <span class="s2">&quot;urdf&quot;</span><span class="p">,</span> <span class="s2">&quot;youbot.xacro&quot;</span><span class="p">]</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<p>首先从合并后的数据中提取特征和标签，然后使用 <code>LabelEncoder</code> 对标签进行编码，再将编码后的标签转换为独热编码。接着，使用 <code>train_test_split</code> 将数据集划分为训练集和测试集，最后调整输入数据的形状以适应一维卷积层的输入要求</p>
-<h4 id="dcnn_3">编译DCNN<a class="headerlink" href="#dcnn_3" title="Permanent link">&para;</a></h4>
+<p>之后配置一些节点，格式一般就是<code>package</code>（指定节点所属的包名）、<code>executable</code>（指定要执行的可执行文件）、<code>parameters</code> （节点设置参数）</p>
 <div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -2571,49 +2277,316 @@ $$
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-3-10">10</a></span>
 <span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 构建 DCNN 模型</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv1D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)))</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling1D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv1D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling1D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Flatten</span><span class="p">())</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">y_categorical</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="c1"># 编译模型</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 配置ros_state_publisher节点</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">ros_state_publisher</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="n">package</span><span class="o">=</span><span class="s2">&quot;robot_state_publisher&quot;</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="n">executable</span><span class="o">=</span><span class="s2">&quot;robot_state_publisher&quot;</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="n">parameters</span><span class="o">=</span><span class="p">[</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>        <span class="p">{</span><span class="s2">&quot;robot_description&quot;</span><span class="p">:</span> <span class="n">ParameterValue</span><span class="p">(</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>            <span class="n">Command</span><span class="p">([</span><span class="s2">&quot;xacro &quot;</span><span class="p">,</span> <span class="n">xacro_path</span><span class="p">]),</span> 
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>            <span class="n">value_type</span><span class="o">=</span><span class="nb">str</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>            <span class="p">)</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>    <span class="p">}],</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="p">)</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="c1"># 配置joint_state_publisher节点</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="n">joint_state_publisher</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>    <span class="n">package</span><span class="o">=</span><span class="s2">&quot;joint_state_publisher&quot;</span><span class="p">,</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>    <span class="n">executable</span><span class="o">=</span><span class="s2">&quot;joint_state_publisher&quot;</span><span class="p">,</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;joint_state_publisher&quot;</span><span class="p">,</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="p">)</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="c1"># 配置rviz2节点</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="n">rviz2_node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a>    <span class="n">package</span><span class="o">=</span><span class="s2">&quot;rviz2&quot;</span><span class="p">,</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>    <span class="n">executable</span><span class="o">=</span><span class="s2">&quot;rviz2&quot;</span><span class="p">,</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;rviz2&quot;</span><span class="p">,</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a>    <span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;-d&quot;</span><span class="p">,</span> <span class="n">PathJoinSubstitution</span><span class="p">(</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>        <span class="p">[</span><span class="n">FindPackageShare</span><span class="p">(</span><span class="s2">&quot;youbot_description&quot;</span><span class="p">),</span> <span class="s2">&quot;config&quot;</span><span class="p">,</span> <span class="s2">&quot;rviz&quot;</span><span class="p">,</span> <span class="s2">&quot;display_model.rviz&quot;</span><span class="p">]</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a>    <span class="p">)]</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<p>使用 <code>Sequential</code> 模型构建一个一维卷积神经网络（DCNN），包含卷积层、池化层、扁平化层和全连接层。最后，使用 <code>compile</code> 方法编译模型，指定优化器、损失函数和评估指标</p>
-<h4 id="_10">训练并输出结果<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span>
-<span class="normal"><a href="#__codelineno-4-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 训练模型，并保存训练历史</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1"># 输出训练结果</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;训练集损失和准确率：&quot;</span><span class="p">)</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;loss&#39;</span><span class="p">])):</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Epoch </span><span class="si">{</span><span class="n">epoch</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">: Loss = </span><span class="si">{</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;loss&#39;</span><span class="p">][</span><span class="n">epoch</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, Accuracy = </span><span class="si">{</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">][</span><span class="n">epoch</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">验证集损失和准确率：&quot;</span><span class="p">)</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_loss&#39;</span><span class="p">])):</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Epoch </span><span class="si">{</span><span class="n">epoch</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">: Val Loss = </span><span class="si">{</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_loss&#39;</span><span class="p">][</span><span class="n">epoch</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, Val Accuracy = </span><span class="si">{</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_accuracy&#39;</span><span class="p">][</span><span class="n">epoch</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="c1"># 保存模型</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;./model/action_recognition_model_2.h5&#39;</span><span class="p">)</span>
+<p>最后return一下</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>        <span class="n">ros_state_publisher</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="n">joint_state_publisher</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="n">rviz2_node</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="p">])</span>
 </span></code></pre></div></td></tr></table></div>
+<p>这样launch文件基本就写好了，接下来去<code>CMakeLists.txt</code>里把<code>install</code>写好（也就是launch meshes urdf）</p>
+<div class="language-cmake highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">CMake</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="err">...</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nb">find_package</span><span class="p">(</span><span class="s">urdf</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nb">find_package</span><span class="p">(</span><span class="s">xacro</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="err">...</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="nb">install</span><span class="p">(</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">  </span><span class="s">DIRECTORY</span><span class="w"> </span><span class="s">launch</span><span class="w"> </span><span class="s">meshes</span><span class="w"> </span><span class="s">urdf</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">  </span><span class="s">DESTINATION</span><span class="w"> </span><span class="s">share/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>现在就可以启动rviz了，在<code>youbot_ws</code>中启动终端运行：</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>colcon<span class="w"> </span>build
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="nb">source</span><span class="w"> </span>install/setup.bash
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>ros2<span class="w"> </span>launch<span class="w"> </span>youbot_description<span class="w"> </span>display_youbot.launch.py
+</span></code></pre></div></td></tr></table></div>
+<p>在rviz中add好<code>robot_model</code>，在<code>Global Options</code>中指定好<code>Fixed frame</code>为<code>base_link</code>，就可以看到youbot模型了</p>
+<blockquote>
+<p>在launch文件中添加<code>joint_state_publisher_gui</code>就可以调出一个gui来操控机器人</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">joint_state_publisher_gui</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>        <span class="n">package</span><span class="o">=</span><span class="s2">&quot;joint_state_publisher_gui&quot;</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>        <span class="n">executable</span><span class="o">=</span><span class="s2">&quot;joint_state_publisher_gui&quot;</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;joint_state_publisher_gui&quot;</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>    <span class="p">)</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="o">...</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a>        <span class="o">..</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a>        <span class="n">joint_state_publisher_gui</span><span class="p">,</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a>        <span class="o">...</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a>    <span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
+<p>但要注意的是，添加<code>joint_state_publisher_gui</code>后，就应该把<code>joint_state_publisher</code>注释掉，否则会造成冲突（<code>joint_state_publisher_gui</code>本身就有<code>joint_state_publisher</code>的功能）</p>
+</blockquote>
+<p>最后rviz界面如下图所示（点击<code>randomize</code>可以随机改变机械臂姿态，<code>center</code>复位）：</p>
+<p><img alt="rviz2界面" src="../bot_pic/01.png" /></p>
+<h2 id="gazebo">在gazebo中仿真<a class="headerlink" href="#gazebo" title="Permanent link">&para;</a></h2>
+<p>先安装gazebo，再导入一些基础的库（来源于鱼香ros）</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gazebo
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.gazebo
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>git<span class="w"> </span>clone<span class="w"> </span>https://gitee.com/ohhuo/gazebo_models.git<span class="w"> </span>~/.gazebo/models
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>rm<span class="w"> </span>-rf<span class="w"> </span>~/.gazebo/models/.git
+</span></code></pre></div></td></tr></table></div>
+<p>启动gazebo后在界面中点击edit可以调出Building Editor，可以绘制一些墙体放一些物件，完成后将文件保存为<code>room</code>文件夹，保存在<code>description</code>下的<code>world</code>中，之后可以对世界文件进行修改，<code>save world as</code>为<code>.world</code>文件保存在world中即可。<code>world</code>文件结构如下：</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>.
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>├──<span class="w"> </span>custom_room.world
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a>└──<span class="w"> </span>room
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span>├──<span class="w"> </span>model.config
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span>└──<span class="w"> </span>model.sdf
+</span></code></pre></div></td></tr></table></div>
+<p>然后就可以开始编写launch文件了，先下载好对应的配置：</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-<span class="nv">$ROS_DISTRO</span>-gazebo-ros-pkgs
+</span></code></pre></div></td></tr></table></div>
+<h3 id="gazebo_simlaunchpy">编写<code>gazebo_sim.launch.py</code><a class="headerlink" href="#gazebo_simlaunchpy" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>整个逻辑与rviz的launch文件差不多</p>
+</blockquote>
+<p>和rviz的启动文件一样的导入包</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kn">from</span> <span class="nn">launch.actions</span> <span class="kn">import</span> <span class="n">DeclareLaunchArgument</span><span class="p">,</span> <span class="n">IncludeLaunchDescription</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kn">from</span> <span class="nn">launch.substitutions</span> <span class="kn">import</span> <span class="n">Command</span><span class="p">,</span> <span class="n">FindExecutable</span><span class="p">,</span> <span class="n">PathJoinSubstitution</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="kn">from</span> <span class="nn">launch_ros.actions</span> <span class="kn">import</span> <span class="n">Node</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="kn">from</span> <span class="nn">launch_ros.substitutions</span> <span class="kn">import</span> <span class="n">FindPackageShare</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="kn">from</span> <span class="nn">launch_ros.parameter_descriptions</span> <span class="kn">import</span> <span class="n">ParameterValue</span>
+</span></code></pre></div></td></tr></table></div>
+<p>需要再添加这个：</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">from</span> <span class="nn">launch.launch_description_sources</span> <span class="kn">import</span> <span class="n">PythonLaunchDescriptionSource</span>
+</span></code></pre></div></td></tr></table></div>
+<p>编写<code>generate_launch_description()</code>函数：</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">def</span> <span class="nf">generate_launch_description</span><span class="p">():</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="c1"># 获取xacro文件路径</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a>    <span class="n">xacro_path</span> <span class="o">=</span> <span class="n">PathJoinSubstitution</span><span class="p">(</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a>        <span class="p">[</span><span class="n">FindPackageShare</span><span class="p">(</span><span class="s2">&quot;youbot_description&quot;</span><span class="p">),</span> <span class="s2">&quot;urdf&quot;</span><span class="p">,</span> <span class="s2">&quot;youbot.xacro&quot;</span><span class="p">]</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5"></a>    <span class="p">)</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7"></a>    <span class="c1"># 配置ros_state_publisher节点</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8"></a>    <span class="n">ros_state_publisher</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9"></a>        <span class="n">package</span><span class="o">=</span><span class="s2">&quot;robot_state_publisher&quot;</span><span class="p">,</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10"></a>        <span class="n">executable</span><span class="o">=</span><span class="s2">&quot;robot_state_publisher&quot;</span><span class="p">,</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11"></a>        <span class="n">parameters</span><span class="o">=</span><span class="p">[</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12"></a>            <span class="p">{</span><span class="s2">&quot;robot_description&quot;</span><span class="p">:</span> <span class="n">ParameterValue</span><span class="p">(</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13"></a>                <span class="n">Command</span><span class="p">([</span><span class="s2">&quot;xacro &quot;</span><span class="p">,</span> <span class="n">xacro_path</span><span class="p">]),</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14"></a>                <span class="n">value_type</span><span class="o">=</span><span class="nb">str</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15"></a>                <span class="p">)</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16"></a>        <span class="p">}],</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17"></a>    <span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>接着包含 <code>gazebo_ros</code> 包中的 <code>gazebo.launch.py</code> 文件，启动 Gazebo 仿真环境；指定要加载的世界文件 <code>custom_room.world</code>，并开启详细日志输出</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>    <span class="c1"># 通过IncludeLaunchDescription包含另一个launch文件</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a>    <span class="n">gazebo_sim_launch</span> <span class="o">=</span> <span class="n">IncludeLaunchDescription</span><span class="p">(</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a>        <span class="n">PythonLaunchDescriptionSource</span><span class="p">(</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a>            <span class="n">PathJoinSubstitution</span><span class="p">([</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5"></a>                <span class="n">FindPackageShare</span><span class="p">(</span><span class="s2">&quot;gazebo_ros&quot;</span><span class="p">),</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6"></a>                <span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7"></a>                <span class="s2">&quot;gazebo.launch.py&quot;</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8"></a>            <span class="p">])</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9"></a>        <span class="p">),</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10"></a>        <span class="n">launch_arguments</span><span class="o">=</span><span class="p">{</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11"></a>            <span class="s2">&quot;world&quot;</span><span class="p">:</span> <span class="n">PathJoinSubstitution</span><span class="p">([</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12"></a>                <span class="n">FindPackageShare</span><span class="p">(</span><span class="s2">&quot;youbot_description&quot;</span><span class="p">),</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13"></a>                <span class="s2">&quot;world&quot;</span><span class="p">,</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14"></a>                <span class="s2">&quot;custom_room.world&quot;</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15"></a>            <span class="p">]),</span>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16"></a>            <span class="s2">&quot;verbose&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17"></a>        <span class="p">}</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18"></a>    <span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>最后return一下</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>    <span class="c1"># 请求gazebo加载机器人</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a>    <span class="n">spawn_entity</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a>        <span class="n">package</span><span class="o">=</span><span class="s2">&quot;gazebo_ros&quot;</span><span class="p">,</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4"></a>        <span class="n">executable</span><span class="o">=</span><span class="s2">&quot;spawn_entity.py&quot;</span><span class="p">,</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5"></a>        <span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;-entity&quot;</span><span class="p">,</span> <span class="s2">&quot;youbot&quot;</span><span class="p">,</span> 
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6"></a>                   <span class="s2">&quot;-topic&quot;</span><span class="p">,</span> <span class="s2">&quot;/robot_description&quot;</span><span class="p">],</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7"></a>    <span class="p">)</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8"></a>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9"></a>    <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10"></a>        <span class="n">ros_state_publisher</span><span class="p">,</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11"></a>        <span class="n">gazebo_sim_launch</span><span class="p">,</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12"></a>        <span class="n">spawn_entity</span><span class="p">,</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13"></a>    <span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
+<p>整个launch文件就写完了，之后<code>colcon build</code>和<code>source</code>完就可以启动gezebo加载机器人了</p>
+<blockquote>
+<p>这里我出现了两个问题：</p>
+<ul>
+<li>[Wrn] [kdl_parser] : The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.</li>
+<li>gazebo无法加载，黑屏</li>
+</ul>
+<p><strong>对于第一个warning：</strong>在机器人模型中，根链接通常是整个机器人的基础，它没有父链接，KDL 的设计使得它无法处理根链接的惯性信息。解决方法就是在<code>youbot.xacro</code>中新建一个虚拟链接：</p>
+<div class="language-xml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">XML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="w">  </span><span class="cm">&lt;!-- 添加虚拟根链接 dummy_root_link --&gt;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">  </span><span class="nt">&lt;link</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;dummy_root_link&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">  </span><span class="cm">&lt;!-- 添加固定关节，连接 dummy_root_link 和 base_link --&gt;</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">  </span><span class="nt">&lt;joint</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;dummy_joint&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fixed&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">    </span><span class="nt">&lt;parent</span><span class="w"> </span><span class="na">link=</span><span class="s">&quot;dummy_root_link&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">    </span><span class="nt">&lt;child</span><span class="w"> </span><span class="na">link=</span><span class="s">&quot;base_link&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">    </span><span class="cm">&lt;!-- 调整 z 值使轮子接触地面 --&gt;</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">    </span><span class="nt">&lt;origin</span><span class="w"> </span><span class="na">xyz=</span><span class="s">&quot;0 0 0.11&quot;</span><span class="w"> </span><span class="na">rpy=</span><span class="s">&quot;0 0 0&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">  </span><span class="nt">&lt;/joint&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>对于第二个warning，也就是它导致的gazebo崩溃，报错大概是这样的内容：</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="o">[</span>gzclient-3<span class="o">]</span><span class="w"> </span><span class="o">[</span>Wrn<span class="o">]</span><span class="w"> </span><span class="o">[</span>FuelModelDatabase.cc:313<span class="o">]</span><span class="w"> </span>URI<span class="w"> </span>not<span class="w"> </span>supported<span class="w"> </span>by<span class="w"> </span>Fuel<span class="w"> </span><span class="o">[</span>model://youbot_description/meshes/Link1.stl<span class="o">]</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="o">[</span>gzclient-3<span class="o">]</span><span class="w"> </span><span class="o">[</span>Wrn<span class="o">]</span><span class="w"> </span><span class="o">[</span>SystemPaths.cc:459<span class="o">]</span><span class="w"> </span>File<span class="w"> </span>or<span class="w"> </span>path<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>exist<span class="w"> </span><span class="o">[</span><span class="s2">&quot;&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>model://youbot_description/meshes/Link1.stl<span class="o">]</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="o">[</span>gzclient-3<span class="o">]</span><span class="w"> </span><span class="o">[</span>Err<span class="o">]</span><span class="w"> </span><span class="o">[</span>Visual.cc:2956<span class="o">]</span><span class="w"> </span>No<span class="w"> </span>mesh<span class="w"> </span>specified
+</span></code></pre></div></td></tr></table></div>
+<p>也就是gazebo找不到meshes文件，后来在ros社区看到有人是这样解决的，在<code>package.xml</code>文件中加入：</p>
+<div class="language-xml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">XML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="nt">&lt;export&gt;</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="w">  </span><span class="nt">&lt;gazebo_ros</span><span class="w"> </span><span class="na">gazebo_model_path=</span><span class="s">&quot;${prefix}/..&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="nt">&lt;/export&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<p><code>${prefix}</code>代表软件包安装后的路径，<code>${prefix}/..</code> 就表示安装路径的上一级目录，这样就能找到meshes了，成功加载模型</p>
+<p>后来和同学交流这个问题（他也遇到了这个报错），他的解决办法是直接在<code>.gazebo/models</code>中添加<code>youbot_description</code>文件夹，把meshes文件夹放在里面，这样不需要上面这条命令，gazebo也能读到了，文件目录如下：</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span>
+<span class="normal"><a href="#__codelineno-19-6">6</a></span>
+<span class="normal"><a href="#__codelineno-19-7">7</a></span>
+<span class="normal"><a href="#__codelineno-19-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>wayne@wayne-Legion:~/.gazebo/models/youbot_description$<span class="w"> </span>tree
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2"></a>.
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3"></a>└──<span class="w"> </span>meshes
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">    </span>├──<span class="w"> </span>base_link.stl
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">    </span>├──<span class="w"> </span>Link10.stl
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">    </span>...
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7"></a>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="m">1</span><span class="w"> </span>directory,<span class="w"> </span><span class="m">11</span><span class="w"> </span>files
+</span></code></pre></div></td></tr></table></div>
+</blockquote>
+<p><img alt="gazebo" src="../bot_pic/02.png" /></p>
 
 
 
@@ -2725,7 +2698,7 @@ $$
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../Note/Numerical%20analysis/NPUCM/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 西北工业大学数学建模校赛">
+          <a href="../CSIETPP/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 多模态信息融合感知的手势识别方法与系统设计">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2735,20 +2708,20 @@ $$
                 Previous
               </span>
               <div class="md-ellipsis">
-                西北工业大学数学建模校赛
+                多模态信息融合感知的手势识别方法与系统设计
               </div>
             </div>
           </a>
         
         
           
-          <a href="../kuka_youbot/" class="md-footer__link md-footer__link--next" aria-label="Next: Ubuntu22.04下的KUKA youbot仿真">
+          <a href="../../Blog/Blog/" class="md-footer__link md-footer__link--next" aria-label="Next: Blog">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Ubuntu22.04下的KUKA youbot仿真
+                Blog
               </div>
             </div>
             <div class="md-footer__button md-icon">
