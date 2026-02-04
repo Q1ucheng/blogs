@@ -10,13 +10,13 @@
         <meta name="author" content="Wayne">
       
       
-        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/CS61A/12.Mutable_values/">
+        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/STM32/02_USART/">
       
       
-        <link rel="prev" href="../11.Trees/">
+        <link rel="prev" href="../01_GPIO/">
       
       
-        <link rel="next" href="../HW03/">
+        <link rel="next" href="../../Git_related/Git/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Mutable Values - Wayne's blogs</title>
+        <title>USART串口通信 - Wayne's blogs</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mutable-values" class="md-skip">
+        <a href="#usart1" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mutable Values
+              USART串口通信
             
           </span>
         </div>
@@ -274,13 +274,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../1.CS61A_Structure_and_Interpretation_of_Computer_Programs/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../CS61A/1.CS61A_Structure_and_Interpretation_of_Computer_Programs/" class="md-tabs__link">
           
   
   CS61A
@@ -294,11 +292,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../STM32/00_CLion_STM32_Related/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00_CLion_STM32_Related/" class="md-tabs__link">
           
   
   STM32
@@ -440,30 +440,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -474,7 +469,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             CS61A
@@ -488,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1.CS61A_Structure_and_Interpretation_of_Computer_Programs/" class="md-nav__link">
+      <a href="../../CS61A/1.CS61A_Structure_and_Interpretation_of_Computer_Programs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -509,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2.Functions/" class="md-nav__link">
+      <a href="../../CS61A/2.Functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3.Control/" class="md-nav__link">
+      <a href="../../CS61A/3.Control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -551,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4.Higher-Order_function/" class="md-nav__link">
+      <a href="../../CS61A/4.Higher-Order_function/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -572,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5.Environments/" class="md-nav__link">
+      <a href="../../CS61A/5.Environments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -593,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6.Function_example/" class="md-nav__link">
+      <a href="../../CS61A/6.Function_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -614,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../7.Recursive_function/" class="md-nav__link">
+      <a href="../../CS61A/7.Recursive_function/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -635,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8.Tree_recursion/" class="md-nav__link">
+      <a href="../../CS61A/8.Tree_recursion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -656,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../9.Containers/" class="md-nav__link">
+      <a href="../../CS61A/9.Containers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -677,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10.Data_abstraction/" class="md-nav__link">
+      <a href="../../CS61A/10.Data_abstraction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -698,11 +693,630 @@
   
   
     <li class="md-nav__item">
-      <a href="../11.Trees/" class="md-nav__link">
+      <a href="../../CS61A/11.Trees/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/12.Mutable_values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mutable Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/HW03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HW03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/13.Mutable_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mutable Function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/14.Iterators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iterators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/15.Object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/HW04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HW04
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/16.Inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inheritance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Ants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Ants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/17.Representation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Representation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/18.Composition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Composition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/19.Efficiency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Efficiency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Lab08%27s_Optional_Problems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab08's Option Problems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/20.Decomposition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decomposition & Data example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/21.Scheme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scheme
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/22.Calculation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/24.Scheme%E9%83%A8%E5%88%86%E6%80%BB%E5%92%8C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scals.zip
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/25.Lab11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab11 & Scheme Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/26.Declarative_Programming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Declarative Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/27.Tables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/28.Aggregation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aggregation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/29.Database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database(optional)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/30.Tail_Calls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tail Calls(optional)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/31.Macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros(optional)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/32.Final_Example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Conclusions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conclusions🎉
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    STM32
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            STM32
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_CLion_STM32_Related/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLion中编辑STM32CubeMX项目的工作流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_GPIO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPIO 输入输出控制
   </span>
   
 
@@ -732,7 +1346,7 @@
           
   
   <span class="md-ellipsis">
-    Mutable Values
+    USART串口通信
   </span>
   
 
@@ -743,7 +1357,7 @@
         
   
   <span class="md-ellipsis">
-    Mutable Values
+    USART串口通信
   </span>
   
 
@@ -765,27 +1379,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objects" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Objects
+      第一步：硬件
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mutation-operations" class="md-nav__link">
+  <a href="#printf-gcc" class="md-nav__link">
     <span class="md-ellipsis">
-      Mutation Operations
+      第二步：实现 printf 重定向 (GCC 环境)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tuples" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Tuples（元组）
+      第三步：配置接收中断逻辑
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四步：初始化与主循环
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      第五步：编译与烧录
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验总结
     </span>
   </a>
   
@@ -795,620 +1436,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../HW03/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    HW03
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../13.Mutable_functions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mutable Function
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../14.Iterators/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Iterators
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../15.Object/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Object
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../HW04/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    HW04
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../16.Inheritance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inheritance
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Ants/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Project Ants
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../17.Representation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Representation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../18.Composition/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Composition
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../19.Efficiency/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Efficiency
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Lab08%27s_Optional_Problems/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lab08's Option Problems
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../20.Decomposition/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Decomposition & Data example
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../21.Scheme/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Scheme
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../22.Calculation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Calculation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../24.Scheme%E9%83%A8%E5%88%86%E6%80%BB%E5%92%8C/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    scals.zip
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../25.Lab11/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lab11 & Scheme Project
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../26.Declarative_Programming/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Declarative Programming
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../27.Tables/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tables
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../28.Aggregation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Aggregation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../29.Database/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Database(optional)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../30.Tail_Calls/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tail Calls(optional)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../31.Macros/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Macros(optional)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../32.Final_Example/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Final Example
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Conclusions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Conclusions🎉
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    STM32
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            STM32
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../STM32/00_CLion_STM32_Related/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    CLion中编辑STM32CubeMX项目的工作流
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../STM32/01_GPIO/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    GPIO 输入输出控制
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../STM32/02_USART/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    USART串口通信
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2276,27 +2303,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objects" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Objects
+      第一步：硬件
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mutation-operations" class="md-nav__link">
+  <a href="#printf-gcc" class="md-nav__link">
     <span class="md-ellipsis">
-      Mutation Operations
+      第二步：实现 printf 重定向 (GCC 环境)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tuples" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Tuples（元组）
+      第三步：配置接收中断逻辑
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四步：初始化与主循环
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      第五步：编译与烧录
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验总结
     </span>
   </a>
   
@@ -2320,191 +2374,206 @@
   
 
 
-<h1 id="mutable-values">Mutable Values<a class="headerlink" href="#mutable-values" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>John在本节开始就强调了这一讲的重要性</p>
-<p><strong>...today is a very important day, where you learn about mutation, which is when a value actually changes, and this is not something thats happened in the course before, but it is reslly common and it's a core element of what we're going to be studying very soon in this course, which is what‘s called <em>object oriented programming...</em></strong></p>
-</blockquote>
-<h2 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">&para;</a></h2>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<h1 id="usart1">USART1 接发通信实验<a class="headerlink" href="#usart1" title="Permanent link">&para;</a></h1>
+<p>针对野火 STM32F103ZET6 开发板的 <strong>USART1 接发通信实验</strong>，基于 HAL 库实现两个核心功能：
+1.  <strong>串口重定向（printf）</strong>：让 STM32 能像在电脑上写 C 语言一样，使用 <code>printf</code> 向电脑发送信息。
+2.  <strong>中断回显（Echo）</strong>：电脑发送什么字符给 STM32，STM32 就立刻发回什么给电脑。</p>
+<h2 id="_1">第一步：硬件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>在写代码前，确认你的 CubeMX 配置（虽然你已经生成了代码，但心里要有数）：
+*   <strong>引脚</strong>：STM32F103 的 USART1 通常映射在 <strong>PA9 (TX)</strong> 和 <strong>PA10 (RX)</strong>。
+*   <strong>NVIC</strong>：要实现“接收中断”，必须在 NVIC Settings 中开启 <code>USART1 global interrupt</code>。
+*   <strong>连线</strong>：TX 接 PA10，RX 接 PA9，GND 共地。</p>
+<h2 id="printf-gcc">第二步：实现 printf 重定向 (GCC 环境)<a class="headerlink" href="#printf-gcc" title="Permanent link">&para;</a></h2>
+<p>在 CLion (使用 GCC 编译器) 中，标准库的底层是通过 <code>_write</code> 函数实现的。我们需要重写这个函数。</p>
+<p><strong>操作位置</strong>：<code>Core/Src/main.c</code></p>
+<ol>
+<li>
+<p><strong>引入头文件</strong>：
+    找到 <code>/* USER CODE BEGIN Includes */</code>，添加标准输入输出库。</p>
+<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">date</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">datetime</span><span class="o">.</span><span class="n">date</span><span class="s1">&#39;&gt;</span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cm">/* USER CODE BEGIN Includes */</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="cm">/* USER CODE END Includes */</span>
 </span></code></pre></div></td></tr></table></div>
-<p><code>date</code>是一个<code>class</code>（类）</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">today</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">another_date</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span><span class="p">(</span><span class="n">another_date</span> <span class="o">-</span> <span class="n">today</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="s1">&#39;138 days, 0:00:00&#39;</span>
+</li>
+<li>
+<p><strong>重写 <code>_write</code> 函数</strong>：
+    找到 <code>/* USER CODE BEGIN 0 */</code>，添加以下代码。
+    当调用 printf 时，数据最终会通过这个函数，利用 <code>HAL_UART_Transmit</code> 从 USART1 发送出去。</p>
+<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cm">/* USER CODE BEGIN 0 */</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1">// 声明外部的 UART 句柄，CubeMX 生成的句柄通常名为 huart1</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">extern</span><span class="w"> </span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="n">huart1</span><span class="p">;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="cm">/**</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="cm"> * @brief 重定向 printf 函数到 UART1 (GCC/Clang 环境)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="cm"> * @param file 文件描述符 (忽略)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="cm"> * @param ptr  要发送的数据缓冲区</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="cm"> * @param len  数据长度</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="cm"> * @return     发送的字节数</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="cm"> */</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="kt">int</span><span class="w"> </span><span class="nf">_write</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">file</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="c1">// 使用 HAL 库发送数据，超时时间设为 1000ms</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="n">HAL_UART_Transmit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">len</span><span class="p">;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="p">}</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="cm">/* USER CODE END 0 */</span>
 </span></code></pre></div></td></tr></table></div>
-<p>使用这个类创建一个日期，也可以计算两个日期的差值</p>
-<p>对象有属性（attributes）的概念，可以理解为该对象中某个值的名字。使用点语法来访问一个对象中的某个属性</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span> <span class="o">.</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
+</li>
+</ol>
+<h2 id="_2">第三步：配置接收中断逻辑<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>为了不让 CPU 一直死等数据（轮询模式），我们使用<strong>中断模式</strong>接收数据。</p>
+<p><strong>操作位置</strong>：<code>Core/Src/main.c</code></p>
+<ol>
+<li>
+<p><strong>定义接收缓冲区</strong>：
+    我们需要一个变量来存放接收到的数据。
+    找到 <code>/* USER CODE BEGIN PV */</code> (Private Variables)：</p>
+<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cm">/* USER CODE BEGIN PV */</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kt">uint8_t</span><span class="w"> </span><span class="n">RxBuffer</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">// 定义一个 1 字节的接收缓冲，每次接收 1 个字符</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="cm">/* USER CODE END PV */</span>
 </span></code></pre></div></td></tr></table></div>
-<p><code>&lt;expression&gt;</code> 表示一个对象，<code>&lt;name&gt;</code> 表示该对象中对某个属性的名称。</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="mi">2024</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">today</span><span class="o">.</span><span class="n">month</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="mi">3</span>
+</li>
+<li>
+<p><strong>编写中断回调函数</strong>：
+    当串口接收到数据后，HAL 库会自动进入中断处理函数，最终调用 <code>HAL_UART_RxCpltCallback</code>。我们需要重写这个“弱定义”函数。
+    找到 <code>/* USER CODE BEGIN 4 */</code> (通常在 main 函数下面)：</p>
+<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cm">/* USER CODE BEGIN 4 */</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="cm">/**</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="cm"> * @brief  Rx Transfer completed callback. (串口接收完成回调函数)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="cm"> * @param  huart UART handle</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="cm"> * @retval None</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="cm"> */</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">HAL_UART_RxCpltCallback</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="p">{</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="c1">// 判断是否是 USART1 触发的中断</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">huart</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">USART1</span><span class="p">)</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="c1">// 1. 回显：把接收到的数据（RxBuffer）发回给电脑</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">        </span><span class="c1">// 使用阻塞发送即可，因为只是回传一个字节</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">        </span><span class="n">HAL_UART_Transmit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">RxBuffer</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">        </span><span class="c1">// 2. 重新开启接收中断</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">        </span><span class="c1">// HAL库的中断接收是“一次性”的，必须再次调用才能接收下一个字节</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="n">HAL_UART_Receive_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">RxBuffer</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="p">}</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="cm">/* USER CODE END 4 */</span>
 </span></code></pre></div></td></tr></table></div>
-<blockquote>
-<p>对象还有方法（methods）的概念，其实也是属性，只不过该属性的值是函数。</p>
-</blockquote>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">today</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%A %B </span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="s1">&#39;Thursday March 28&#39;</span>
+</li>
+</ol>
+<h2 id="_3">第四步：初始化与主循环<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>现在我们要启动系统，并在主循环里做一些简单的指示证明系统在运行，同时开启中断接收。</p>
+<p><strong>操作位置</strong>：<code>Core/Src/main.c</code> -&gt; <code>int main(void)</code></p>
+<ol>
+<li>
+<p><strong>开启第一次接收中断</strong>：
+    在 <code>MX_USART1_UART_Init();</code> 之后，<code>while (1)</code> 之前，加入开启代码。
+    找到 <code>/* USER CODE BEGIN 2 */</code>：</p>
+<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="cm">/* USER CODE BEGIN 2 */</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;野火 STM32F103 USART1 实验启动成功！</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;现在请输入字符，单片机会回显给你：</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="c1">// 开启中断接收，将数据存入 RxBuffer，长度为 1</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">HAL_UART_Receive_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">RxBuffer</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="cm">/* USER CODE END 2 */</span>
 </span></code></pre></div></td></tr></table></div>
-<p><code>strftime</code>就是一个方法，它接受一些参数，就能返回我们期望的结果</p>
-<p>string就是一个对象：</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+</li>
+<li>
+<p><strong>主循环逻辑</strong>：
+    在 <code>while (1)</code> 中，我们可以让 LED 闪烁或者每隔几秒打印一句话，证明主程序没有被串口中断卡死。</p>
+<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
-<span class="normal"><a href="#__codelineno-5-6">6</a></span>
-<span class="normal"><a href="#__codelineno-5-7">7</a></span>
-<span class="normal"><a href="#__codelineno-5-8">8</a></span>
-<span class="normal"><a href="#__codelineno-5-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="s1">&#39;HELLO&#39;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="s1">&#39;hello&#39;</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">swapcase</span><span class="p">()</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="s1">&#39;hELLO&#39;</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="c1"># 这些方法的调用都是基于原来的字符串返回一个新的字符串，并不会改变原有的字符串</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="s1">&#39;Hello&#39;</span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="cm">/* USER CODE BEGIN 3 */</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="c1">// 模拟主程序正在处理其他任务</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1">// 注意：不要在这里写阻塞式的 scanf，否则会卡住</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">HAL_Delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;System Running...</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="cm">/* USER CODE END 3 */</span>
 </span></code></pre></div></td></tr></table></div>
-<p>一些好玩的编码</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span>
-<span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span>
-<span class="normal"><a href="#__codelineno-6-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">unicodedata</span> <span class="kn">import</span> <span class="n">lookup</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lookup</span><span class="p">(</span><span class="s1">&#39;WHITE SMILING FACE&#39;</span><span class="p">)</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="s1">&#39;☺&#39;</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lookup</span><span class="p">(</span><span class="s1">&#39;SNOWMAN&#39;</span><span class="p">)</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="s1">&#39;☃&#39;</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">lookup</span><span class="p">(</span><span class="s1">&#39;BABY&#39;</span><span class="p">)</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="s1">&#39;👶&#39;</span>
-</span></code></pre></div></td></tr></table></div>
-<h2 id="mutation-operations">Mutation Operations<a class="headerlink" href="#mutation-operations" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span>
-<span class="normal"><a href="#__codelineno-7-5">5</a></span>
-<span class="normal"><a href="#__codelineno-7-6">6</a></span>
-<span class="normal"><a href="#__codelineno-7-7">7</a></span>
-<span class="normal"><a href="#__codelineno-7-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="n">l</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="s1">&#39;c&#39;</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
-</span></code></pre></div></td></tr></table></div>
-<p>惊讶的发现<code>s</code>竟然也被改变了。这是因为列表是可变数据（记得之前在<code>Function</code>中写到：“<em>这说明<code>area</code>只是绑定了314这个值，至于这个值是怎么来的它并不清楚</em>”，这里说不变的数据是数字）</p>
-<blockquote>
+</li>
+</ol>
+<h2 id="_4">第五步：编译与烧录<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../pics/002.png" /></p>
+<h2 id="_5">实验总结<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>为什么需要 <code>_write</code>？</strong></p>
 <ul>
-<li>像数字这样的基本数据类型的实例是不可变（immutable）的。它们所代表的值，在程序运行期间是不可以更改的。 另一方面，列表就是可变的（mutable）</li>
-<li><strong>数据共享和身份（Sharing and Identity）</strong>正是由于我们没有在操作数据时创建新的列表，而是直接操作的源数据，这就导致变量 <code>s</code> 也被改变了，因为它和变量 <code>l</code> 绑定到时同一个列表！</li>
+<li>C 语言的 <code>printf</code> 是标准库函数，它不知道数据要往屏幕打印还是往串口发。</li>
+<li>在嵌入式 GCC 环境中，<code>_write</code> 是系统调用的底层接口。我们把它“嫁接”到 <code>HAL_UART_Transmit</code> 上，就实现了 <code>printf</code> -&gt; 串口 的通路。</li>
 </ul>
-</blockquote>
-<p>Python 提供了 <code>is</code> 和 <code>is not</code> 两种比较操作符来验证两个变量是否指向同一个对象</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="ow">is</span> <span class="n">s</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kc">True</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="ow">is</span> <span class="n">l</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kc">True</span>
-</span></code></pre></div></td></tr></table></div>
-<p><code>is</code>与<code>==</code>不同：</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-9-10">10</a></span>
-<span class="normal"><a href="#__codelineno-9-11">11</a></span>
-<span class="normal"><a href="#__codelineno-9-12">12</a></span>
-<span class="normal"><a href="#__codelineno-9-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="kc">True</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>  <span class="c1"># a与b只是值相同，但并不是指向同一变量</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="kc">False</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="o">------</span>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span>
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="kc">True</span>
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
-</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="kc">True</span>        <span class="c1"># a,b指向同一个变量</span>
-</span></code></pre></div></td></tr></table></div>
-<p>John给了一个迷惑的例子：</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span>
-<span class="normal"><a href="#__codelineno-10-3">3</a></span>
-<span class="normal"><a href="#__codelineno-10-4">4</a></span>
-<span class="normal"><a href="#__codelineno-10-5">5</a></span>
-<span class="normal"><a href="#__codelineno-10-6">6</a></span>
-<span class="normal"><a href="#__codelineno-10-7">7</a></span>
-<span class="normal"><a href="#__codelineno-10-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="p">[]):</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="o">...</span>     <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="o">...</span>     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="o">...</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">()</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="mi">1</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">()</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="mi">2</span>
-</span></code></pre></div></td></tr></table></div>
-<p>我开始没有想清楚为什么第二次调用<code>f</code>会输出2，后来知道了，第一次调用<code>f</code>时，<code>s</code>就被添加了元素5，第二次调用时，由于没有传参，<code>f</code>会使用默认参数<code>s</code>，而此时<code>s</code>已经被修改：</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>这个程序展示了一个常见的 Python 默认参数陷阱：默认参数在函数定义时会被初始化，并在每次调用函数时都会继续使用相同的对象。因此，在默认参数是可变对象（如列表、字典等）的情况下，如果对其进行修改，这些修改会在后续调用中保留下来。</p>
-</div>
-<p><strong>每次调用 <code>f()</code> 时，列表 <code>s</code> 都会被修改并保存在函数定义时创建的默认列表中。这就是为什么后续调用会看到前面的修改。</strong></p>
-<h2 id="tuples">Tuples（元组）<a class="headerlink" href="#tuples" title="Permanent link">&para;</a></h2>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span>
-<span class="normal"><a href="#__codelineno-11-5">5</a></span>
-<span class="normal"><a href="#__codelineno-11-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">tuple</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span><span class="p">,</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="p">(</span><span class="mi">2</span><span class="p">,)</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="p">{(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span> <span class="mi">3</span><span class="p">}</span>  <span class="c1"># 元组可以作为字典的key</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="p">{(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span> <span class="mi">3</span><span class="p">}</span>
-</span></code></pre></div></td></tr></table></div>
-<p>元组不可改变，但可以改变元组中的可变元素</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
-<span class="normal"><a href="#__codelineno-12-2">2</a></span>
-<span class="normal"><a href="#__codelineno-12-3">3</a></span>
-<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">666</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p">([</span><span class="mi">666</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><strong>为什么在回调函数里又要调用 <code>HAL_UART_Receive_IT</code>？</strong></p>
+<ul>
+<li>这是 HAL 库的设计机制。<code>HAL_UART_Receive_IT</code> 配置完寄存器后，一旦收到指定长度的数据（这里是1字节），中断触发，硬件标志位会被 HAL 库的中断处理函数清除，然后通过 <code>RxCpltCallback</code> 通知用户。</li>
+<li>此时，接收逻辑已经结束了。为了接收<strong>下一个</strong>字符，你必须再次“布网”，也就是再次调用 <code>HAL_UART_Receive_IT</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>中断的好处</strong></p>
+<ul>
+<li>主循环 <code>while(1)</code> 可以专心做其他事情（比如点灯、处理复杂的电机算法）。</li>
+<li>只有当串口真的有数据来时，CPU 才会暂停手头的活，跳过去处理一下数据的收发，处理完立刻回来。效率极高。</li>
+</ul>
+</li>
+</ol>
 
 
 
@@ -2616,7 +2685,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../11.Trees/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Trees">
+          <a href="../01_GPIO/" class="md-footer__link md-footer__link--prev" aria-label="Previous: GPIO 输入输出控制">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2626,20 +2695,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Trees
+                GPIO 输入输出控制
               </div>
             </div>
           </a>
         
         
           
-          <a href="../HW03/" class="md-footer__link md-footer__link--next" aria-label="Next: HW03">
+          <a href="../../Git_related/Git/" class="md-footer__link md-footer__link--next" aria-label="Next: Git">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                HW03
+                Git
               </div>
             </div>
             <div class="md-footer__button md-icon">
