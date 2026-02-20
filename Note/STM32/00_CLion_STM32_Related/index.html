@@ -2542,35 +2542,27 @@
 <p>先选择芯片<code>STM32F103ZET6</code>，创建新项目。</p>
 <h3 id="system-core">System Core<a class="headerlink" href="#system-core" title="Permanent link">&para;</a></h3>
 <h4 id="1-sys">1. 系统调试配置 (SYS)<a class="headerlink" href="#1-sys" title="Permanent link">&para;</a></h4>
-<ul>
-<li>在左侧 System Core -&gt; SYS，将 <strong>Debug</strong> 选项设置为 <strong>Serial Wire</strong>。</li>
-<li>STM32 的调试引脚（PA13/PA14）默认是开启的。如果你不显式地告诉 CubeMX “我要保留这两个引脚做调试用”，CubeMX 可能会在后续配置中把它们重置为普通 GPIO。</li>
-<li><strong>这是新建项目 No.1！</strong></li>
-</ul>
+<p>在左侧 System Core -&gt; SYS，将 <strong>Debug</strong> 选项设置为 <strong>Serial Wire</strong>。</p>
+<p>STM32 的调试引脚（PA13/PA14）默认是开启的。如果你不显式地告诉 CubeMX “我要保留这两个引脚做调试用”，CubeMX 可能会在后续配置中把它们重置为普通 GPIO。</p>
 <h4 id="2-rcc">2. 时钟源配置 (RCC)<a class="headerlink" href="#2-rcc" title="Permanent link">&para;</a></h4>
-<ul>
-<li>在 System Core -&gt; RCC，将 <strong>High Speed Clock (HSE)</strong> 设置为 <strong>Crystal/Ceramic Resonator</strong>（晶振/陶瓷谐振器）。</li>
-<li>STM32 内部自带一个 RC 振荡器 (HSI)，但精度较差。野火开发板上焊了一个 8MHz 的外部晶振，精度高且稳定。</li>
-<li>启用外部晶振，为系统提供精准的时钟源。</li>
-</ul>
+<p>在 System Core -&gt; RCC，将 <strong>High Speed Clock (HSE)</strong> 设置为 <strong>Crystal/Ceramic Resonator</strong>（晶振/陶瓷谐振器）。</p>
+<p>STM32 内部自带一个 RC 振荡器 (HSI)，但精度较差。野火开发板上焊了一个 8MHz 的外部晶振，精度高且稳定。</p>
+<p>启用外部晶振，为系统提供精准的时钟源。</p>
 <h4 id="3-clock-configuration">3. 时钟树配置 (Clock Configuration)<a class="headerlink" href="#3-clock-configuration" title="Permanent link">&para;</a></h4>
-<ul>
-<li>切换到 Clock Configuration 标签页，在图中间的 <strong>HCLK (MHz)</strong> 输入框里直接敲入 <strong>72</strong>，然后回车，点击 OK 让软件自动计算分频。</li>
-<li>STM32F103 的最高主频是 72MHz。</li>
-<li>让芯片全速运行，发挥最大性能。</li>
-</ul>
+<p>切换到 Clock Configuration 标签页，在图中间的 <strong>HCLK (MHz)</strong> 输入框里直接敲入 <strong>72</strong>，然后回车，点击 OK 让软件自动计算分频。</p>
+<p>STM32F103 的最高主频是 72MHz。让芯片全速运行，发挥最大性能。</p>
 <h4 id="4-led-gpio-output">4. 配置 LED (GPIO Output)<a class="headerlink" href="#4-led-gpio-output" title="Permanent link">&para;</a></h4>
+<p>阅读野火原理图，找到LED，发现红灯引脚为<strong>PB5</strong>；在右侧芯片图找到 <strong>PB5</strong>，左键点击选择 <strong>GPIO_Output</strong>。右键点击 -&gt; Enter User Label -&gt; 输入 LED_RED。</p>
+<p><strong>详细配置 (左侧 System Core -&gt; GPIO -&gt; PB5)</strong>：</p>
 <ul>
-<li>阅读野火原理图，找到LED，发现红灯引脚为<strong>PB5</strong>；在右侧芯片图找到 <strong>PB5</strong>，左键点击选择 <strong>GPIO_Output</strong>。右键点击 -&gt; Enter User Label -&gt; 输入 LED_RED。</li>
-<li><strong>详细配置 (左侧 System Core -&gt; GPIO -&gt; PB5)</strong>：</li>
 <li><strong>GPIO Output Level</strong>: <strong>High</strong> (默认为高电平)：野火板子 LED 是低电平亮。初始化时给 High，让灯默认是灭的。</li>
 <li><strong>GPIO Mode</strong>: <strong>Output Push Pull</strong> (推挽输出)：推挽模式驱动能力强，能输出高低电平，适合驱动 LED。（开漏通常用于总线通信）。</li>
 <li><strong>GPIO Pull-up/Pull-down</strong>: <strong>No pull-up and no pull-down</strong>：输出模式下，电平由 ODR 寄存器决定，通常不需要内部电阻辅助。</li>
 </ul>
 <h4 id="5-gpio-input">5. 配置按键 (GPIO Input) —— <strong>谁来发出指令？</strong><a class="headerlink" href="#5-gpio-input" title="Permanent link">&para;</a></h4>
+<p>在芯片图找到 <strong>PA0</strong>，选择 <strong>GPIO_Input</strong>。 Label -&gt; KEY1。</p>
+<p><strong>详细配置 (左侧 GPIO -&gt; PA0)</strong>：</p>
 <ul>
-<li><strong>操作</strong>：在芯片图找到 <strong>PA0</strong>，选择 <strong>GPIO_Input</strong>。 Label -&gt; KEY1。</li>
-<li><strong>详细配置 (左侧 GPIO -&gt; PA0)</strong>：</li>
 <li><strong>GPIO Mode</strong>: <strong>Input mode</strong>。</li>
 <li><strong>GPIO Pull-up/Pull-down</strong>: <strong>Pull-down</strong> (下拉电阻)：查看野火原理图，KEY1 一端接 PA0，另一端接 <strong>3.3V</strong>。这意味着按下按键时，PA0 连到 3.3V (高电平)。但是当<strong>松开</strong>按键时，PA0 悬空，电压是飘忽不定。所以要开启内部 <strong>下拉电阻 (Pull-down)</strong>。松开时，电阻把引脚拉到 GND (0V)；按下时，外部 3.3V 强行把它拉高。这样能保证“不按就是 0，按了就是 1”。</li>
 </ul>
@@ -2627,6 +2619,16 @@
 <p>在调试配置中配置好OpenOCD：</p>
 <p><img alt="image-20260204175133337" src="../pics/001.png" /></p>
 <p>修改<code>STM32F103ZETX_FLASH.ld</code>文件，我用的是 <strong>GCC 10.3</strong>，但文件中用了 <code>(READONLY)</code> 关键字，这是 <strong>GCC 11+</strong> 才支持的语法。删除（READONLY）即可。</p>
+<blockquote>
+<p>后来我对<code>arm-none-eabi-gcc</code>进行了修改，配置了<code>arm-gnu-toolchain-15.2</code>，就不用再删除READONLY了</p>
+<p>下载地址：<a href="https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads">Arm GNU Toolchain Downloads – Arm Developer</a></p>
+<p>选择一个<code>zip</code>解压后添加到path就行，回到CLion重新设置工具链。</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>修改配置之后退出CLion，删除<code>cmake-build-debug</code>再重新构建项目（因为 CLion 启动时会读取 PATH）</li>
+<li><strong>标准gcc编译在电脑上运行的程序，arm-none-eabi-gcc编译在单片机上运行的裸机固件。</strong></li>
+</ul>
+</blockquote>
 <p>在CMake中点击刷新看看有没有bug：</p>
 <p><img alt="" src="../pics/006.png" /></p>
 <p>现在可以直接在<code>main.c</code>中编写代码了：</p>
@@ -2656,36 +2658,30 @@
 </span></code></pre></div></td></tr></table></div>
 <p>点灯结束。</p>
 <blockquote>
-<p>想把串口通信也加进去，设计一个 <strong>“双向交互”</strong>：</p>
+<p>想把串口通信也加进去：</p>
 <ul>
 <li>按下开发板的按键（KEY1）时，STM32 通过串口告诉电脑“按键被按下了”。</li>
 <li>在电脑串口助手发送字符 '1'，红灯亮；发送 '0'，红灯灭。</li>
 </ul>
 </blockquote>
 <p>双击<code>.ioc</code>文件打开<strong>STM32CubeMX</strong>，配置 USART1：</p>
-<ul>
-<li>左侧 Connectivity -&gt; USART1。</li>
-<li><strong>Mode</strong>: 选择 Asynchronous (异步通信)。</li>
-<li><strong>Check GPIO</strong>: 芯片图可见它是用 <strong>PA9 (TX)</strong> 和 <strong>PA10 (RX)</strong>。</li>
-<li><strong>Parameter Settings</strong>:</li>
-<li>Baud Rate: 115200</li>
-<li>Word Length: 8 Bits</li>
-<li>Parity: None</li>
-<li>
-<p>Stop Bits: 1</p>
-</li>
-<li>
-<p><strong>开启串口中断：</strong></p>
-</li>
-<li>点击 NVIC Settings 标签页。</li>
-<li>勾选 USART1 global interrupt 的 <strong>Enabled</strong>。</li>
-<li>我们要用中断来接收电脑发的 '1' 和 '0'，这样主循环可以专心检测按键，互不干扰。</li>
-</ul>
+<p>左侧 Connectivity -&gt; USART1。</p>
+<p><strong>Mode</strong>: 选择 Asynchronous (异步通信)。</p>
+<p><strong>Check GPIO</strong>: 芯片图可见它是用 <strong>PA9 (TX)</strong> 和 <strong>PA10 (RX)</strong>。</p>
+<p><strong>Parameter Settings</strong>:
+- Baud Rate: 115200
+- Word Length: 8 Bits
+- Parity: None
+- Stop Bits: 1</p>
+<p><strong>开启串口中断：</strong>
+- 点击 NVIC Settings 标签页。
+- 勾选 USART1 global interrupt 的 <strong>Enabled</strong>。
+- 我们要用中断来接收电脑发的 '1' 和 '0'，这样主循环可以专心检测按键，互不干扰。</p>
 <p>设置完成后生成代码即可。</p>
 <p>回到 CLion，我们需要做三件事：
-1.  <strong>添加 printf 重定向</strong>（为了方便发送）。
-2.  <strong>编写接收中断回调</strong>（为了接收指令）。
-3.  <strong>编写主循环</strong>（检测按键并上报）。</p>
+- <strong>添加 printf 重定向</strong>（为了方便发送）。
+- <strong>编写接收中断回调</strong>（为了接收指令）。
+- <strong>编写主循环</strong>（检测按键并上报）。</p>
 <h4 id="1">1. 引入头文件与变量<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
 <p>在 <code>main.c</code> 顶部：</p>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -2904,7 +2900,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 4, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 20, 2026</span>
   </span>
 
     
@@ -2914,7 +2910,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 4, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 20, 2026</span>
   </span>
 
     

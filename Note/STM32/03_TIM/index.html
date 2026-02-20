@@ -10,13 +10,9 @@
         <meta name="author" content="Wayne">
       
       
-        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/MySQL/Mysql_learning/">
+        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/STM32/03_TIM/">
       
       
-        <link rel="prev" href="../../Ubuntu_related/moveit2/">
-      
-      
-        <link rel="next" href="../../PyQt6_and_PySide6/PyQt6PySide6/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +20,7 @@
     
     
       
-        <title>记录学习使用MySQL的过程 - Wayne's blogs</title>
+        <title>TIM基本定时器 - Wayne's blogs</title>
       
     
     
@@ -92,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mysql" class="md-skip">
+        <a href="#tim" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              记录学习使用MySQL的过程
+              TIM基本定时器
             
           </span>
         </div>
@@ -296,7 +292,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../STM32/00_CLion_STM32_Related/" class="md-tabs__link">
+        <a href="../00_CLion_STM32_Related/" class="md-tabs__link">
           
   
   STM32
@@ -310,20 +306,16 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../Git_related/Git/" class="md-tabs__link">
           
   
@@ -1288,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../STM32/00_CLion_STM32_Related/" class="md-nav__link">
+      <a href="../00_CLion_STM32_Related/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1309,7 +1301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../STM32/01_GPIO/" class="md-nav__link">
+      <a href="../01_GPIO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1330,7 +1322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../STM32/02_USART/" class="md-nav__link">
+      <a href="../02_USART/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1355,30 +1347,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1389,7 +1376,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Note
@@ -1408,20 +1395,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
         
           
-          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1543,20 +1527,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1649,30 +1630,25 @@
                 
   
   
-    
   
   
-  
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1683,7 +1659,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             MySQL
@@ -1694,30 +1670,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    记录学习使用MySQL的过程
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../MySQL/Mysql_learning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1726,62 +1682,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      前期配置
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      创建数据库连接
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pymysql" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pymysql执行数据库模式定义语言
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pymysql_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pymysql执行数据操纵语言
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1807,20 +1707,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1879,20 +1776,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           
-          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1951,20 +1845,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
         
           
-          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2086,20 +1977,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
         
           
-          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2310,38 +2198,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#stm32cubemx" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一部分：STM32CubeMX 配置指南
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      前期配置
+      第二部分：代码编写与原理指导
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="第二部分：代码编写与原理指导">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      创建数据库连接
+      启动定时器
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#pymysql" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Pymysql执行数据库模式定义语言
+      编写中断回调函数
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#pymysql_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pymysql执行数据操纵语言
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2363,354 +2257,125 @@
   
 
 
-<h1 id="mysql">记录学习和使用MySQL的过程<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h1>
-<p>了解到开发过程中可能会涉及一些数据库的使用，遂先简单上手一下Mysql（CS61A的学习也让我有了一点SQL的基础）</p>
-<h2 id="_1">前期配置<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>先安装Mysql：</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>pip install pymysql -i https://pypi.tuna.tsinghua.edu.cn/simple
+<h1 id="tim">TIM基本定时器<a class="headerlink" href="#tim" title="Permanent link">&para;</a></h1>
+<h2 id="stm32cubemx">第一部分：STM32CubeMX 配置指南<a class="headerlink" href="#stm32cubemx" title="Permanent link">&para;</a></h2>
+<p><strong>System Core</strong>：SYS: Serial Wire；RCC选 Crystal/Ceramic Resonator。</p>
+<p><strong>Clock Configuration</strong></p>
+<ul>
+<li><strong>HCLK (MHz)</strong> 设置 <code>72</code>。</li>
+<li>注意<strong>APB1 Timer clocks</strong> (即 PCLK1 x1 或 x2) 最终也是 <strong>72MHz</strong>（因为当 APB1 分频系数不为1时，定时器时钟会倍频）。基本定时器 TIM6/TIM7 挂载在 APB1 总线上。</li>
+</ul>
+<p><strong>GPIO：</strong>配置一个LED即可</p>
+<p><strong>定时器配置 (Timers)</strong> ：STM32F103ZET6 有两个基本定时器：<strong>TIM6</strong> 和 <strong>TIM7</strong>。它们功能简单，专门用于产生时基，没有输入捕获/PWM等功能，非常适合做纯定时任务。我们选择 <strong>TIM6</strong>。</p>
+<ul>
+<li>
+<p>点击左侧 <code>Timers</code> -&gt; <code>TIM6</code>。</p>
+</li>
+<li>
+<p>勾选 <strong>Activated</strong>。</p>
+</li>
+<li>
+<p><strong>Parameter Settings (参数设置)</strong>：
+    这里我们需要配置两个核心参数：<code>Prescaler</code> (预分频器, PSC) 和 <code>Counter Period</code> (自动重装载值, ARR)。
+    <strong>目标</strong>：我们要产生一个 <strong>500ms (0.5秒)</strong> 的定时中断。</p>
+<p><strong>计算公式</strong>：
+$$
+\text{定时时间} = \frac{(\text{PSC} + 1) \times (\text{ARR} + 1)}{\text{定时器时钟频率}}
+$$
+已知定时器时钟为 72MHz (72,000,000 Hz)。</p>
+</li>
+</ul>
+<p><strong>Prescaler (PSC - 16 bit)</strong>: 设置为 <code>7199</code>。</p>
+<ul>
+<li>实际分频系数 = 7199 + 1 = 7200。</li>
+<li>分频后频率 = 72MHz / 7200 = 10,000 Hz (即 10kHz，每 0.1ms 计数一次)。</li>
+</ul>
+<p><strong>Counter Period (ARR - 16 bit)</strong>: 设置为 <code>4999</code>。</p>
+<ul>
+<li>实际计数次数 = 4999 + 1 = 5000 次。</li>
+<li>
+<p>总时间 = 5000 * 0.1ms = 500ms。</p>
+</li>
+<li>
+<p><strong>Counter Mode</strong>: <code>Up</code> (向上计数)</p>
+</li>
+<li><strong>Auto-reload preload</strong>: <code>Enable</code> (建议使能，通过影子寄存器更新，更稳定)</li>
+</ul>
+<p><strong>NVIC Settings (中断设置)</strong>：</p>
+<ul>
+<li>点击 TIM6 配置页面的 <code>NVIC Settings</code> 标签。</li>
+<li><strong>勾选</strong> <code>TIM6 global interrupt</code> 后面的 <strong>Enabled</strong> 复选框。</li>
+<li><em>重要</em>：如果不勾选这个，CPU 将无法响应定时器产生的中断信号，实验会失败。</li>
+</ul>
+<p>点击 <strong>GENERATE CODE</strong>（可以在<strong>Code Generator</strong>中勾选 <code>Generate peripheral initialization as a pair of '.c/.h' files</code> ，生成的代码更模块化，TIM6 的配置会单独放在 <code>tim.c</code> 中）</p>
+<h2 id="_1">第二部分：代码编写与原理指导<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">启动定时器<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>CubeMX 生成的代码虽然完成了初始化（在 <code>main.c</code> 的 <code>MX_TIM6_Init()</code> 中），但默认情况下，<strong>定时器是关闭的，且中断也是未开启的</strong>。</p>
+<p>我们需要在 <code>main.c</code> 中手动开启它。</p>
+<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cm">/* USER CODE BEGIN 2 */</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// 开启基本定时器 TIM6，并使能中断</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1">// 这里的 &amp;htim6 是在 tim.c 中定义的句柄</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">HAL_TIM_Base_Start_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">htim6</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">HAL_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="c1">// 如果启动失败，可以在这里进行错误处理（例如点亮一个故障灯）</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="n">Error_Handler</span><span class="p">();</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="cm">/* USER CODE END 2 */</span>
 </span></code></pre></div></td></tr></table></div>
-<p>发现好像需要一个数据库管理工具，在Github上找到SQLyog软件：<a href="https://github.com/webyog/sqlyog-community/wiki/Downloads">Github链接</a></p>
-<blockquote>
-<p>SQLyog是一款功能强大的MySQL数据库管理工具，旨在帮助用户更高效地管理和操作MySQL数据库</p>
-</blockquote>
-<p>下载完成打开，新建（输入任意名称）--&gt; 设置密码：</p>
-<p><img alt="" src="../pic/image-20240805154435632.png" /></p>
-<p>结果报错：</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>错误号码2002
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>can&#39;t connect to serve on &#39;localhost&#39; (10061)
+<p><code>HAL_TIM_Base_Start_IT</code> 这个函数做了两件事：</p>
+<ul>
+<li>设置 TIM6 的控制寄存器，开始计数。</li>
+<li>设置 TIM6 的中断使能寄存器（DIER），允许“更新中断”（Update Interrupt）。当计数器从 4999 溢出变回 0 时，产生中断。</li>
+</ul>
+<h3 id="_3">编写中断回调函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>当定时器时间到了（500ms），CPU 会跳转到中断服务函数（ISR）。在 HAL 库中，中断处理流程是这样的：</p>
+<p><code>TIM6_IRQHandler()</code> (在 stm32f1xx_it.c) -&gt; <code>HAL_TIM_IRQHandler()</code> (HAL库处理) -&gt; <code>HAL_TIM_PeriodElapsedCallback()</code> (弱定义函数，<strong>我们需要重写它</strong>)。</p>
+<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cm">/* USER CODE BEGIN 4 */</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="cm">/**</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="cm"> * @brief  定时器周期流逝回调函数（即定时器中断回调）</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="cm"> * @param  htim: 定时器句柄，用于判断是哪个定时器触发了中断</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="cm"> */</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">HAL_TIM_PeriodElapsedCallback</span><span class="p">(</span><span class="n">TIM_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">htim</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="c1">// 判断是否是 TIM6 触发的中断</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">htim</span><span class="o">-&gt;</span><span class="n">Instance</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">TIM6</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="c1">// 翻转 LED_RED 的电平</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="c1">// 野火板子 LED 接在 PB5，低电平亮，高电平灭，翻转即实现闪烁</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">LED_RED_GPIO_Port</span><span class="p">,</span><span class="w"> </span><span class="n">LED_RED_Pin</span><span class="p">);</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="p">}</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="cm">/* USER CODE END 4 */</span>
 </span></code></pre></div></td></tr></table></div>
-<p>查询后发现可能是没有开启Mysql服务，cmd以管理员身份命令<code>net start mysql</code>，提示我服务名无效，继续上网搜索，发现应该是我没有为MySQL设置环境变量（研究了一会发现是我没有安装官方的MySQL（一个完整的数据库管理系统））</p>
-<blockquote>
-<p>发现一个小技巧，可以使用<code>pip show &lt;package_name&gt;</code>来找到<code>Location</code>（与后文无关）</p>
-<p><img alt="" src="../pic/image-20240805163729860.png" /></p>
-</blockquote>
-<p>下载MySQL：<a href="https://dev.mysql.com/downloads/mysql/">Download MySQL Community Server</a></p>
-<p>打开解压的文件夹 <code>F:\mysql-9.0.1-winx64</code>，在该文件夹下创建 <strong>my.ini</strong> 配置文件，编辑 <strong>my.ini</strong> 配置以下基本信息：</p>
-<div class="language-ini highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">INI</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">[client]</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c1"># 设置mysql客户端默认字符集</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="na">default-character-set</span><span class="o">=</span><span class="s">utf8</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="k">[mysqld]</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="c1"># 设置3306端口</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="na">port</span><span class="o">=</span><span class="s">3306</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="hll"><span class="c1"># 设置mysql的安装目录</span>
-</span></span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="hll"><span class="na">basedir</span><span class="o">=</span><span class="s">F:\\mysql-9.0.1-winx64</span>
-</span></span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="c1"># 设置 mysql数据库的数据的存放目录，MySQL 8+ 不需要以下配置，系统自己生成即可，否则有可能报错</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1"># datadir=F:\\mysql-9.0.1-winx64</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="c1"># 允许最大连接数</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="na">max_connections</span><span class="o">=</span><span class="s">20</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="c1"># 服务端使用的字符集默认为8比特编码的latin1字符集</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="na">character-set-server</span><span class="o">=</span><span class="s">utf8</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="c1"># 创建新表时将使用的默认存储引擎</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="na">default-storage-engine</span><span class="o">=</span><span class="s">INNODB</span>
-</span></code></pre></div></td></tr></table></div>
-<p>以管理员身份打开 cmd 命令行工具，切换目录<code>F:\mysql-9.0.1-winx64\bin</code></p>
-<p>初始化数据库：</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>mysqld --initialize --console
-</span></code></pre></div></td></tr></table></div>
-<p>执行完成后，会输出 root 用户的初始默认密码：<code>kkwf2+y86%YO</code></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span>
-<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>F:\mysql-9.0.1-winx64\bin&gt;mysqld --initialize --console
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>2024-08-05T08:31:47.128678Z 0 [System] [MY-015017] [Server] MySQL Server Initialization - start.
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>2024-08-05T08:31:47.135111Z 0 [System] [MY-013169] [Server] F:\mysql-9.0.1-winx64\bin\mysqld.exe (mysqld 9.0.1) initializing of server in progress as process 4220
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>2024-08-05T08:31:47.148120Z 0 [Warning] [MY-013242] [Server] --character-set-server: &#39;utf8&#39; is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>2024-08-05T08:31:47.186317Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>2024-08-05T08:31:47.448596Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>2024-08-05T08:31:49.177117Z 6 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: kkwf2+y86%YO
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>2024-08-05T08:31:50.943082Z 0 [System] [MY-015018] [Server] MySQL Server Initialization - end.
-</span></code></pre></div></td></tr></table></div>
-<blockquote>
-<p>感觉初始密码太复杂，开始更改：</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span>
-<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>F:\mysql-9.0.1-winx64\bin&gt;mysqladmin -uroot -p password
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>Enter password: ************
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>New password: ***********
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>Confirm new password: ***********
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>Warning: Since password will be sent to server in plain text, use ssl connection to ensure password safety.
-</span></code></pre></div></td></tr></table></div>
-<p>记录一下，密码为<code>Zqc20040813</code></p>
-</blockquote>
-<p>接着就可以启动MySQL服务了</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span>
-<span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>F:\mysql-9.0.1-winx64\bin&gt;mysqld install
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>Service successfully installed.
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>F:\mysql-9.0.1-winx64\bin&gt;net start mysql
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a>MySQL 服务正在启动 .
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a>MySQL 服务已经启动成功。
-</span></code></pre></div></td></tr></table></div>
-<p><img alt="" src="../pic/image-20240805165220199.png" /></p>
-<hr />
-<h2 id="_2">创建数据库连接<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span>
-<span class="normal"><a href="#__codelineno-7-14">14</a></span>
-<span class="normal"><a href="#__codelineno-7-15">15</a></span>
-<span class="normal"><a href="#__codelineno-7-16">16</a></span>
-<span class="normal"><a href="#__codelineno-7-17">17</a></span>
-<span class="normal"><a href="#__codelineno-7-18">18</a></span>
-<span class="normal"><a href="#__codelineno-7-19">19</a></span>
-<span class="normal"><a href="#__codelineno-7-20">20</a></span>
-<span class="normal"><a href="#__codelineno-7-21">21</a></span>
-<span class="normal"><a href="#__codelineno-7-22">22</a></span>
-<span class="normal"><a href="#__codelineno-7-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">pymysql</span> <span class="kn">import</span> <span class="n">Connection</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">con</span> <span class="o">=</span> <span class="kc">None</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="k">try</span><span class="p">:</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>    <span class="c1"># 创建数据库连接</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>    <span class="n">con</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a>        <span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>  <span class="c1"># 主机名</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a>        <span class="n">port</span><span class="o">=</span><span class="mi">3306</span><span class="p">,</span>  <span class="c1"># 端口</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a>        <span class="n">user</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>  <span class="c1"># 账户</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a>        <span class="n">password</span><span class="o">=</span><span class="s2">&quot;Zqc20040813&quot;</span><span class="p">,</span>  <span class="c1"># 密码</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a>    <span class="p">)</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">con</span><span class="p">))</span>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">con</span><span class="o">.</span><span class="n">get_host_info</span><span class="p">())</span>
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">con</span><span class="o">.</span><span class="n">get_server_info</span><span class="p">())</span>
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16"></a>
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;异常&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19"></a>
-</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="k">finally</span><span class="p">:</span>
-</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21"></a>    <span class="k">if</span> <span class="n">con</span><span class="p">:</span>
-</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22"></a>        <span class="c1"># 关闭连接</span>
-</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23"></a>        <span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span></code></pre></div></td></tr></table></div>
-<p><code>print</code>结果为：（成功创建连接）</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">pymysql</span><span class="o">.</span><span class="n">connections</span><span class="o">.</span><span class="n">Connection</span><span class="s1">&#39;&gt;</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">socket</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">3306</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="mf">9.0.1</span>
-</span></code></pre></div></td></tr></table></div>
-<h2 id="pymysql">Pymysql执行数据库模式定义语言<a class="headerlink" href="#pymysql" title="Permanent link">&para;</a></h2>
-<p>在Python中，连接MySQL数据库后，使用 <code>cursor()</code> 方法从连接对象中创建一个游标对象。游标对象用于执行SQL语句，并在需要时返回查询结果</p>
-<blockquote>
-<p>先在SQLyog中新建（<code>ctrl</code>+<code>D</code>）一个数据库（我将其命名为db_python）</p>
-</blockquote>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-9-10">10</a></span>
-<span class="normal"><a href="#__codelineno-9-11">11</a></span>
-<span class="normal"><a href="#__codelineno-9-12">12</a></span>
-<span class="normal"><a href="#__codelineno-9-13">13</a></span>
-<span class="normal"><a href="#__codelineno-9-14">14</a></span>
-<span class="normal"><a href="#__codelineno-9-15">15</a></span>
-<span class="normal"><a href="#__codelineno-9-16">16</a></span>
-<span class="normal"><a href="#__codelineno-9-17">17</a></span>
-<span class="normal"><a href="#__codelineno-9-18">18</a></span>
-<span class="normal"><a href="#__codelineno-9-19">19</a></span>
-<span class="normal"><a href="#__codelineno-9-20">20</a></span>
-<span class="normal"><a href="#__codelineno-9-21">21</a></span>
-<span class="normal"><a href="#__codelineno-9-22">22</a></span>
-<span class="normal"><a href="#__codelineno-9-23">23</a></span>
-<span class="normal"><a href="#__codelineno-9-24">24</a></span>
-<span class="normal"><a href="#__codelineno-9-25">25</a></span>
-<span class="normal"><a href="#__codelineno-9-26">26</a></span>
-<span class="normal"><a href="#__codelineno-9-27">27</a></span>
-<span class="normal"><a href="#__codelineno-9-28">28</a></span>
-<span class="normal"><a href="#__codelineno-9-29">29</a></span>
-<span class="normal"><a href="#__codelineno-9-30">30</a></span>
-<span class="normal"><a href="#__codelineno-9-31">31</a></span>
-<span class="normal"><a href="#__codelineno-9-32">32</a></span>
-<span class="normal"><a href="#__codelineno-9-33">33</a></span>
-<span class="normal"><a href="#__codelineno-9-34">34</a></span>
-<span class="normal"><a href="#__codelineno-9-35">35</a></span>
-<span class="normal"><a href="#__codelineno-9-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">pymysql</span> <span class="kn">import</span> <span class="n">Connection</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="n">con</span> <span class="o">=</span> <span class="kc">None</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="k">try</span><span class="p">:</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a>    <span class="c1"># 创建数据库连接</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6"></a>    <span class="n">con</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a>        <span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>  <span class="c1"># 主机名</span>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8"></a>        <span class="n">port</span><span class="o">=</span><span class="mi">3306</span><span class="p">,</span>  <span class="c1"># 端口</span>
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9"></a>        <span class="n">user</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>  <span class="c1"># 账户</span>
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10"></a>        <span class="n">password</span><span class="o">=</span><span class="s2">&quot;Zqc20040813&quot;</span><span class="p">,</span>  <span class="c1"># 密码</span>
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11"></a>        <span class="n">database</span><span class="o">=</span><span class="s2">&quot;db_python&quot;</span>  <span class="c1"># 指定操作的数据库</span>
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12"></a>    <span class="p">)</span>
-</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13"></a>
-</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14"></a>    <span class="c1"># 创建游标对象</span>
-</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15"></a>    <span class="n">cursor</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16"></a>
-</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17"></a>    <span class="c1"># 定义建表sql语句</span>
-</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18"></a>    <span class="n">sql</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="s2">    CREATE TABLE `t_student3` (</span>
-</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="s2">        `id` int(11) NOT NULL AUTO_INCREMENT,</span>
-</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="s2">        `name` varchar(10) DEFAULT NULL,</span>
-</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="s2">        `age` int(11) DEFAULT NULL,</span>
-</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="s2">        PRIMARY KEY (`id`)</span>
-</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="s2">    ) ENGINE=InnoDB DEFAULT CHARSET=utf8</span>
-</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="s2">    &quot;&quot;&quot;</span>
-</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26"></a>
-</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27"></a>    <span class="c1"># 使用游标对象，执行sql</span>
-</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
-</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29"></a>
-</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;异常&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32"></a>
-</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33"></a><span class="k">finally</span><span class="p">:</span>
-</span><span id="__span-9-34"><a id="__codelineno-9-34" name="__codelineno-9-34"></a>    <span class="k">if</span> <span class="n">con</span><span class="p">:</span>
-</span><span id="__span-9-35"><a id="__codelineno-9-35" name="__codelineno-9-35"></a>        <span class="c1"># 关闭连接</span>
-</span><span id="__span-9-36"><a id="__codelineno-9-36" name="__codelineno-9-36"></a>        <span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span></code></pre></div></td></tr></table></div>
-<p><img alt="" src="../pic/image-20240805171612985.png" /></p>
-<blockquote>
-<p>继续创建表后需要刷新对象浏览器才能看到新建的结果</p>
-</blockquote>
-<h2 id="pymysql_1">Pymysql执行数据操纵语言<a class="headerlink" href="#pymysql_1" title="Permanent link">&para;</a></h2>
-<p>为了测试，可以直接在SQLyog当中修改数据库内容：</p>
-<p><img alt="" src="../pic/image-20240805172950422.png" /></p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-10-10">10</a></span>
-<span class="normal"><a href="#__codelineno-10-11">11</a></span>
-<span class="normal"><a href="#__codelineno-10-12">12</a></span>
-<span class="normal"><a href="#__codelineno-10-13">13</a></span>
-<span class="normal"><a href="#__codelineno-10-14">14</a></span>
-<span class="normal"><a href="#__codelineno-10-15">15</a></span>
-<span class="normal"><a href="#__codelineno-10-16">16</a></span>
-<span class="normal"><a href="#__codelineno-10-17">17</a></span>
-<span class="normal"><a href="#__codelineno-10-18">18</a></span>
-<span class="normal"><a href="#__codelineno-10-19">19</a></span>
-<span class="normal"><a href="#__codelineno-10-20">20</a></span>
-<span class="normal"><a href="#__codelineno-10-21">21</a></span>
-<span class="normal"><a href="#__codelineno-10-22">22</a></span>
-<span class="normal"><a href="#__codelineno-10-23">23</a></span>
-<span class="normal"><a href="#__codelineno-10-24">24</a></span>
-<span class="normal"><a href="#__codelineno-10-25">25</a></span>
-<span class="normal"><a href="#__codelineno-10-26">26</a></span>
-<span class="normal"><a href="#__codelineno-10-27">27</a></span>
-<span class="normal"><a href="#__codelineno-10-28">28</a></span>
-<span class="normal"><a href="#__codelineno-10-29">29</a></span>
-<span class="normal"><a href="#__codelineno-10-30">30</a></span>
-<span class="normal"><a href="#__codelineno-10-31">31</a></span>
-<span class="normal"><a href="#__codelineno-10-32">32</a></span>
-<span class="normal"><a href="#__codelineno-10-33">33</a></span>
-<span class="normal"><a href="#__codelineno-10-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">pymysql</span> <span class="kn">import</span> <span class="n">Connection</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">con</span> <span class="o">=</span> <span class="kc">None</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="k">try</span><span class="p">:</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a>    <span class="c1"># 创建数据库连接</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a>    <span class="n">con</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7"></a>        <span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>  <span class="c1"># 主机名</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8"></a>        <span class="n">port</span><span class="o">=</span><span class="mi">3306</span><span class="p">,</span>  <span class="c1"># 端口</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9"></a>        <span class="n">user</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>  <span class="c1"># 账户</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10"></a>        <span class="n">password</span><span class="o">=</span><span class="s2">&quot;Zqc20040813&quot;</span><span class="p">,</span>  <span class="c1"># 密码</span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11"></a>        <span class="n">database</span><span class="o">=</span><span class="s2">&quot;db_python&quot;</span>  <span class="c1"># 指定操作的数据库</span>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12"></a>    <span class="p">)</span>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13"></a>
-</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14"></a>    <span class="c1"># 获取游标对象</span>
-</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15"></a>    <span class="n">cursor</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16"></a>
-</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17"></a>    <span class="c1"># 使用游标对象执行 SQL 语句</span>
-</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM t_student3&quot;</span><span class="p">)</span>
-</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19"></a>
-</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20"></a>    <span class="c1"># 获取查询所有结果</span>
-</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22"></a>
-</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23"></a>    <span class="c1"># 打印结果</span>
-</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24"></a>    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">),</span> <span class="n">result</span><span class="p">)</span>
-</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25"></a>    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
-</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27"></a>
-</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28"></a><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;异常：&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30"></a>
-</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31"></a><span class="k">finally</span><span class="p">:</span>
-</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32"></a>    <span class="k">if</span> <span class="n">con</span><span class="p">:</span>
-</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33"></a>        <span class="c1"># 关闭连接</span>
-</span><span id="__span-10-34"><a id="__codelineno-10-34" name="__codelineno-10-34"></a>        <span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span></code></pre></div></td></tr></table></div>
-<p>得到结果：</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span>
-<span class="normal"><a href="#__codelineno-11-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>&lt;class &#39;tuple&#39;&gt; ((1, &#39;wayne&#39;, 19), (2, &#39;Ronald&#39;, 19), (3, &#39;nothing&#39;, 20), (4, &#39;John&#39;, 30))
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a>(1, &#39;wayne&#39;, 19)
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a>(2, &#39;Ronald&#39;, 19)
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a>(3, &#39;nothing&#39;, 20)
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5"></a>(4, &#39;John&#39;, 30)
-</span></code></pre></div></td></tr></table></div>
-<p>插入操作也一样：</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
-<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1"># 使用游标对象执行 SQL 语句</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO t_student3 VALUES (null, &#39;insert_man&#39;, 22)&quot;</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
-<p>注意每次操作后需要提交，可以在<code>con</code>的设置中添加<code>autocommit=True</code></p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
-<span class="normal"><a href="#__codelineno-13-2">2</a></span>
-<span class="normal"><a href="#__codelineno-13-3">3</a></span>
-<span class="normal"><a href="#__codelineno-13-4">4</a></span>
-<span class="normal"><a href="#__codelineno-13-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1"># 创建数据库连接</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="n">con</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a>        <span class="o">...</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a>        <span class="n">autocommit</span><span class="o">=</span><span class="kc">True</span>  <span class="c1"># 自动提交</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5"></a>    <span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
-<p>刷新就可以看到<code>insert_man</code>加入到数据库中了</p>
-<p><img alt="" src="../pic/image-20240805173936634.png" /></p>
-<p>更新和删除操作也很简单：</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
-<span class="normal"><a href="#__codelineno-14-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;UPDATE t_student3 SET age=999 WHERE id=5&quot;</span><span class="p">)</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;delete from t_student3 WHERE id=5&quot;</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
+<p>一定要判断 <code>htim-&gt;Instance == TIM6</code>。因为如果有多个定时器（比如 TIM7）也开启了中断，它们都会调用同一个回调函数。如果不判断，会导致逻辑混乱。</p>
+<p>编译烧录之后就会看到LED灯间断闪烁了。</p>
 
 
 
@@ -2817,44 +2482,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../../Ubuntu_related/moveit2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: MoveIt2教程">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                MoveIt2教程
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../../PyQt6_and_PySide6/PyQt6PySide6/" class="md-footer__link md-footer__link--next" aria-label="Next: PyQt6/PySide6">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                PyQt6/PySide6
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
